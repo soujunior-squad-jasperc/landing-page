@@ -75,7 +75,7 @@ A proposta combina **storytelling, dados reais, prova social e CTAs estratégico
 
 | Camada | Tecnologia | Propósito no Projeto |
 | :--- | :--- | :--- |
-| **Front-end** | HTML5 / CSS3 | Estrutura semântica, estilização modular e interatividade da landing page |
+| **Front-end** | HTML5 / CSS3 / JavaScript (Vanilla| Estrutura semântica, estilização modular e interatividade da landing page |
 | **Versionamento** | Git & GitHub | Controle de versão, colaboração em equipe e salvamento de código |
 | **Infraestrutura** | Netlify | Hospedagem de alta performance e deploy contínuo (CI/CD) |
 
