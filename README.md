@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="frontend/assets/images/capa-souJunior.png" alt="Capa SouJunior" width="100%">
+  <img src="frontend/assets/images/capasoujunior.png" alt="Capa SouJunior" width="100%">
 
-  # 🚀 Landing Page · SouJunior
+  # 🚀 Landing Page · Jasper.C
   
   <p align="center">
     <b>Desenvolvido pela squad <u>Jasper.C</u> para o Hackathon da SouJunior</b>
@@ -19,18 +19,20 @@
 </div>
 
 ---
-## 📑 Sumário
+<details>
+<summary><b>📑 Sumário</b></summary>
 
-- [Projeto](#projeto)
-- [Solução](#solução)
-- [Estrutura da Landing Page](#estrutura-da-landing-page)
-- [Stack Tecnológica](#stack-tecnológica)
-- [Arquitetura do Projeto](#arquitetura-do-projeto)
-- [Equipe — Jasper.C](#equipe--jasperic)
-- [Como Executar o Projeto Localmente](#como-executar-o-projeto-localmente)
-- [Acesso ao Projeto em andamento](#acesso-ao-projeto-em-andamento)
+- [1. Projeto](#projeto)
+- [2. Solução](#-solução)
+- [3. Estrutura da Landing Page](#estrutura-da-landing-page)
+- [4. Stack Tecnológica](#stack-tecnológica)
+- [5. Arquitetura do Projeto](#arquitetura-do-projeto)
+- [6. Equipe — Jasper.C](#equipe--jasper-c)
+- [7. Como Executar o Projeto Localmente](#como-executar-o-projeto-localmente)
+- [8. Acesso ao Projeto em andamento](#acesso-ao-projeto-em-andamento)
 
----
+</details>
+
 ---
 ## Projeto
 
@@ -38,16 +40,16 @@ A SouJunior é uma comunidade voltada para profissionais em início de carreira 
 
 Mantida com o apoio e engajamento da própria comunidade, a SouJunior busca fortalecer sua sustentabilidade por meio do Apoia.se, permitindo que pessoas contribuam a partir de R$ 2,00 para ajudar na continuidade dessas iniciativas.
 
-Neste Hackathon, nossa Squad recebeu o desafio de criar uma **Landing Page criativa, moderna e persuasiva**, capaz de transformar a jornada do visitante e incentivar novos apoiadores.
+Neste Hackathon, nossa Squad recebeu o desafio de criar uma Landing Page criativa, moderna e persuasiva, capaz de transformar a jornada do visitante e incentivar novos apoiadores.
 
-Atualmente, a campanha de arrecadação aparece **no final de uma página institucional extensa**, depois de conteúdos sobre a comunidade, áreas de atuação e depoimentos.
+Atualmente, a campanha de arrecadação aparece no final de uma página institucional extensa, depois de conteúdos sobre a comunidade, áreas de atuação e depoimentos.
 
 Isso gera dois principais problemas:
 
-*  A página atual não foi estruturada com foco em **conversão de apoiadores**;
-*  Não há uma comunicação clara sobre **para onde os recursos arrecadados são direcionados**.
+*  A página atual não foi estruturada com foco em conversão de apoiadores;
+*  Não há uma comunicação clara sobre para onde os recursos arrecadados são direcionados.
 
-Para quem está considerando apoiar, entender o **impacto da contribuição e como os recursos são utilizados** é fundamental para gerar confiança e incentivar o apoio.
+Para quem está considerando apoiar, entender o impacto da contribuição e como os recursos são utilizados é fundamental para gerar confiança e incentivar o apoio.
 
 ---
 ## Solução
@@ -73,8 +75,7 @@ A proposta combina **storytelling, dados reais, prova social e CTAs estratégico
 
 | Camada | Tecnologia | Propósito no Projeto |
 | :--- | :--- | :--- |
-| **Front-end** | HTML5 / CSS3 / Vanilla JS | Estrutura semântica, estilização modular e interatividade da landing page |
-| **Back-end** | Java (Spring Boot) | Processamento e validação de dados de formulários e requisições |
+| **Front-end** | HTML5 / CSS3 | Estrutura semântica, estilização modular e interatividade da landing page |
 | **Versionamento** | Git & GitHub | Controle de versão, colaboração em equipe e salvamento de código |
 | **Infraestrutura** | Netlify | Hospedagem de alta performance e deploy contínuo (CI/CD) |
 
