@@ -82,8 +82,6 @@ A proposta combina **storytelling, dados reais, prova social e CTAs estratégico
 ## Arquitetura do Projeto
 ```text
 soujunior-landing/
-├── backend/              # API Java (Spring Boot) para tratamento de formulários
-│   └── src/
 ├── frontend/             # Interface visual da Landing Page
 │   ├── index.html        # Página principal
 │   ├── css/              # Estilos modulares (variables, global, components)
