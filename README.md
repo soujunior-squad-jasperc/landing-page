@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="frontend/assets/images/seu-banner-ou-logo.png" alt="Capa SouJunior" width="100%">
+  <img src="frontend/assets/images/capa-souJunior.png" alt="Capa SouJunior" width="100%">
 
   # 🚀 Landing Page · SouJunior
   
