@@ -110,7 +110,7 @@ soujunior-landing/
 Abra o seu terminal e clone o repositório do projeto:
 
 ```bash
-git clone [https://github.com/saradataeng/soujunior-landing-apoiase.git](https://github.com/saradataeng/soujunior-landing-apoiase.git)
+git clone [https://github.com/soujunior-squad-jasperc/soujunior-landing-apoiase.git](https://github.com/soujunior-squad-jasperc/soujunior-landing-apoiase.git)
 cd soujunior-landing-apoiase
 ```
 ### 2. Rodando o Front-end
