@@ -110,8 +110,8 @@ soujunior-landing/
 Abra o seu terminal e clone o repositório do projeto:
 
 ```bash
-git clone [https://github.com/soujunior-squad-jasperc/soujunior-landing-apoiase.git](https://github.com/soujunior-squad-jasperc/soujunior-landing-apoiase.git)
-cd soujunior-landing-apoiase
+git clone [https://github.com/soujunior-squad-jasperc/landing-page.git](https://github.com/soujunior-squad-jasperc/landing-page.git)
+cd landing-page
 ```
 ### 2. Rodando o Front-end
 Como o Front-end foi desenvolvido utilizando HTML, CSS e Vanilla JavaScript sem frameworks pesados, para rodar:
@@ -123,7 +123,7 @@ Instale a extensão Live Server.
 Navegue até a pasta frontend/, clique com o botão direito no arquivo index.html e selecione "Open with Live Server". O site abrirá automaticamente no seu navegador.
 
 🌐 Acesso ao Projeto em andamento
-[Deploy no Netlify](https://soujunior-landingpage-apoiase.netlify.app/)
+[Deploy no Netlify](https://soujunior-landingpage-jasperc.netlify.app/)
 
 
 
