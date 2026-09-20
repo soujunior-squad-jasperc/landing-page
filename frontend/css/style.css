@@ -191,8 +191,7 @@ body {
 
 .landing-desktop-hi .mascot-juno {
   position: absolute;
-  top: 90px;
-  /* Altere este valor para subir ou descer o mascote */
+  top: 200px; /* Aumente este valor para descer mais o bonequinho */
   left: 353px;
   width: 200px;
   height: 200px;
@@ -1074,23 +1073,15 @@ body {
   height: 360px;
 }
 
+/* Esconde as chavetas/infernências indesejadas no fundo */
 .landing-desktop-hi .text-wrapper-37 {
-  position: absolute;
-  top: 381px;
-  left: 182px;
-  font-weight: 700;
-  color: #3c7ef933;
-  font-size: 30px;
-  line-height: 24px;
-  white-space: nowrap;
-  font-family: "Funnel Display", Helvetica;
-  letter-spacing: 0;
-  z-index: 2;
+  display: none;
 }
 
+/* Pousa o mascote com os pés alinhados na linha inferior */
 .landing-desktop-hi .jutsu-juno-FAQ {
   position: absolute;
-  top: 90px;
+  top: 140px; /* Desce o mascote para ficar apoiado na base */
   left: 55px;
   width: 260px;
   height: 260px;
