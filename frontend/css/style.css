@@ -1073,15 +1073,15 @@ body {
   height: 360px;
 }
 
-/* Esconde as chavetas/infernências indesejadas no fundo */
+
 .landing-desktop-hi .text-wrapper-37 {
   display: none;
 }
 
-/* Pousa o mascote com os pés alinhados na linha inferior */
+
 .landing-desktop-hi .jutsu-juno-FAQ {
   position: absolute;
-  top: 140px; /* Desce o mascote para ficar apoiado na base */
+  top: 140px; 
   left: 55px;
   width: 260px;
   height: 260px;
@@ -1798,6 +1798,8 @@ body {
 .landing-desktop-hi .header-container {
   display: flex;
   width: 1200px;
+  margin: 0 auto;
+  max-width: calc(100% - 240px);
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -1973,4 +1975,112 @@ body {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* ========================================
+   ACESSIBILIDADE
+   ======================================== */
+
+/* Alto contraste */
+.high-contrast,
+.high-contrast .landing-desktop-hi {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast .landing-desktop-hi * {
+  color: #fff !important;
+}
+
+.high-contrast .landing-desktop-hi a,
+.high-contrast .landing-desktop-hi button {
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+/* Escala de cinza */
+.grayscale {
+    filter: grayscale(100%);
+}
+
+/* Inversão de cores */
+.invert-colors {
+    filter: invert(100%);
+}
+/* Tamanho do texto */
+.large-text {
+    font-size: 120% !important;
+}
+
+.extra-large-text {
+    font-size: 140% !important;
+}
+
+/* Botão de acessibilidade */
+
+.header-container {
+    position: relative;
+}
+
+/* Botão de acessibilidade integrado e elegante */
+.accessibility-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px; /* Mude para 50% se preferir totalmente redondo */
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 12px; /* Dá um respiro em relação ao botão anterior */
+}
+
+.accessibility-button:hover {
+  background-color: #f0f4ff;
+  border-color: #3c7ef9;
+  color: #3c7ef9;
+}
+
+/* Painel de acessibilidade */
+.accessibility-menu {
+  position: absolute;
+  top: 60px;
+  right: 0; /* Alinha com o novo botão */
+  width: 220px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #d9e8ff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1001;
+}
+
+.accessibility-menu h2 {
+    margin: 0 0 12px;
+    font-family: "Funnel Display", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.accessibility-menu button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #d9e8ff;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #222222;
+    font-family: "Funnel Sans", Helvetica;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.accessibility-menu button:hover {
+    background-color: #f0f6ff;
+}
+
+
 
