@@ -761,21 +761,21 @@ body {
 /* ==========================================================================
    06. COMO APOIAR
    ========================================================================== */
-
+/* Cards */
 .landing-desktop-hi .support {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.625rem;
   position: relative;
   align-self: stretch;
   width: 100%;
-  padding: 0 1.5rem;
+  padding: 6rem 1.5rem;
   box-sizing: border-box;
-  flex: 0 0 auto;
   background: linear-gradient(
     180deg,
-    rgba(218, 233, 255, 1) 0%,
+    rgba(217, 232, 255, 1) 0%,
     rgba(241, 245, 251, 1) 100%
   );
 }
@@ -783,22 +783,23 @@ body {
 .landing-desktop-hi .support-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2.5rem;
+  align-items: flex-start;
+  gap: 3rem;
   position: relative;
   width: 100%;
   max-width: 75rem;
-  min-height: 39.25rem;
-  padding: 3.75rem 0;
+  flex: 0 0 auto;
 }
 
-/* Introdução */
 .landing-desktop-hi .support-intro-2 {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.75rem;
   position: relative;
+  align-self: stretch;
+  width: 100%;
   flex: 0 0 auto;
 }
 
@@ -811,33 +812,31 @@ body {
   color: #3c7ef9;
   font-size: 0.875rem;
   letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
+  line-height: normal;
 }
 
 .landing-desktop-hi .text-wrapper-18 {
   position: relative;
   width: fit-content;
   font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
+  font-weight: 600;
   color: #242731;
   font-size: 2.5rem;
   letter-spacing: 0;
-  line-height: 1.2;
+  line-height: normal;
 }
 
 .landing-desktop-hi .text-wrapper-19 {
   position: relative;
-  width: fit-content;
-  font-family: "Funnel Sans", Helvetica;
+  width: 100%;
+  font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #333333;
   font-size: 1.125rem;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: normal;
 }
 
-/* Cards */
 .landing-desktop-hi .support-options {
   display: flex;
   align-items: center;
@@ -850,6 +849,17 @@ body {
 }
 
 .landing-desktop-hi .support-option {
+  --card-bg: #ffffff;
+  --card-border: #dde3ec;
+  --card-eyebrow: #0a1662;
+  --card-title: #0a1662;
+  --card-label: #242731;
+  --card-text: #000000;
+  --card-check: #3c7ef9;
+  --card-cta-bg: #3c7ef9;
+  --card-cta-color: #ffffff;
+  --card-cta-border: transparent;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -858,9 +868,9 @@ body {
   width: 20.625rem;
   min-height: 21.25rem;
   padding: 1.5rem;
-  background-color: #ffffff;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 0.75rem;
-  border: 1px solid #dde3ec;
   overflow: hidden;
   transition:
     transform 0.3s ease-out,
@@ -872,157 +882,144 @@ body {
   box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
 }
 
-.landing-desktop-hi .support-option-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+/* Card — destaque */
+.landing-desktop-hi .support-option--featured {
+  --card-bg: #0a1662e6;
+  --card-border: rgba(255, 255, 255, 0.15);
+  --card-eyebrow: #98bafb;
+  --card-title: #ffffff;
+  --card-label: #ffffff;
+  --card-text: #dce8ff;
+  --card-cta-bg: #ffffff;
+  --card-cta-color: #0a1662;
+  --card-cta-border: #000000;
+
   width: 21.25rem;
   min-height: 23.75rem;
-  padding: 1.5rem;
-  background-color: #0a1662e6;
-  border-radius: 0.75rem;
-  border: 1px solid;
-  border-color: rgba(255, 255, 255, 0.15);
-  transition:
-    transform 0.3s ease-out,
-    box-shadow 0.3s ease-out;
+  overflow: visible;
 }
 
-.landing-desktop-hi .support-option-2:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
-}
-
-.landing-desktop-hi .badge-row {
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0.3125rem 0.75rem;
+.landing-desktop-hi .support-option__badge {
   position: absolute;
   top: -1.125rem;
-  left: 6.625rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3125rem 0.75rem;
   background-color: #ffffff;
+  border: 1px solid #3c7ef9;
   border-radius: 999px;
-  border: 1px solid;
-  border-color: #3c7ef9;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #172675;
+  white-space: nowrap;
 }
 
-.landing-desktop-hi .option-content {
+/* Card — conteúdo */
+.landing-desktop-hi .support-option__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.75rem;
-  position: relative;
   align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.landing-desktop-hi .option-content-2 {
+.landing-desktop-hi .support-option__eyebrow {
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--card-eyebrow);
+}
+
+.landing-desktop-hi .support-option__header {
   display: flex;
-  flex-direction: column;
-  height: 15rem;
-  align-items: flex-start;
-  gap: 0.75rem;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.landing-desktop-hi .div-2 {
-  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.landing-desktop-hi .vector-2 {
-  position: relative;
+.landing-desktop-hi .support-option__title {
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--card-title);
+}
+
+.landing-desktop-hi .support-option__divider {
   width: 12.3438rem;
   height: 1px;
-  margin-bottom: -1px;
 }
 
-/* Cards — títulos */
-.landing-desktop-hi .text-wrapper-20 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #0a1662;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-21 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 1.25rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-26 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #172675;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-27 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #98bafb;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-28 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 1.25rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-/* Cards — benefícios */
-.landing-desktop-hi .benefits-option,
-.landing-desktop-hi .benefits-option-2 {
-  display: inline-flex;
+/* Card — benefícios */
+.landing-desktop-hi .support-option__benefits {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  position: relative;
-  flex: 0 0 auto;
 }
 
+.landing-desktop-hi .support-option__benefits-label {
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--card-label);
+}
+
+.landing-desktop-hi .benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.landing-desktop-hi .benefit-item {
+  display: flex;
+  gap: 0.3em;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--card-text);
+}
+
+.landing-desktop-hi .benefit-item::before {
+  content: "✓";
+  content: "✓" / "";
+  flex: none;
+  font-weight: 600;
+  color: var(--card-check);
+}
+
+/* Card — botão */
+.landing-desktop-hi .support-option__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  flex: 0 0 auto;
+  background-color: var(--card-cta-bg);
+  border: 1px solid var(--card-cta-border);
+  border-radius: 0.25rem;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--card-cta-color);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Usados também em outras seções (Contato e CTA final) */
 .landing-desktop-hi .div-4 {
   display: flex;
   flex-direction: column;
@@ -1032,114 +1029,6 @@ body {
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-22 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #242731;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-29 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .div-3 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 0.875rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .div-5 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 0.875rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.landing-desktop-hi .span {
-  font-weight: 600;
-  color: #3c7ef9;
-}
-
-.landing-desktop-hi .text-wrapper-23 {
-  color: #000000;
-}
-
-.landing-desktop-hi .text-wrapper-30 {
-  font-weight: 600;
-  color: #3d7ff5;
-}
-
-.landing-desktop-hi .text-wrapper-31 {
-  color: #dce8ff;
-}
-
-.landing-desktop-hi .text-wrapper-33 {
-  color: #dde8ff;
-}
-
-.landing-desktop-hi .text-wrapper-35 {
-  color: #242731;
-}
-
-/* Cards — botões */
-.landing-desktop-hi .CTA {
-  all: unset;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #3c7ef9;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-.landing-desktop-hi .button {
-  all: unset;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #000000;
-  border-radius: 0.25rem;
-  cursor: pointer;
 }
 
 .landing-desktop-hi .text-wrapper-25 {
@@ -1154,20 +1043,6 @@ body {
   line-height: 1.5rem;
   white-space: nowrap;
 }
-
-.landing-desktop-hi .text-wrapper-34 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-
 /* ==========================================================================
    07. FAQ
    ========================================================================== */
@@ -1906,8 +1781,6 @@ body {
   line-height: 1.5rem;
   white-space: nowrap;
 }
-
-
 /* ==========================================================================
    11. ACESSIBILIDADE
    ========================================================================== */
@@ -1953,13 +1826,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.625rem;
-  height: 2.625rem;
-  margin-left: 0.75rem;
+  width: 42px;
+  height: 42px;
+  margin-left: 12px;
   background-color: #ffffff;
   border: 1px solid #d0d0d0;
-  border-radius: 0.5rem;
-  font-size: 1.25rem;
+  border-radius: 8px;
+  font-size: 20px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -1973,43 +1846,41 @@ body {
 /* Painel */
 .accessibility-menu {
   position: absolute;
-  top: 3.75rem;
+  top: 60px;
   right: 0;
-  width: 13.75rem;
-  padding: 1rem;
+  width: 220px;
+  padding: 16px;
   background-color: #ffffff;
   border: 1px solid #d9e8ff;
-  border-radius: 0.75rem;
+  border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   z-index: 1001;
 }
 
 .accessibility-menu h2 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 12px;
   font-family: "Funnel Display", Helvetica;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 600;
   color: #222222;
 }
 
 .accessibility-menu button {
   width: 100%;
-  padding: 0.625rem;
-  margin-top: 0.375rem;
+  padding: 10px;
+  margin-top: 6px;
   border: 1px solid #d9e8ff;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   background-color: #ffffff;
   color: #222222;
   font-family: "Funnel Sans", Helvetica;
-  font-size: 0.875rem;
+  font-size: 14px;
   cursor: pointer;
 }
 
 .accessibility-menu button:hover {
   background-color: #f0f6ff;
 }
-
-
 /* ==========================================================================
    12. RESPONSIVIDADE
    ========================================================================== */
@@ -2081,8 +1952,7 @@ body {
     flex-direction: column;
   }
 
-  .landing-desktop-hi .support-option,
-  .landing-desktop-hi .support-option-2 {
+ .landing-desktop-hi .support-option {
     width: 100%;
     max-width: 26rem;
   }
