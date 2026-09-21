@@ -1,3 +1,30 @@
+/* ==========================================================================
+   SOUJUNIOR — LANDING PAGE
+
+   Índice
+   01. Base
+   02. Header
+   03. Hero
+   04. Por que apoiar
+   05. Impacto
+   06. Como apoiar
+   07. FAQ
+   08. Contato
+   09. CTA final
+   10. Footer
+   11. Acessibilidade
+   12. Responsividade
+
+   Convenções
+   - Tamanhos e espaçamentos em rem (1rem = 16px) e %.
+   - Bordas, linhas e sombras de 1px permanecem em px.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   01. BASE
+   ========================================================================== */
+
 html,
 body {
   margin: 0;
@@ -18,1696 +45,34 @@ body {
   overflow-y: auto;
 }
 
-.landing-desktop-hi .hero {
-  display: flex;
-  height: 640px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #f3f7ff;
-}
-
-.landing-desktop-hi .hero-container {
-  display: flex;
-  width: 1200px;
-  align-items: center;
-  justify-content: center;
-  gap: 64px;
-  position: relative;
-  align-self: stretch;
-}
-
-.landing-desktop-hi .hero-content {
-  display: flex;
-  flex-direction: column;
-  width: 569px;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 24px;
-  position: relative;
-}
-
-.landing-desktop-hi .hero-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 600;
-  color: #3c7ef9;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .div {
-  position: relative;
-  align-self: stretch;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #242731;
-  font-size: 56px;
-  letter-spacing: 0;
-  line-height: 60px;
-}
-
-.landing-desktop-hi .p {
-  position: relative;
-  align-self: stretch;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: 27px;
-}
-
-.landing-desktop-hi .hero-actions {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .primary-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 20px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #3c7ef9;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .text-wrapper-2 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Inter", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .secondary-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 20px;
-  position: relative;
-  flex: 0 0 auto;
-  border-radius: 4px;
-  border: 1px solid;
-  border-color: #d0d0d0;
-}
-
-.landing-desktop-hi .SECONDARY-CTA {
-  position: relative;
-  width: fit-content;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .hero-visual {
-  position: relative;
-  width: 567px;
-  height: 400px;
-}
-
-.landing-desktop-hi .hero-glow {
-  position: absolute;
-  top: -20px;
-  left: 55px;
-  width: 500px;
-  height: 500px;
-  border-radius: 250px;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(61, 127, 245, 0.12) 51%,
-    rgba(61, 127, 245, 0) 100%
-  );
-}
-
-.landing-desktop-hi .image-removebg {
-  top: 8px;
-  left: 71px;
-  width: 392px;
-  height: 392px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .img {
-  top: 87px;
-  left: 157px;
-  width: 392px;
-  height: 392px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .mascot-juno {
-  position: absolute;
-  top: 90px;
-  /* Altere este valor para subir ou descer o mascote */
-  left: 353px;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .tag-projetos {
-  top: 333px;
-  left: 182px;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 16px;
-  position: absolute;
-  background-color: #fefefe;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #0a1662;
-}
-
-.landing-desktop-hi .text-wrapper-3 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .tag-mentoria {
-  top: 99px;
-  left: 409px;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 16px;
-  position: absolute;
-  background-color: #fefefe;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #0a1662;
-}
-
-.landing-desktop-hi .text-wrapper-4 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .node-projetos {
-  position: absolute;
-  top: 130px;
-  left: 119px;
-  width: 450px;
-  height: 320px;
-}
-
-.landing-desktop-hi .line-connector {
-  position: absolute;
-  top: 51px;
-  left: 55px;
-  width: 19px;
-  height: 10px;
-}
-
-.landing-desktop-hi .node-circle {
-  position: absolute;
-  top: 0;
-  left: -9px;
-  width: 72px;
-  height: 72px;
-  background-color: #e7e8ea;
-  border-radius: 36px;
-  border: 1px solid;
-  border-color: #0a1662;
-}
-
-.landing-desktop-hi .text-wrapper-5 {
-  position: absolute;
-  top: 27px;
-  left: 16px;
-  font-weight: 500;
-  color: #000000;
-  font-size: 14px;
-  line-height: normal;
-  font-family: "Funnel Display", Helvetica;
-  letter-spacing: 0;
-}
-
-.landing-desktop-hi .vector {
-  position: absolute;
-  top: 51px;
-  left: 166px;
-  width: 69px;
-  height: 69px;
-}
-
-.landing-desktop-hi .support-reason {
-  height: 720px;
-  align-items: center;
-  padding: 96px 0px;
-  align-self: stretch;
-  width: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(243, 247, 255, 1) 0%,
-    rgba(231, 240, 255, 1) 100%
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.landing-desktop-hi .support-reason-2 {
-  width: 1200px;
-  align-items: flex-start;
-  gap: 64px;
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.landing-desktop-hi .support-intro {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 12px;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  display: flex;
-  position: relative;
-}
-
-.landing-desktop-hi .text-wrapper-6 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #3c7ef9;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .text-wrapper-7 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #242731;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .text-wrapper-8 {
-  position: relative;
-  width: 1200px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: #333333;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .support-reasons {
-  flex-direction: column;
-  width: 1200px;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 15px;
-  flex: 0 0 auto;
-  display: flex;
-  position: relative;
-}
-
-.landing-desktop-hi .reason-row {
-  align-items: center;
-  display: flex;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .reason-item {
-  display: flex;
-  flex-direction: column;
-  width: 360px;
-  align-items: flex-start;
-  gap: 8px;
-  position: relative;
-}
-
-.landing-desktop-hi .text-wrapper-9 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 500;
-  color: #3c7ef9;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .text-wrapper-10 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #0a1662;
-  font-size: 26px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .text-wrapper-11 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 400;
-  color: #333333;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .reason-item-wrapper {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .div-wrapper {
-  align-items: flex-end;
-  justify-content: flex-end;
-  display: flex;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-12 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #0a1662;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .reason-path {
-  position: absolute;
-  top: -54px;
-  left: 0;
-  width: 1200px;
-  height: 392px;
-}
-
-.landing-desktop-hi .impact {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 626px;
-  align-items: center;
-  gap: 10px;
-  padding: 96px 120px;
-  position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(232, 240, 255, 1) 0%,
-    rgba(217, 232, 255, 1) 100%
-  );
-}
-
-.landing-desktop-hi .impact-container {
-  flex-direction: column;
-  width: 1200px;
-  height: 434px;
-  align-items: flex-end;
-  gap: 48px;
-  display: flex;
-  position: relative;
-}
-
-.landing-desktop-hi .dot-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 214px;
-  height: 232px;
-}
-
-.landing-desktop-hi .impact-intro {
-  flex-direction: column;
-  width: 480px;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 8px;
-  flex: 0 0 auto;
-  display: flex;
-  position: relative;
-}
-
-.landing-desktop-hi .text-wrapper-13 {
-  position: relative;
-  align-self: stretch;
-  margin-top: -3px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #242731;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .impact-metric {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: start;
-  /* Alinha todos os números exatamente na mesma linha do topo */
-  align-self: stretch;
-  width: 100%;
-}
-
-.landing-desktop-hi .metric {
-  margin-top: 0px;
-  /*120*/
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  position: relative;
-  text-align: center;
-}
-
-.landing-desktop-hi .text-wrapper-14 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 56px;
-  letter-spacing: 0;
-  line-height: 52px;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.landing-desktop-hi .text-wrapper-15 {
-  position: relative;
-  width: 100%;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 700;
-  /* Negrito */
-  color: #000000;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 22px;
-  text-align: center;
-  /* Alinha o texto centralizado */
-  white-space: normal;
-}
-
-.landing-desktop-hi .metric-2 {
-  margin-top: 0px;
-  /*108*/
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  position: relative;
-  text-align: center;
-}
-
-.landing-desktop-hi .metric-3 {
-  margin-top: 0px;
-  /*+50*/
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  position: relative;
-  text-align: center;
-}
-
-.landing-desktop-hi .text-wrapper-16 {
-  position: relative;
-  width: 100%;
-  max-width: 220px;
-  /* Limita a largura para dobrar no lugar certo */
-  height: auto;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 22px;
-  text-align: center;
-  /* ALINHA AS PALAVRAS EMBAIXO DO NÚMERO */
-  white-space: normal;
-  /* CORRIGIDO: Permite a quebra de linha sem estourar */
-}
-
-.landing-desktop-hi .metric-4 {
-  margin-top: 0px;
-  /* 35 */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  position: relative;
-  text-align: center;
-}
-
-.landing-desktop-hi .support {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background: linear-gradient(
-    180deg,
-    rgba(218, 233, 255, 1) 0%,
-    rgba(241, 245, 251, 1) 100%
-  );
-}
-
-.landing-desktop-hi .support-container {
-  flex-direction: column;
-  width: 1200px;
-  height: 628px;
-  align-items: center;
-  gap: 40px;
-  padding: 60px 0px;
-  display: flex;
-  position: relative;
-}
-
-.landing-desktop-hi .support-intro-2 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-17 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #3c7ef9;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-18 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #242731;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-19 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 400;
-  color: #333333;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .support-options {
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  display: flex;
-  position: relative;
-}
-
-.landing-desktop-hi .support-option {
-  width: 330px;
-  height: 340px;
-  background-color: #ffffff;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px;
-  position: relative;
-  border-radius: 12px;
-  border: 1px solid #dde3ec;
-}
-
-.landing-desktop-hi .option-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-20 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #0a1662;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .div-2 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-21 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .vector-2 {
-  position: relative;
-  width: 197.5px;
-  height: 1px;
-  margin-bottom: -1px;
-}
-
-.landing-desktop-hi .benefits-option {
-  display: inline-flex;
-  gap: 6px;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-22 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #242731;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .div-3 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .span {
-  font-weight: 600;
-  color: #3c7ef9;
-}
-
-.landing-desktop-hi .text-wrapper-23 {
-  color: #000000;
-}
-
-.landing-desktop-hi .text-wrapper-24 {
-  font-weight: 600;
-  color: #000000;
-}
-
-.landing-desktop-hi .CTA {
-  all: unset;
-  box-sizing: border-box;
-  background-color: #3c7ef9;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
-  position: relative;
-  flex: 0 0 auto;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .text-wrapper-25 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .support-option-2 {
-  width: 340px;
-  height: 380px;
-  background-color: #0a1662e6;
-  border-color: rgba(255, 255, 255, 0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px;
-  position: relative;
-  border-radius: 12px;
-  border: 1px solid;
-}
-
-.landing-desktop-hi .badge-row {
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5px 12px;
-  position: absolute;
-  top: -18px;
-  left: 106px;
-  background-color: #ffffff;
-  border-radius: 999px;
-  border: 1px solid;
-  border-color: #3c7ef9;
-}
-
-.landing-desktop-hi .text-wrapper-26 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #172675;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-27 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #98bafb;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-28 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .div-4 {
-  display: flex;
-  gap: 8px;
-  align-self: stretch;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-29 {
-  width: fit-content;
-  margin-top: -1px;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 24px;
-  white-space: nowrap;
-  position: relative;
-  font-family: "Funnel Display", Helvetica;
-  letter-spacing: 0;
-}
-
-.landing-desktop-hi .div-5 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.landing-desktop-hi .text-wrapper-30 {
-  font-weight: 600;
-  color: #3d7ff5;
-}
-
-.landing-desktop-hi .text-wrapper-31 {
-  color: #dce8ff;
-}
-
-.landing-desktop-hi .text-wrapper-32 {
-  font-weight: 600;
-  color: #dce6ff;
-}
-
-.landing-desktop-hi .text-wrapper-33 {
-  color: #dde8ff;
-}
-
-.landing-desktop-hi .button {
-  all: unset;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #000000;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
-  position: relative;
-  flex: 0 0 auto;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .text-wrapper-34 {
-  color: #0a1662;
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .option-content-2 {
-  display: flex;
-  flex-direction: column;
-  height: 240px;
-  align-items: flex-start;
-  gap: 12px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.landing-desktop-hi .benefits-option-2 {
-  display: inline-flex;
-  gap: 8px;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-35 {
-  color: #242731;
-}
-
-.landing-desktop-hi .text-wrapper-36 {
-  font-weight: 600;
-  color: #242731;
-}
-
-.landing-desktop-hi .FAQ {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 96px 0px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #f1f5fb;
-}
-
-.landing-desktop-hi .FAQ-container {
-  display: flex;
-  width: 1200px;
-  align-items: center;
-  justify-content: center;
-  gap: 80px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .FAQ-visual {
-  position: relative;
-  width: 369px;
-  height: 360px;
-}
-
-.landing-desktop-hi .text-wrapper-37 {
-  position: absolute;
-  top: 381px;
-  left: 182px;
-  font-weight: 700;
-  color: #3c7ef933;
-  font-size: 30px;
-  line-height: 24px;
-  white-space: nowrap;
-  font-family: "Funnel Display", Helvetica;
-  letter-spacing: 0;
-  z-index: 2;
-}
-
-.landing-desktop-hi .jutsu-juno-FAQ {
-  position: absolute;
-  top: 90px;
-  left: 55px;
-  width: 260px;
-  height: 260px;
-  object-fit: contain;
-}
-
-.landing-desktop-hi .vector-3 {
-  position: absolute;
-  top: 76px;
-  left: 105px;
-  width: 257px;
-  height: 320px;
-}
-
-.landing-desktop-hi .ellipse {
-  position: absolute;
-  top: 229px;
-  left: 355px;
-  width: 14px;
-  height: 14px;
-  background-color: #f1f5fb;
-  border-radius: 7px;
-  border: 1px solid;
-  border-color: #3c7ef9;
-}
-
-.landing-desktop-hi .ellipse-2 {
-  position: absolute;
-  top: 75px;
-  left: 31px;
-  width: 8px;
-  height: 8px;
-  background-color: #3c7ef94c;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .ellipse-3 {
-  position: absolute;
-  top: 75px;
-  left: 55px;
-  width: 8px;
-  height: 8px;
-  background-color: #3c7ef945;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .ellipse-4 {
-  position: absolute;
-  top: 75px;
-  left: 79px;
-  width: 8px;
-  height: 8px;
-  background-color: #3c7ef926;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .ellipse-5 {
-  position: absolute;
-  top: 99px;
-  left: 31px;
-  width: 8px;
-  height: 8px;
-  background-color: #3c7ef94c;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .ellipse-6 {
-  position: absolute;
-  top: 99px;
-  left: 55px;
-  width: 8px;
-  height: 8px;
-  background-color: #3c7ef933;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .FAQ-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
-.landing-desktop-hi .FAQ-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 0px 0px 24px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-38 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #3c7ef9;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-39 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 36px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-40 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: #333333d9;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .FAQ-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  overflow: hidden;
-}
-
-.landing-desktop-hi .FAQ-item {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0px;
-  padding: 20px 0px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .FAQ-question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Links e botões */
+.landing-desktop-hi a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.landing-desktop-hi button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
   cursor: pointer;
+  text-align: left;
 }
 
-.landing-desktop-hi .text-wrapper-42 {
-  transition: transform 0.3s ease;
-  display: inline-block;
+.landing-desktop-hi a:focus-visible,
+.landing-desktop-hi button:focus-visible {
+  outline: 2px solid #3c7ef9;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
-.landing-desktop-hi .FAQ-item.active .text-wrapper-42 {
-  transform: rotate(20deg);
-}
-
-.landing-desktop-hi .FAQ-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition:
-    max-height 0.35s ease,
-    padding 0.35s ease;
-  padding: 0;
-}
-
-.landing-desktop-hi .FAQ-answer p {
-  color: #57595f;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Funnel Sans", Helvetica;
-  margin: 0;
-}
-
-.landing-desktop-hi .FAQ-item.active .FAQ-answer {
-  max-height: 200px;
-  padding: 12px 0 0;
-}
-
-.landing-desktop-hi .text-wrapper-41 {
-  position: relative;
-  flex: 1;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #0a1662;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.landing-desktop-hi .text-wrapper-42 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: #3c7ef9;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-
-
-.landing-desktop-hi .vector-4 {
-  position: relative;
-  width: 745.5px;
-  height: 1px;
-}
-
-.landing-desktop-hi .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 96px 0px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background: linear-gradient(
-    180deg,
-    rgba(241, 245, 251, 1) 0%,
-    rgba(215, 220, 234, 1) 100%
-  );
-}
-
-.landing-desktop-hi .contact-container {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  padding: 80px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .contact-content {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 60px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .contact-info {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  align-items: flex-start;
-  gap: 22px;
-  position: relative;
-}
-
-.landing-desktop-hi .contact-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-43 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: 55px;
-}
-
-.landing-desktop-hi .text-wrapper-44 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: #242731;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 30px;
-}
-
-.landing-desktop-hi .contact-form {
-  display: inline-flex;
-  align-items: flex-start;
-  padding: 32px 42px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .contact-form-content {
-  display: flex;
-  width: 560px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-45 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #000000;
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 22px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .frame {
-  flex-direction: column;
-  height: 35px;
-  align-items: flex-start;
-  justify-content: center;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  gap: 10px;
-  padding: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #f7f8fa;
-  border: 1px solid;
-  border-color: #dce3ed;
-}
-
-.landing-desktop-hi .text-wrapper-46 {
-  position: relative;
-  width: fit-content;
-  margin-top: -11.5px;
-  margin-bottom: -9.5px;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 400;
-  color: #333333;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .frame-2 {
-  height: 35px;
-  align-items: center;
-  display: flex;
-  gap: 10px;
-  padding: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #f7f8fa;
-  border: 1px solid;
-  border-color: #dce3ed;
-}
-
-.landing-desktop-hi .field-message {
-  height: 120px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.landing-desktop-hi .frame-3 {
-  height: 120px;
-  align-items: flex-start;
-  display: flex;
-  gap: 10px;
-  padding: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #f7f8fa;
-  border: 1px solid;
-  border-color: #dce3ed;
-}
-
-.landing-desktop-hi .text-wrapper-47 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 400;
-  color: #333333;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .CTA-2 {
-  all: unset;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #3c7ef9;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.landing-desktop-hi .full-final-CTA {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-  background-color: #d8ddea;
-}
-
-.landing-desktop-hi .final-CTA {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 400px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-  position: relative;
-  margin-left: -0.5px;
-  margin-right: -0.5px;
-  border-radius: 40px 40px 0px 0px;
-  background: linear-gradient(
-    180deg,
-    rgba(217, 222, 235, 0.5) 0%,
-    rgba(184, 203, 233, 1) 100%
-  );
-}
-
-.landing-desktop-hi .final-CTA-container {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  padding: 80px 0px;
-  position: relative;
-  flex: 0 0 auto;
-  margin-top: -20px;
-  margin-bottom: -20px;
-}
-
-.landing-desktop-hi .text-wrapper-48 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #3c7ef9;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-49 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-50 {
-  width: 560px;
-  font-weight: 400;
-  color: #242731;
-  font-size: 18px;
-  text-align: center;
-  line-height: 34px;
-  position: relative;
-  font-family: "Funnel Display", Helvetica;
-  letter-spacing: 0;
-}
-
-.landing-desktop-hi .CTA-3 {
-  all: unset;
-  box-sizing: border-box;
-  flex-direction: column;
-  background-color: #3c7ef9;
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
-  position: relative;
-  flex: 0 0 auto;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .cta-streaks-left {
-  position: absolute;
-  top: 180px;
-  left: -30px;
-  width: 480px;
-  height: auto;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-.landing-desktop-hi .cta-streaks-right {
-  position: absolute;
-  top: 180px;
-  right: -30px;
-  width: 480px;
-  height: auto;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-.landing-desktop-hi .footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #2f2e2e;
-}
-
-.landing-desktop-hi .footer-container {
-  display: flex;
-  flex-direction: column;
-  width: 1200px;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 48px 40px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .footer-main {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 0px 0px 20px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .footer-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-}
-
+/* Logotipo (header e footer) */
 .landing-desktop-hi .logomarca {
   display: flex;
-  width: 204px;
-  height: 38px;
+  width: 12.75rem;
+  height: 2.375rem;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -1715,78 +80,19 @@ body {
 
 .landing-desktop-hi .icone {
   position: relative;
-  width: 38px;
-  height: 38px;
+  width: 2.375rem;
+  height: 2.375rem;
 }
 
-.landing-desktop-hi .logotipo {
-  display: flex;
-  flex-direction: column;
-  width: 170px;
-  height: 38px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-left: -4px;
-}
 
-.landing-desktop-hi .vector-5 {
-  position: relative;
-  width: 156px;
-  height: 24px;
-}
-
-.landing-desktop-hi .text-wrapper-51 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: #e7e8ea;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.landing-desktop-hi .footer-links {
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .vector-6 {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 1px;
-}
-
-.landing-desktop-hi .footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-52 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
+/* ==========================================================================
+   02. HEADER
+   ========================================================================== */
 
 .landing-desktop-hi .header {
   display: flex;
   width: 100%;
-  height: 88px;
+  height: 5.5rem;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -1806,7 +112,9 @@ body {
 
 .landing-desktop-hi .header-container {
   display: flex;
-  width: 1200px;
+  width: 75rem;
+  max-width: calc(100% - 3rem);
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -1815,25 +123,25 @@ body {
 
 .landing-desktop-hi .vector-wrapper {
   display: flex;
-  width: 170px;
-  height: 38px;
+  width: 10.625rem;
+  height: 2.375rem;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-left: -4px;
+  margin-left: -0.25rem;
 }
 
 .landing-desktop-hi .vector-7 {
   position: relative;
-  width: 153.59px;
-  height: 24.4px;
+  width: 9.5994rem;
+  height: 1.525rem;
 }
 
 .landing-desktop-hi .navbar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 2rem;
   position: relative;
   flex: 0 0 auto;
 }
@@ -1844,9 +152,9 @@ body {
   font-family: "Funnel Sans", Helvetica;
   font-weight: 500;
   color: #242731;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   white-space: nowrap;
 }
 
@@ -1854,11 +162,11 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   position: relative;
   flex: 0 0 auto;
   background-color: #3c7ef9;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .landing-desktop-hi .text-wrapper-54 {
@@ -1868,17 +176,469 @@ body {
   font-family: "Funnel Sans", Helvetica;
   font-weight: 600;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   white-space: nowrap;
 }
 
-/* =================== Animação - números =================== */
 
-.landing-desktop-hi .text-wrapper-14,
+/* ==========================================================================
+   03. HERO
+   ========================================================================== */
+
+.landing-desktop-hi .hero {
+  display: flex;
+  min-height: 40rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background-color: #f3f7ff;
+}
+
+.landing-desktop-hi .hero-container {
+  display: flex;
+  width: 100%;
+  max-width: 75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+  align-self: stretch;
+}
+
+/* Texto */
+.landing-desktop-hi .hero-content {
+  display: flex;
+  flex-direction: column;
+  width: 35.5625rem;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.landing-desktop-hi .hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 600;
+  color: #3c7ef9;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.landing-desktop-hi .div {
+  position: relative;
+  align-self: stretch;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #242731;
+  font-size: 3.5rem;
+  letter-spacing: 0;
+  line-height: 3.75rem;
+}
+
+.landing-desktop-hi .p {
+  position: relative;
+  align-self: stretch;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 1.6875rem;
+}
+
+/* Botões */
+.landing-desktop-hi .hero-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #3c7ef9;
+  border-radius: 0.25rem;
+}
+
+.landing-desktop-hi .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  border-color: #d0d0d0;
+}
+
+.landing-desktop-hi .SECONDARY-CTA {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Ilustração */
+.landing-desktop-hi .hero-visual {
+  position: relative;
+  width: 35.4375rem;
+  max-width: 100%;
+}
+
+.landing-desktop-hi .hero-art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ==========================================================================
+   04. POR QUE APOIAR
+   ========================================================================== */
+
+.landing-desktop-hi .support-reason {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  position: relative;
+  width: 100%;
+  min-height: 45rem;
+  padding: 6rem 1.5rem;
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    rgba(243, 247, 255, 1) 0%,
+    rgba(231, 240, 255, 1) 100%
+  );
+}
+
+.landing-desktop-hi .support-reason-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  position: relative;
+  width: 100%;
+  max-width: 75rem;
+  flex: 0 0 auto;
+}
+
+/* Introdução */
+.landing-desktop-hi .support-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.75rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-6 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #3c7ef9;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.landing-desktop-hi .text-wrapper-7 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #242731;
+  font-size: 2.5rem;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.landing-desktop-hi .text-wrapper-8 {
+  position: relative;
+  width: 100%;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: #333333;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* Motivos */
+.landing-desktop-hi .support-reasons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.9375rem;
+  position: relative;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .reason-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .reason-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .div-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .reason-item {
+  display: flex;
+  flex-direction: column;
+  width: 22.5rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.landing-desktop-hi .text-wrapper-9 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 500;
+  color: #3c7ef9;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.landing-desktop-hi .text-wrapper-10 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #0a1662;
+  font-size: 1.625rem;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.landing-desktop-hi .text-wrapper-11 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 400;
+  color: #333333;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.landing-desktop-hi .text-wrapper-12 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #0a1662;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.landing-desktop-hi .reason-path {
+  position: absolute;
+  top: -3.375rem;
+  left: 0;
+  width: 75rem;
+  height: 24.5rem;
+}
+
+
+/* ==========================================================================
+   05. IMPACTO
+   ========================================================================== */
+
+.landing-desktop-hi .impact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  position: relative;
+  width: 100%;
+  min-height: 39.125rem;
+  padding: 6rem 1.5rem;
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    rgba(232, 240, 255, 1) 0%,
+    rgba(217, 232, 255, 1) 100%
+  );
+}
+
+.landing-desktop-hi .impact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3rem;
+  position: relative;
+  width: 100%;
+  max-width: 75rem;
+  min-height: 27.125rem;
+}
+
+.landing-desktop-hi .dot-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13.375rem;
+  height: 14.5rem;
+}
+
+/* Introdução */
+.landing-desktop-hi .impact-intro {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-13 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -0.1875rem;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #242731;
+  font-size: 2.5rem;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* Métricas */
+.landing-desktop-hi .impact-metric {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  align-self: stretch;
+  width: 100%;
+}
+
+.landing-desktop-hi .metric,
+.landing-desktop-hi .metric-2,
+.landing-desktop-hi .metric-3,
+.landing-desktop-hi .metric-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.landing-desktop-hi .text-wrapper-14 {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #0a1662;
+  font-size: 3.5rem;
+  letter-spacing: 0;
+  line-height: 3.25rem;
+  white-space: nowrap;
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
 .landing-desktop-hi .text-wrapper-15 {
   display: inline-block;
+  position: relative;
+  width: 100%;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.375rem;
+  white-space: normal;
+  text-align: center;
   transition: transform 0.25s ease;
 }
 
@@ -1896,69 +656,875 @@ body {
   transform: scale(1.15);
 }
 
-/* =================== Animação - cards =================== */
+
+/* ==========================================================================
+   06. COMO APOIAR
+   ========================================================================== */
+
+.landing-desktop-hi .support {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  background: linear-gradient(
+    180deg,
+    rgba(218, 233, 255, 1) 0%,
+    rgba(241, 245, 251, 1) 100%
+  );
+}
+
+.landing-desktop-hi .support-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  position: relative;
+  width: 100%;
+  max-width: 75rem;
+  min-height: 39.25rem;
+  padding: 3.75rem 0;
+}
+
+/* Introdução */
+.landing-desktop-hi .support-intro-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-17 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #3c7ef9;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-18 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #242731;
+  font-size: 2.5rem;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.landing-desktop-hi .text-wrapper-19 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 400;
+  color: #333333;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+
+/* Cards */
+.landing-desktop-hi .support-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
 
 .landing-desktop-hi .support-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 20.625rem;
+  min-height: 21.25rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #dde3ec;
+  overflow: hidden;
   transition:
     transform 0.3s ease-out,
-    box-shadow 0.3s ease-out,
-    background-color 0.3s ease-out;
+    box-shadow 0.3s ease-out;
 }
 
 .landing-desktop-hi .support-option:hover {
   transform: scale(1.03);
   box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
-  background-color: #f0f4ff;
-  /* um azul bem clarinho no hover */
 }
 
 .landing-desktop-hi .support-option-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 21.25rem;
+  min-height: 23.75rem;
+  padding: 1.5rem;
+  background-color: #0a1662e6;
+  border-radius: 0.75rem;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.15);
   transition:
     transform 0.3s ease-out,
-    box-shadow 0.3s ease-out,
-    background-color 0.3s ease-out;
+    box-shadow 0.3s ease-out;
 }
 
 .landing-desktop-hi .support-option-2:hover {
   transform: scale(1.03);
   box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
-  background-color: #0d1c7a;
-  /* uma versão um pouco mais clara do azul-marinho original */
 }
 
-/* ==================== ACESSIBILIDADE — resets e foco ==================== */
-
-/* Trocamos vários <div> clicáveis por <a>/<button> reais.
-   Estas regras devolvem a eles a mesma aparência "sem estilo de navegador"
-   que os <div> já tinham, sem alterar o visual existente. */
-.landing-desktop-hi a {
-  text-decoration: none;
-  color: inherit;
+.landing-desktop-hi .badge-row {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.3125rem 0.75rem;
+  position: absolute;
+  top: -1.125rem;
+  left: 6.625rem;
+  background-color: #ffffff;
+  border-radius: 999px;
+  border: 1px solid;
+  border-color: #3c7ef9;
 }
 
-.landing-desktop-hi button {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background: none;
-  border: none;
+.landing-desktop-hi .option-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .option-content-2 {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  align-items: flex-start;
+  gap: 0.75rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.landing-desktop-hi .div-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .vector-2 {
+  position: relative;
+  width: 12.3438rem;
+  height: 1px;
+  margin-bottom: -1px;
+}
+
+/* Cards — títulos */
+.landing-desktop-hi .text-wrapper-20 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #0a1662;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-21 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #0a1662;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-26 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #172675;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-27 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #98bafb;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-28 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+/* Cards — benefícios */
+.landing-desktop-hi .benefits-option,
+.landing-desktop-hi .benefits-option-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .div-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-22 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #242731;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-29 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .div-3 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .div-5 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+
+.landing-desktop-hi .span {
+  font-weight: 600;
+  color: #3c7ef9;
+}
+
+.landing-desktop-hi .text-wrapper-23 {
+  color: #000000;
+}
+
+.landing-desktop-hi .text-wrapper-30 {
+  font-weight: 600;
+  color: #3d7ff5;
+}
+
+.landing-desktop-hi .text-wrapper-31 {
+  color: #dce8ff;
+}
+
+.landing-desktop-hi .text-wrapper-33 {
+  color: #dde8ff;
+}
+
+.landing-desktop-hi .text-wrapper-35 {
+  color: #242731;
+}
+
+/* Cards — botões */
+.landing-desktop-hi .CTA {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #3c7ef9;
+  border-radius: 0.25rem;
   cursor: pointer;
-  text-align: left;
 }
 
-.landing-desktop-hi .logomarca {
+.landing-desktop-hi .button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 0.25rem;
   cursor: pointer;
 }
 
-/* Campos de formulário (input/textarea) preenchendo o "frame" já estilizado,
-   sem borda/fundo própria — o visual continua vindo do .frame/.frame-2/.frame-3 */
+.landing-desktop-hi .text-wrapper-25 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-34 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #0a1662;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   07. FAQ
+   ========================================================================== */
+
+.landing-desktop-hi .FAQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  padding: 6rem 1.5rem;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  background-color: #f1f5fb;
+}
+
+.landing-desktop-hi .FAQ-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  position: relative;
+  width: 100%;
+  max-width: 75rem;
+  flex: 0 0 auto;
+}
+
+/* Ilustração */
+.landing-desktop-hi .FAQ-visual {
+  position: relative;
+  width: 23.0625rem;
+  height: 22.5rem;
+}
+
+.landing-desktop-hi .text-wrapper-37 {
+  display: none;
+}
+
+.landing-desktop-hi .jutsu-juno-FAQ {
+  position: absolute;
+  top: 8.75rem;
+  left: 3.4375rem;
+  width: 16.25rem;
+  height: 16.25rem;
+  object-fit: contain;
+}
+
+.landing-desktop-hi .vector-3 {
+  position: absolute;
+  top: 4.75rem;
+  left: 6.5625rem;
+  width: 16.0625rem;
+  height: 20rem;
+}
+
+.landing-desktop-hi .ellipse {
+  position: absolute;
+  top: 14.3125rem;
+  left: 22.1875rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  background-color: #f1f5fb;
+  border-radius: 0.4375rem;
+  border: 1px solid;
+  border-color: #3c7ef9;
+}
+
+.landing-desktop-hi .ellipse-2,
+.landing-desktop-hi .ellipse-3,
+.landing-desktop-hi .ellipse-4,
+.landing-desktop-hi .ellipse-5,
+.landing-desktop-hi .ellipse-6 {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.landing-desktop-hi .ellipse-2 {
+  top: 4.6875rem;
+  left: 1.9375rem;
+  background-color: #3c7ef94c;
+}
+
+.landing-desktop-hi .ellipse-3 {
+  top: 4.6875rem;
+  left: 3.4375rem;
+  background-color: #3c7ef945;
+}
+
+.landing-desktop-hi .ellipse-4 {
+  top: 4.6875rem;
+  left: 4.9375rem;
+  background-color: #3c7ef926;
+}
+
+.landing-desktop-hi .ellipse-5 {
+  top: 6.1875rem;
+  left: 1.9375rem;
+  background-color: #3c7ef94c;
+}
+
+.landing-desktop-hi .ellipse-6 {
+  top: 6.1875rem;
+  left: 3.4375rem;
+  background-color: #3c7ef933;
+}
+
+/* Conteúdo */
+.landing-desktop-hi .FAQ-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.landing-desktop-hi .FAQ-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0 0 1.5rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-38 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #3c7ef9;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-39 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #0a1662;
+  font-size: 2.25rem;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.landing-desktop-hi .text-wrapper-40 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: #333333d9;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+
+/* Perguntas */
+.landing-desktop-hi .FAQ-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .FAQ-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 1.25rem 0;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-bottom: 1px solid #dde3ec;
+}
+
+.landing-desktop-hi .FAQ-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.landing-desktop-hi .text-wrapper-41 {
+  position: relative;
+  flex: 1;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #0a1662;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+
+.landing-desktop-hi .text-wrapper-42 {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: #3c7ef9;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+
+.landing-desktop-hi .FAQ-item.active .text-wrapper-42 {
+  transform: rotate(20deg);
+}
+
+.landing-desktop-hi .FAQ-answer {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease,
+    visibility 0s linear 0.35s;
+}
+
+.landing-desktop-hi .FAQ-item.active .FAQ-answer {
+  max-height: 37.5rem;
+  padding: 0.75rem 0 0;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.landing-desktop-hi .FAQ-answer p {
+  margin: 0;
+  font-family: "Funnel Sans", Helvetica;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #57595f;
+}
+
+
+/* ==========================================================================
+   08. CONTATO
+   ========================================================================== */
+
+.landing-desktop-hi .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  padding: 6rem 0;
+  flex: 0 0 auto;
+  background: linear-gradient(
+    180deg,
+    rgba(241, 245, 251, 1) 0%,
+    rgba(215, 220, 234, 1) 100%
+  );
+}
+
+.landing-desktop-hi .contact-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 1.5rem;
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .contact-content {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 3.75rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+/* Texto */
+.landing-desktop-hi .contact-info {
+  display: flex;
+  flex-direction: column;
+  width: 31.25rem;
+  align-items: flex-start;
+  gap: 1.375rem;
+  position: relative;
+}
+
+.landing-desktop-hi .contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-43 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #0a1662;
+  font-size: 2.5rem;
+  letter-spacing: 0;
+  line-height: 3.4375rem;
+}
+
+.landing-desktop-hi .text-wrapper-44 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: #242731;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  line-height: 1.875rem;
+}
+
+/* Formulário */
+.landing-desktop-hi .contact-form {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 2rem 2.625rem;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .contact-form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  position: relative;
+  width: 35rem;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-45 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 1.125rem;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 1.375rem;
+  white-space: nowrap;
+}
+
+/* Campos */
+.landing-desktop-hi .frame,
+.landing-desktop-hi .frame-2,
+.landing-desktop-hi .frame-3 {
+  display: flex;
+  gap: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.5rem;
+}
+
+.landing-desktop-hi .frame,
+.landing-desktop-hi .frame-2 {
+  align-items: center;
+  min-height: 2.1875rem;
+  overflow: hidden;
+}
+
+.landing-desktop-hi .frame-3 {
+  flex-direction: column;
+  min-height: 7.5rem;
+}
+
+.landing-desktop-hi .field-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.landing-desktop-hi .text-wrapper-46 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.7188rem;
+  margin-bottom: -0.5938rem;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 400;
+  color: #333333;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-47 {
+  position: relative;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 400;
+  color: #333333;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+
 .landing-desktop-hi .form-input {
+  width: 100%;
   border: none;
   background: transparent;
   outline: none;
-  width: 100%;
   resize: none;
   font-family: "Funnel Sans", Helvetica;
+}
+
+.landing-desktop-hi .field-message .form-input {
+  display: block;
+  flex: 1;
+  min-height: 6.25rem;
+  box-sizing: border-box;
 }
 
 .landing-desktop-hi .form-input::placeholder {
@@ -1966,20 +1532,461 @@ body {
   opacity: 1;
 }
 
-/* Foco visível: como o campo em si não tem borda própria (acima),
-   mostramos o foco destacando o "frame" que o envolve */
 .landing-desktop-hi .frame:focus-within,
 .landing-desktop-hi .frame-2:focus-within,
 .landing-desktop-hi .frame-3:focus-within {
   outline: 2px solid #3c7ef9;
   outline-offset: 1px;
+  border-color: #3c7ef9;
 }
 
-/* Foco visível para todo elemento navegável por teclado (links, botões) */
-.landing-desktop-hi a:focus-visible,
-.landing-desktop-hi button:focus-visible {
-  outline: 2px solid #3c7ef9;
-  outline-offset: 2px;
-  border-radius: 4px;
+/* Botão de envio */
+.landing-desktop-hi .CTA-2 {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #3c7ef9;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  cursor: pointer;
 }
 
+
+/* ==========================================================================
+   09. CTA FINAL
+   ========================================================================== */
+
+.landing-desktop-hi .full-final-CTA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #d8ddea;
+}
+
+.landing-desktop-hi .final-CTA {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.625rem;
+  position: relative;
+  margin-left: -0.5px;
+  margin-right: -0.5px;
+  border-radius: 2.5rem 2.5rem 0 0;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(217, 222, 235, 0.5) 0%,
+    rgba(184, 203, 233, 1) 100%
+  );
+}
+
+.landing-desktop-hi .final-CTA-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem 0;
+  position: relative;
+  margin-top: -1.25rem;
+  margin-bottom: -1.25rem;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-48 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #3c7ef9;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-49 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #0a1662;
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.landing-desktop-hi .text-wrapper-50 {
+  position: relative;
+  width: 100%;
+  max-width: 35rem;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: #242731;
+  font-size: 1.125rem;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 2.125rem;
+}
+
+.landing-desktop-hi .CTA-3 {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #3c7ef9;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.landing-desktop-hi .cta-streaks-left {
+  position: absolute;
+  top: 11.25rem;
+  left: -1.875rem;
+  width: 30rem;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.landing-desktop-hi .cta-streaks-right {
+  position: absolute;
+  top: 11.25rem;
+  right: -1.875rem;
+  width: 30rem;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+/* ==========================================================================
+   10. FOOTER
+   ========================================================================== */
+
+.landing-desktop-hi .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.625rem;
+  position: relative;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #2f2e2e;
+}
+
+.landing-desktop-hi .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 3rem 2.5rem;
+  position: relative;
+  width: 100%;
+  max-width: 75rem;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .footer-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 0 1.25rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.125rem;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.landing-desktop-hi .logotipo {
+  display: flex;
+  flex-direction: column;
+  width: 10.625rem;
+  height: 2.375rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: -0.25rem;
+}
+
+.landing-desktop-hi .vector-5 {
+  position: relative;
+  width: 9.75rem;
+  height: 1.5rem;
+}
+
+.landing-desktop-hi .text-wrapper-51 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: #e7e8ea;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+
+.landing-desktop-hi .footer-links {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .vector-6 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 1px;
+}
+
+.landing-desktop-hi .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-52 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   11. ACESSIBILIDADE
+   ========================================================================== */
+
+/* Alto contraste */
+.high-contrast,
+.high-contrast .landing-desktop-hi {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast .landing-desktop-hi * {
+  color: #fff !important;
+}
+
+.high-contrast .landing-desktop-hi a,
+.high-contrast .landing-desktop-hi button {
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+/* Escala de cinza */
+.grayscale {
+  filter: grayscale(100%);
+}
+
+/* Inversão de cores */
+.invert-colors {
+  filter: invert(100%);
+}
+
+/* Tamanho do texto */
+.large-text {
+  font-size: 120% !important;
+}
+
+.extra-large-text {
+  font-size: 140% !important;
+}
+
+/* Botão */
+.landing-desktop-hi .accessibility-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.625rem;
+  height: 2.625rem;
+  margin-left: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.landing-desktop-hi .accessibility-button:hover {
+  background-color: #f0f4ff;
+  border-color: #3c7ef9;
+  color: #3c7ef9;
+}
+
+/* Painel */
+.accessibility-menu {
+  position: absolute;
+  top: 3.75rem;
+  right: 0;
+  width: 13.75rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #d9e8ff;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1001;
+}
+
+.accessibility-menu h2 {
+  margin: 0 0 0.75rem;
+  font-family: "Funnel Display", Helvetica;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #222222;
+}
+
+.accessibility-menu button {
+  width: 100%;
+  padding: 0.625rem;
+  margin-top: 0.375rem;
+  border: 1px solid #d9e8ff;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #222222;
+  font-family: "Funnel Sans", Helvetica;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.accessibility-menu button:hover {
+  background-color: #f0f6ff;
+}
+
+
+/* ==========================================================================
+   12. RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 79em) {
+  .landing-desktop-hi .reason-path {
+    display: none;
+  }
+
+  .landing-desktop-hi .contact-container {
+    width: 100%;
+  }
+
+  .landing-desktop-hi .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .landing-desktop-hi .contact-info,
+  .landing-desktop-hi .contact-form-content {
+    width: 100%;
+    max-width: 35rem;
+  }
+
+  .landing-desktop-hi .contact-form {
+    width: 100%;
+    max-width: 40.25rem;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 64em) {
+  .landing-desktop-hi .hero-container,
+  .landing-desktop-hi .FAQ-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .landing-desktop-hi .hero-content,
+  .landing-desktop-hi .FAQ-content,
+  .landing-desktop-hi .impact-intro {
+    width: 100%;
+  }
+
+  .landing-desktop-hi .hero-visual {
+    width: 100%;
+    max-width: 35.4375rem;
+  }
+
+  .landing-desktop-hi .reason-row,
+  .landing-desktop-hi .reason-item-wrapper,
+  .landing-desktop-hi .div-wrapper {
+    justify-content: flex-start;
+  }
+
+  .landing-desktop-hi .reason-item {
+    width: 100%;
+    max-width: 22.5rem;
+  }
+
+  .landing-desktop-hi .impact-metric {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+
+  .landing-desktop-hi .support-options {
+    flex-direction: column;
+  }
+
+  .landing-desktop-hi .support-option,
+  .landing-desktop-hi .support-option-2 {
+    width: 100%;
+    max-width: 26rem;
+  }
+
+  .landing-desktop-hi .cta-streaks-left,
+  .landing-desktop-hi .cta-streaks-right,
+  .landing-desktop-hi .FAQ-visual {
+    display: none;
+  }
+}
