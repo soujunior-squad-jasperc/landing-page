@@ -677,42 +677,44 @@ body {
 /* ==========================================================================
    06. COMO APOIAR
    ========================================================================== */
-
+/* Cards */
 .landing-desktop-hi .support {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.625rem;
   position: relative;
   align-self: stretch;
   width: 100%;
-  padding: 0 1.5rem;
+  padding: 6rem 1.5rem;
   box-sizing: border-box;
-  flex: 0 0 auto;
   background: linear-gradient(180deg,
-      rgba(218, 233, 255, 1) 0%,
+      rgba(217, 232, 255, 1) 0%,
       rgba(241, 245, 251, 1) 100%);
 }
 
 .landing-desktop-hi .support-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2.5rem;
+  align-items: flex-start;
+  gap: 3rem;
   position: relative;
   width: 100%;
   max-width: 75rem;
-  min-height: 39.25rem;
-  padding: 3.75rem 0;
+  flex: 0 0 auto;
 }
 
 /* Introdução */
 .landing-desktop-hi .support-intro-2 {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.75rem;
   position: relative;
+  align-self: stretch;
+  width: 100%;
   flex: 0 0 auto;
 }
 
@@ -733,7 +735,7 @@ body {
   position: relative;
   width: fit-content;
   font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
+  font-weight: 600;
   color: #242731;
   font-size: 2.5rem;
   letter-spacing: 0;
@@ -742,8 +744,8 @@ body {
 
 .landing-desktop-hi .text-wrapper-19 {
   position: relative;
-  width: fit-content;
-  font-family: "Funnel Sans", Helvetica;
+  width: 100%;
+  font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #333333;
   font-size: 1.125rem;
@@ -764,6 +766,17 @@ body {
 }
 
 .landing-desktop-hi .support-option {
+  --card-bg: #ffffff;
+  --card-border: #dde3ec;
+  --card-eyebrow: #0a1662;
+  --card-title: #0a1662;
+  --card-label: #242731;
+  --card-text: #000000;
+  --card-check: #3c7ef9;
+  --card-cta-bg: #3c7ef9;
+  --card-cta-color: #ffffff;
+  --card-cta-border: transparent;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -772,9 +785,9 @@ body {
   width: 20.625rem;
   min-height: 21.25rem;
   padding: 1.5rem;
-  background-color: #ffffff;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 0.75rem;
-  border: 1px solid #dde3ec;
   overflow: hidden;
   transition:
     transform 0.3s ease-out,
@@ -786,157 +799,144 @@ body {
   box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
 }
 
-.landing-desktop-hi .support-option-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+/* Card — destaque */
+.landing-desktop-hi .support-option--featured {
+  --card-bg: #0a1662e6;
+  --card-border: rgba(255, 255, 255, 0.15);
+  --card-eyebrow: #98bafb;
+  --card-title: #ffffff;
+  --card-label: #ffffff;
+  --card-text: #dce8ff;
+  --card-cta-bg: #ffffff;
+  --card-cta-color: #0a1662;
+  --card-cta-border: #000000;
+
   width: 21.25rem;
   min-height: 23.75rem;
-  padding: 1.5rem;
-  background-color: #0a1662e6;
-  border-radius: 0.75rem;
-  border: 1px solid;
-  border-color: rgba(255, 255, 255, 0.15);
-  transition:
-    transform 0.3s ease-out,
-    box-shadow 0.3s ease-out;
+  overflow: visible;
 }
 
-.landing-desktop-hi .support-option-2:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
-}
-
-.landing-desktop-hi .badge-row {
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0.3125rem 0.75rem;
+.landing-desktop-hi .support-option__badge {
   position: absolute;
   top: -1.125rem;
-  left: 6.625rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3125rem 0.75rem;
   background-color: #ffffff;
+  border: 1px solid #3c7ef9;
   border-radius: 999px;
-  border: 1px solid;
-  border-color: #3c7ef9;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #172675;
+  white-space: nowrap;
 }
 
-.landing-desktop-hi .option-content {
+/* Card — conteúdo */
+.landing-desktop-hi .support-option__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.75rem;
-  position: relative;
   align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
 }
 
-.landing-desktop-hi .option-content-2 {
+.landing-desktop-hi .support-option__eyebrow {
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--card-eyebrow);
+}
+
+.landing-desktop-hi .support-option__header {
   display: flex;
-  flex-direction: column;
-  height: 15rem;
-  align-items: flex-start;
-  gap: 0.75rem;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.landing-desktop-hi .div-2 {
-  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  position: relative;
-  flex: 0 0 auto;
 }
 
-.landing-desktop-hi .vector-2 {
-  position: relative;
+.landing-desktop-hi .support-option__title {
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--card-title);
+}
+
+.landing-desktop-hi .support-option__divider {
   width: 12.3438rem;
   height: 1px;
-  margin-bottom: -1px;
 }
 
-/* Cards — títulos */
-.landing-desktop-hi .text-wrapper-20 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #0a1662;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-21 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 1.25rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-26 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #172675;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-27 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #98bafb;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-28 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 1.25rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
-/* Cards — benefícios */
-.landing-desktop-hi .benefits-option,
-.landing-desktop-hi .benefits-option-2 {
-  display: inline-flex;
+/* Card — benefícios */
+.landing-desktop-hi .support-option__benefits {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  position: relative;
-  flex: 0 0 auto;
 }
 
+.landing-desktop-hi .support-option__benefits-label {
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--card-label);
+}
+
+.landing-desktop-hi .benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.landing-desktop-hi .benefit-item {
+  display: flex;
+  gap: 0.3em;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--card-text);
+}
+
+.landing-desktop-hi .benefit-item::before {
+  content: "✓";
+  content: "✓" / "";
+  flex: none;
+  font-weight: 600;
+  color: var(--card-check);
+}
+
+/* Card — botão */
+.landing-desktop-hi .support-option__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  flex: 0 0 auto;
+  background-color: var(--card-cta-bg);
+  border: 1px solid var(--card-cta-border);
+  border-radius: 0.25rem;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--card-cta-color);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Usados também em outras seções (Contato e CTA final) */
 .landing-desktop-hi .div-4 {
   display: flex;
   flex-direction: column;
@@ -948,13 +948,13 @@ body {
   flex: 0 0 auto;
 }
 
-.landing-desktop-hi .text-wrapper-22 {
+.landing-desktop-hi .text-wrapper-25 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #242731;
+  font-weight: 700;
+  color: #ffffff;
   font-size: 1rem;
   letter-spacing: 0;
   line-height: 1.5rem;
@@ -1023,38 +1023,6 @@ body {
   color: #242731;
 }
 
-/* Cards — botões */
-.landing-desktop-hi .CTA {
-  all: unset;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #3c7ef9;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-.landing-desktop-hi .button {
-  all: unset;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #000000;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
 
 .landing-desktop-hi .text-wrapper-25 {
   position: relative;
@@ -1068,19 +1036,6 @@ body {
   line-height: 1.5rem;
   white-space: nowrap;
 }
-
-.landing-desktop-hi .text-wrapper-34 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 1rem;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  white-space: nowrap;
-}
-
 
 /* ==========================================================================
    07. FAQ
@@ -1138,6 +1093,7 @@ body {
   z-index: 5;
 }
 
+/* Pousa o mascote com os pés alinhados na linha inferior */
 .landing-desktop-hi .jutsu-juno-FAQ {
   position: absolute;
   top: 8.15rem;
@@ -1585,6 +1541,7 @@ body {
   flex: 0 0 auto;
   background-color: #3c7ef9;
   border-radius: 0.25rem;
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -1726,8 +1683,7 @@ body {
 }
 
 /* Botões dos 3 cards — permanecem sem movimento */
-.landing-desktop-hi .support-option .CTA,
-.landing-desktop-hi .support-option-2 .button {
+.landing-desktop-hi .support-option__cta {
   transform: none;
   box-shadow: none;
 }
@@ -1890,7 +1846,6 @@ body {
   line-height: 1.5rem;
   white-space: nowrap;
 }
-
 
 /* ==========================================================================
    11. ACESSIBILIDADE
@@ -2066,21 +2021,22 @@ body {
     flex-direction: column;
   }
 
-  .landing-desktop-hi .support-option,
-  .landing-desktop-hi .support-option-2 {
+  .landing-desktop-hi .support-option {
     width: 100%;
     max-width: 26rem;
   }
 
-  .landing-desktop-hi .cta-streaks-left,
-  .landing-desktop-hi .cta-streaks-right,
+
   .landing-desktop-hi .FAQ-visual {
     display: none;
   }
 
-
-
 }
+
+.landing-desktop-hi .support-carousel-controls {
+  display: none;
+}
+
 
 
 /* ==========================================================================
@@ -2098,7 +2054,7 @@ body {
    ========================================================================== */
 
 
-   
+
 
 @media (max-width: 768px) {
 
@@ -2350,27 +2306,22 @@ body {
   }
 
   /* Tamanho dos cards no mobile */
-  .landing-desktop-hi .support-option,
-  .landing-desktop-hi .support-option-2 {
+  .landing-desktop-hi .support-option{
     flex: 0 0 22rem;
     width: 22rem;
   }
 
   /* Controles do carrossel */
   .landing-desktop-hi .support-carousel-controls {
-    position: absolute;
-
-    left: calc(23rem + 11rem);
-    bottom: -3.5rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
 
-    width: max-content;
+    width: 100%;
+    margin-top: 1.5rem;
 
-    transform: translateX(-50%);
+    position: relative;
     z-index: 10;
   }
 
