@@ -1,41 +1,224 @@
+/* ==========================================================================
+   SOUJUNIOR — LANDING PAGE
+
+   Índice
+   01. Base
+   02. Header
+   03. Hero
+   04. Por que apoiar
+   05. Impacto
+   06. Como apoiar
+   07. FAQ
+   08. Contato
+   09. CTA final
+   10. Footer
+   11. Acessibilidade
+   12. Responsividade
+
+   Convenções
+   - Tamanhos e espaçamentos em rem (1rem = 16px) e %.
+   - Bordas, linhas e sombras de 1px permanecem em px.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   01. BASE
+   ========================================================================== */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
 .landing-desktop-hi {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ededed;
+  overflow-y: auto;
+}
+
+/* Links e botões */
+.landing-desktop-hi a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.landing-desktop-hi button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.landing-desktop-hi a:focus-visible,
+.landing-desktop-hi button:focus-visible {
+  outline: 2px solid #3c7ef9;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Logotipo (header e footer) */
+.landing-desktop-hi .logomarca {
+  display: flex;
+  width: 12.75rem;
+  height: 2.375rem;
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #ededed;
-  overflow-y: scroll;
 }
+
+.landing-desktop-hi .icone {
+  position: relative;
+  width: 2.375rem;
+  height: 2.375rem;
+}
+
+
+/* ==========================================================================
+   02. HEADER
+   ========================================================================== */
+
+.landing-desktop-hi .header {
+  display: flex;
+  width: 100%;
+  height: 5.5rem;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.landing-desktop-hi .header.scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.landing-desktop-hi .header-container {
+  display: flex;
+  width: 75rem;
+  max-width: calc(100% - 3rem);
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  align-self: stretch;
+}
+
+.landing-desktop-hi .vector-wrapper {
+  display: flex;
+  width: 10.625rem;
+  height: 2.375rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: -0.25rem;
+}
+
+.landing-desktop-hi .vector-7 {
+  position: relative;
+  width: 9.5994rem;
+  height: 1.525rem;
+}
+
+.landing-desktop-hi .navbar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-53 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 500;
+  color: #242731;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .apoie-agora-CTA {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #3c7ef9;
+  border-radius: 0.5rem;
+}
+
+.landing-desktop-hi .text-wrapper-54 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   03. HERO
+   ========================================================================== */
 
 .landing-desktop-hi .hero {
   display: flex;
-  height: 640px;
+  min-height: 40rem;
   align-items: center;
   justify-content: center;
   position: relative;
   align-self: stretch;
   width: 100%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
   background-color: #f3f7ff;
 }
 
 .landing-desktop-hi .hero-container {
   display: flex;
-  width: 1200px;
+  width: 100%;
+  max-width: 75rem;
   align-items: center;
   justify-content: center;
-  gap: 64px;
+  gap: 4rem;
   position: relative;
   align-self: stretch;
 }
 
+/* Texto */
 .landing-desktop-hi .hero-content {
   display: flex;
   flex-direction: column;
-  width: 569px;
+  width: 35.5625rem;
   align-items: flex-start;
   justify-content: center;
-  gap: 24px;
+  gap: 1.5rem;
   position: relative;
 }
 
@@ -43,7 +226,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 1rem;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -57,7 +240,7 @@
   font-family: "Funnel Sans", Helvetica;
   font-weight: 600;
   color: #3c7ef9;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -68,9 +251,9 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 700;
   color: #242731;
-  font-size: 56px;
+  font-size: 3.5rem;
   letter-spacing: 0;
-  line-height: 60px;
+  line-height: 3.75rem;
 }
 
 .landing-desktop-hi .p {
@@ -79,16 +262,17 @@
   font-family: "Funnel Sans", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0;
-  line-height: 27px;
+  line-height: 1.6875rem;
 }
 
+/* Botões */
 .landing-desktop-hi .hero-actions {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 1rem;
   position: relative;
   flex: 0 0 auto;
 }
@@ -97,11 +281,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   position: relative;
   flex: 0 0 auto;
   background-color: #3c7ef9;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .landing-desktop-hi .text-wrapper-2 {
@@ -111,7 +295,7 @@
   font-family: "Inter", Helvetica;
   font-weight: 700;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
@@ -121,10 +305,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   position: relative;
   flex: 0 0 auto;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid;
   border-color: #d0d0d0;
 }
@@ -135,16 +319,17 @@
   font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
 }
 
+/* Ilustração */
 .landing-desktop-hi .hero-visual {
   position: relative;
-  width: 567px;
-  height: 400px;
+  width: 35.4375rem;
+  max-width: 100%;
 }
 
 .landing-desktop-hi .hero-glow {
@@ -181,7 +366,7 @@
 
 .landing-desktop-hi .mascot-juno {
   position: absolute;
-  top: 204px;
+  top: 200px; /* Aumente este valor para descer mais o bonequinho */
   left: 353px;
   width: 200px;
   height: 200px;
@@ -248,84 +433,58 @@
   height: 320px;
 }
 
-.landing-desktop-hi .line-connector {
-  position: absolute;
-  top: 51px;
-  left: 55px;
-  width: 19px;
-  height: 10px;
+.landing-desktop-hi .hero-art {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.landing-desktop-hi .node-circle {
-  position: absolute;
-  top: 0;
-  left: -9px;
-  width: 72px;
-  height: 72px;
-  background-color: #e7e8ea;
-  border-radius: 36px;
-  border: 1px solid;
-  border-color: #0a1662;
-}
 
-.landing-desktop-hi .text-wrapper-5 {
-  position: absolute;
-  top: 27px;
-  left: 16px;
-  font-weight: 500;
-  color: #000000;
-  font-size: 14px;
-  line-height: normal;
-  font-family: "Funnel Display", Helvetica;
-  letter-spacing: 0;
-}
-
-.landing-desktop-hi .vector {
-  position: absolute;
-  top: 51px;
-  left: 166px;
-  width: 69px;
-  height: 69px;
-}
+/* ==========================================================================
+   04. POR QUE APOIAR
+   ========================================================================== */
 
 .landing-desktop-hi .support-reason {
-  height: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 96px 0px;
   align-self: stretch;
+  position: relative;
   width: 100%;
+  min-height: 45rem;
+  padding: 6rem 1.5rem;
+  box-sizing: border-box;
   background: linear-gradient(
     180deg,
     rgba(243, 247, 255, 1) 0%,
     rgba(231, 240, 255, 1) 100%
   );
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
 }
 
 .landing-desktop-hi .support-reason-2 {
-  width: 1200px;
-  align-items: flex-start;
-  gap: 64px;
-  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
   position: relative;
+  width: 100%;
+  max-width: 75rem;
+  flex: 0 0 auto;
 }
 
+/* Introdução */
 .landing-desktop-hi .support-intro {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 12px;
+  gap: 0.75rem;
+  position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-  display: flex;
-  position: relative;
 }
 
 .landing-desktop-hi .text-wrapper-6 {
@@ -335,7 +494,7 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 600;
   color: #3c7ef9;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -346,36 +505,57 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 600;
   color: #242731;
-  font-size: 40px;
+  font-size: 2.5rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .landing-desktop-hi .text-wrapper-8 {
   position: relative;
-  width: 1200px;
+  width: 100%;
   font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #333333;
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
+/* Motivos */
 .landing-desktop-hi .support-reasons {
+  display: flex;
   flex-direction: column;
-  width: 1200px;
   align-items: flex-start;
   justify-content: center;
-  gap: 15px;
-  flex: 0 0 auto;
-  display: flex;
+  gap: 0.9375rem;
   position: relative;
+  width: 100%;
+  flex: 0 0 auto;
 }
 
 .landing-desktop-hi .reason-row {
-  align-items: center;
   display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .reason-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .div-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -385,9 +565,9 @@
 .landing-desktop-hi .reason-item {
   display: flex;
   flex-direction: column;
-  width: 360px;
+  width: 22.5rem;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   position: relative;
 }
 
@@ -398,7 +578,7 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 500;
   color: #3c7ef9;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -409,7 +589,7 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 600;
   color: #0a1662;
-  font-size: 26px;
+  font-size: 1.625rem;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -420,29 +600,9 @@
   font-family: "Funnel Sans", Helvetica;
   font-weight: 400;
   color: #333333;
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0;
   line-height: normal;
-}
-
-.landing-desktop-hi .reason-item-wrapper {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .div-wrapper {
-  align-items: flex-end;
-  justify-content: flex-end;
-  display: flex;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
 }
 
 .landing-desktop-hi .text-wrapper-12 {
@@ -451,27 +611,34 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 600;
   color: #0a1662;
-  font-size: 24px;
+  font-size: 1.5rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .landing-desktop-hi .reason-path {
   position: absolute;
-  top: -54px;
+  top: -3.375rem;
   left: 0;
-  width: 1200px;
-  height: 392px;
+  width: 75rem;
+  height: 24.5rem;
 }
 
+
+/* ==========================================================================
+   05. IMPACTO
+   ========================================================================== */
+
 .landing-desktop-hi .impact {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  height: 626px;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 96px 120px;
+  align-items: center;
+  gap: 0.625rem;
   position: relative;
+  width: 100%;
+  min-height: 39.125rem;
+  padding: 6rem 1.5rem;
+  box-sizing: border-box;
   background: linear-gradient(
     180deg,
     rgba(232, 240, 255, 1) 0%,
@@ -480,173 +647,159 @@
 }
 
 .landing-desktop-hi .impact-container {
-  flex-direction: column;
-  width: 1200px;
-  height: 434px;
-  align-items: flex-end;
-  gap: 48px;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3rem;
   position: relative;
+  width: 100%;
+  max-width: 75rem;
+  min-height: 27.125rem;
 }
 
 .landing-desktop-hi .dot-grid {
   position: absolute;
   top: 0;
   left: 0;
-  width: 214px;
-  height: 232px;
+  width: 13.375rem;
+  height: 14.5rem;
 }
 
+/* Introdução */
 .landing-desktop-hi .impact-intro {
+  display: flex;
   flex-direction: column;
-  width: 480px;
+  width: 30rem;
   align-items: flex-start;
   justify-content: center;
-  gap: 8px;
-  flex: 0 0 auto;
-  display: flex;
+  gap: 0.5rem;
   position: relative;
+  flex: 0 0 auto;
 }
 
 .landing-desktop-hi .text-wrapper-13 {
   position: relative;
   align-self: stretch;
+  margin-top: -0.1875rem;
   font-family: "Funnel Display", Helvetica;
   font-weight: 700;
   color: #242731;
-  font-size: 40px;
+  font-size: 2.5rem;
   letter-spacing: 0;
   line-height: normal;
 }
 
+/* Métricas */
 .landing-desktop-hi .impact-metric {
-  height: 180px;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
   align-self: stretch;
   width: 100%;
-  overflow: hidden;
-  display: flex;
-  position: relative;
 }
 
-.landing-desktop-hi .metric {
-  padding: 95px 0px;
-  margin-bottom: -82px;
-  display: inline-flex;
+.landing-desktop-hi .metric,
+.landing-desktop-hi .metric-2,
+.landing-desktop-hi .metric-3,
+.landing-desktop-hi .metric-4 {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
   position: relative;
-  flex: 0 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 .landing-desktop-hi .text-wrapper-14 {
+  display: inline-block;
   position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: "Funnel Display", Helvetica;
   font-weight: 700;
   color: #0a1662;
-  font-size: 56px;
+  font-size: 3.5rem;
   letter-spacing: 0;
-  line-height: 52px;
+  line-height: 3.25rem;
   white-space: nowrap;
+  text-align: center;
+  transition: transform 0.25s ease;
 }
 
 .landing-desktop-hi .text-wrapper-15 {
+  display: inline-block;
   position: relative;
-  width: fit-content;
+  width: 100%;
   font-family: "Funnel Sans", Helvetica;
-  font-weight: 500;
+  font-weight: 700;
   color: #000000;
-  font-size: 18px;
+  font-size: 1rem;
   letter-spacing: 0;
-  line-height: 16px;
-  white-space: nowrap;
+  line-height: 1.375rem;
+  white-space: normal;
+  text-align: center;
+  transition: transform 0.25s ease;
 }
 
-.landing-desktop-hi .metric-2 {
-  padding: 55px 0px;
-  margin-bottom: -2px;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 4px;
-  position: relative;
-  flex: 0 0 auto;
+.landing-desktop-hi .metric:hover .text-wrapper-14,
+.landing-desktop-hi .metric-2:hover .text-wrapper-14,
+.landing-desktop-hi .metric-3:hover .text-wrapper-14,
+.landing-desktop-hi .metric-4:hover .text-wrapper-14 {
+  transform: scale(1.25);
 }
 
-.landing-desktop-hi .metric-3 {
-  padding: 30px 0px;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 4px;
-  position: relative;
-  flex: 0 0 auto;
+.landing-desktop-hi .metric:hover .text-wrapper-15,
+.landing-desktop-hi .metric-2:hover .text-wrapper-15,
+.landing-desktop-hi .metric-3:hover .text-wrapper-15,
+.landing-desktop-hi .metric-4:hover .text-wrapper-15 {
+  transform: scale(1.15);
 }
 
-.landing-desktop-hi .text-wrapper-16 {
-  position: relative;
-  align-self: stretch;
-  height: 1px;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 500;
-  color: #909090;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 16px;
-  white-space: nowrap;
-}
 
-.landing-desktop-hi .metric-4 {
-  padding: 7px 0px;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 4px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
+/* ==========================================================================
+   06. COMO APOIAR
+   ========================================================================== */
+/* Cards */
 .landing-desktop-hi .support {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.625rem;
   position: relative;
   align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
+  padding: 6rem 1.5rem;
+  box-sizing: border-box;
   background: linear-gradient(
     180deg,
-    rgba(218, 233, 255, 1) 0%,
+    rgba(217, 232, 255, 1) 0%,
     rgba(241, 245, 251, 1) 100%
   );
 }
 
 .landing-desktop-hi .support-container {
-  flex-direction: column;
-  width: 1200px;
-  height: 628px;
-  align-items: center;
-  gap: 40px;
-  padding: 60px 0px;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
   position: relative;
+  width: 100%;
+  max-width: 75rem;
+  flex: 0 0 auto;
 }
 
 .landing-desktop-hi .support-intro-2 {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.75rem;
   position: relative;
+  align-self: stretch;
+  width: 100%;
   flex: 0 0 auto;
 }
 
@@ -657,176 +810,225 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 600;
   color: #3c7ef9;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
+  line-height: normal;
 }
 
 .landing-desktop-hi .text-wrapper-18 {
   position: relative;
   width: fit-content;
   font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
+  font-weight: 600;
   color: #242731;
-  font-size: 40px;
+  font-size: 2.5rem;
   letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
+  line-height: normal;
 }
 
 .landing-desktop-hi .text-wrapper-19 {
   position: relative;
-  width: fit-content;
-  font-family: "Funnel Sans", Helvetica;
+  width: 100%;
+  font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #333333;
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
+  line-height: normal;
 }
 
 .landing-desktop-hi .support-options {
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 1.5rem;
+  position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-  display: flex;
-  position: relative;
 }
 
 .landing-desktop-hi .support-option {
-  width: 330px;
-  height: 340px;
-  background-color: #ffffff;
-  overflow: hidden;
-  border-color: #dce3ed;
+  --card-bg: #ffffff;
+  --card-border: #dde3ec;
+  --card-eyebrow: #0a1662;
+  --card-title: #0a1662;
+  --card-label: #242731;
+  --card-text: #000000;
+  --card-check: #3c7ef9;
+  --card-cta-bg: #3c7ef9;
+  --card-cta-color: #ffffff;
+  --card-cta-border: transparent;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;
   position: relative;
-  border-radius: 12px;
-  border: 1px solid;
+  width: 20.625rem;
+  min-height: 21.25rem;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease-out,
+    box-shadow 0.3s ease-out;
 }
 
-.landing-desktop-hi .option-content {
+.landing-desktop-hi .support-option:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
+}
+
+/* Card — destaque */
+.landing-desktop-hi .support-option--featured {
+  --card-bg: #0a1662e6;
+  --card-border: rgba(255, 255, 255, 0.15);
+  --card-eyebrow: #98bafb;
+  --card-title: #ffffff;
+  --card-label: #ffffff;
+  --card-text: #dce8ff;
+  --card-cta-bg: #ffffff;
+  --card-cta-color: #0a1662;
+  --card-cta-border: #000000;
+
+  width: 21.25rem;
+  min-height: 23.75rem;
+  overflow: visible;
+}
+
+.landing-desktop-hi .support-option__badge {
+  position: absolute;
+  top: -1.125rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3125rem 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid #3c7ef9;
+  border-radius: 999px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #172675;
+  white-space: nowrap;
+}
+
+/* Card — conteúdo */
+.landing-desktop-hi .support-option__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  gap: 0.75rem;
+  align-self: stretch;
+  width: 100%;
+}
+
+.landing-desktop-hi .support-option__eyebrow {
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--card-eyebrow);
+}
+
+.landing-desktop-hi .support-option__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.landing-desktop-hi .support-option__title {
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--card-title);
+}
+
+.landing-desktop-hi .support-option__divider {
+  width: 12.3438rem;
+  height: 1px;
+}
+
+/* Card — benefícios */
+.landing-desktop-hi .support-option__benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.landing-desktop-hi .support-option__benefits-label {
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--card-label);
+}
+
+.landing-desktop-hi .benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.landing-desktop-hi .benefit-item {
+  display: flex;
+  gap: 0.3em;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--card-text);
+}
+
+.landing-desktop-hi .benefit-item::before {
+  content: "✓";
+  content: "✓" / "";
+  flex: none;
+  font-weight: 600;
+  color: var(--card-check);
+}
+
+/* Card — botão */
+.landing-desktop-hi .support-option__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  flex: 0 0 auto;
+  background-color: var(--card-cta-bg);
+  border: 1px solid var(--card-cta-border);
+  border-radius: 0.25rem;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--card-cta-color);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Usados também em outras seções (Contato e CTA final) */
+.landing-desktop-hi .div-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-20 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #0a1662;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .div-2 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-21 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #0a1662;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .vector-2 {
-  position: relative;
-  width: 197.5px;
-  height: 1px;
-  margin-bottom: -1px;
-}
-
-.landing-desktop-hi .benefits-option {
-  display: inline-flex;
-  gap: 6px;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-22 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #242731;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .div-3 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .span {
-  font-weight: 600;
-  color: #3c7ef9;
-}
-
-.landing-desktop-hi .text-wrapper-23 {
-  color: #000000;
-}
-
-.landing-desktop-hi .text-wrapper-24 {
-  font-weight: 600;
-  color: #000000;
-}
-
-.landing-desktop-hi .CTA {
-  all: unset;
-  box-sizing: border-box;
-  background-color: #3c7ef9;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
-  position: relative;
-  flex: 0 0 auto;
-  border-radius: 4px;
 }
 
 .landing-desktop-hi .text-wrapper-25 {
@@ -836,315 +1038,130 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 700;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   white-space: nowrap;
 }
-
-.landing-desktop-hi .support-option-2 {
-  width: 340px;
-  height: 380px;
-  background-color: #0a1662e6;
-  border-color: #b0b0b0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px;
-  position: relative;
-  border-radius: 12px;
-  border: 1px solid;
-}
-
-.landing-desktop-hi .badge-row {
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5px 12px;
-  position: absolute;
-  top: -18px;
-  left: 106px;
-  background-color: #ffffff;
-  border-radius: 999px;
-  border: 1px solid;
-  border-color: #3c7ef9;
-}
-
-.landing-desktop-hi .text-wrapper-26 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #172675;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-27 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 600;
-  color: #98bafb;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .text-wrapper-28 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .div-4 {
-  display: flex;
-  gap: 8px;
-  align-self: stretch;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-29 {
-  width: fit-content;
-  margin-top: -1px;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 24px;
-  white-space: nowrap;
-  position: relative;
-  font-family: "Funnel Display", Helvetica;
-  letter-spacing: 0;
-}
-
-.landing-desktop-hi .div-5 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.landing-desktop-hi .text-wrapper-30 {
-  font-weight: 600;
-  color: #3d7ff5;
-}
-
-.landing-desktop-hi .text-wrapper-31 {
-  color: #dce8ff;
-}
-
-.landing-desktop-hi .text-wrapper-32 {
-  font-weight: 600;
-  color: #dce6ff;
-}
-
-.landing-desktop-hi .text-wrapper-33 {
-  color: #dde8ff;
-}
-
-.landing-desktop-hi .button {
-  all: unset;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #000000;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
-  position: relative;
-  flex: 0 0 auto;
-  border-radius: 4px;
-}
-
-.landing-desktop-hi .text-wrapper-34 {
-  color: #0a1662;
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .option-content-2 {
-  display: flex;
-  flex-direction: column;
-  height: 240px;
-  align-items: flex-start;
-  gap: 12px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.landing-desktop-hi .benefits-option-2 {
-  display: inline-flex;
-  gap: 8px;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-35 {
-  color: #242731;
-}
-
-.landing-desktop-hi .text-wrapper-36 {
-  font-weight: 600;
-  color: #242731;
-}
+/* ==========================================================================
+   07. FAQ
+   ========================================================================== */
 
 .landing-desktop-hi .FAQ {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 96px 0px;
+  gap: 0.625rem;
   position: relative;
   align-self: stretch;
   width: 100%;
+  padding: 6rem 1.5rem;
+  box-sizing: border-box;
   flex: 0 0 auto;
   background-color: #f1f5fb;
 }
 
 .landing-desktop-hi .FAQ-container {
   display: flex;
-  width: 1200px;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+  gap: 5rem;
   position: relative;
+  width: 100%;
+  max-width: 75rem;
   flex: 0 0 auto;
 }
 
+/* Ilustração */
 .landing-desktop-hi .FAQ-visual {
   position: relative;
-  width: 369px;
+  width: 23.0625rem;
+  height: 22.5rem;
 }
 
+/* Esconde as chavetas/infernências indesejadas no fundo */
 .landing-desktop-hi .text-wrapper-37 {
-  position: absolute;
-  top: 381px;
-  left: 182px;
-  font-weight: 700;
-  color: #3c7ef933;
-  font-size: 30px;
-  line-height: 24px;
-  white-space: nowrap;
-  font-family: "Funnel Display", Helvetica;
-  letter-spacing: 0;
+  display: none;
 }
 
+/* Pousa o mascote com os pés alinhados na linha inferior */
 .landing-desktop-hi .jutsu-juno-FAQ {
   position: absolute;
-  top: 106px;
-  left: 63px;
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
+  top: 8.75rem;
+  left: 3.4375rem;
+  width: 16.25rem;
+  height: 16.25rem;
+  object-fit: contain;
 }
 
 .landing-desktop-hi .vector-3 {
   position: absolute;
-  top: 76px;
-  left: 105px;
-  width: 257px;
-  height: 320px;
+  top: 4.75rem;
+  left: 6.5625rem;
+  width: 16.0625rem;
+  height: 20rem;
 }
 
 .landing-desktop-hi .ellipse {
   position: absolute;
-  top: 229px;
-  left: 355px;
-  width: 14px;
-  height: 14px;
+  top: 14.3125rem;
+  left: 22.1875rem;
+  width: 0.875rem;
+  height: 0.875rem;
   background-color: #f1f5fb;
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   border: 1px solid;
   border-color: #3c7ef9;
 }
 
-.landing-desktop-hi .ellipse-2 {
+.landing-desktop-hi .ellipse-2,
+.landing-desktop-hi .ellipse-3,
+.landing-desktop-hi .ellipse-4,
+.landing-desktop-hi .ellipse-5,
+.landing-desktop-hi .ellipse-6 {
   position: absolute;
-  top: 75px;
-  left: 31px;
-  width: 8px;
-  height: 8px;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.landing-desktop-hi .ellipse-2 {
+  top: 4.6875rem;
+  left: 1.9375rem;
   background-color: #3c7ef94c;
-  border-radius: 4px;
 }
 
 .landing-desktop-hi .ellipse-3 {
-  position: absolute;
-  top: 75px;
-  left: 55px;
-  width: 8px;
-  height: 8px;
+  top: 4.6875rem;
+  left: 3.4375rem;
   background-color: #3c7ef945;
-  border-radius: 4px;
 }
 
 .landing-desktop-hi .ellipse-4 {
-  position: absolute;
-  top: 75px;
-  left: 79px;
-  width: 8px;
-  height: 8px;
+  top: 4.6875rem;
+  left: 4.9375rem;
   background-color: #3c7ef926;
-  border-radius: 4px;
 }
 
 .landing-desktop-hi .ellipse-5 {
-  position: absolute;
-  top: 99px;
-  left: 31px;
-  width: 8px;
-  height: 8px;
+  top: 6.1875rem;
+  left: 1.9375rem;
   background-color: #3c7ef94c;
-  border-radius: 4px;
 }
 
 .landing-desktop-hi .ellipse-6 {
-  position: absolute;
-  top: 99px;
-  left: 55px;
-  width: 8px;
-  height: 8px;
+  top: 6.1875rem;
+  left: 3.4375rem;
   background-color: #3c7ef933;
-  border-radius: 4px;
 }
 
+/* Conteúdo */
 .landing-desktop-hi .FAQ-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 32px;
+  gap: 2rem;
   position: relative;
   flex: 1;
   flex-grow: 1;
@@ -1154,8 +1171,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
-  padding: 0px 0px 24px;
+  gap: 0.75rem;
+  padding: 0 0 1.5rem;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -1169,9 +1186,9 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 600;
   color: #3c7ef9;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   white-space: nowrap;
 }
 
@@ -1181,10 +1198,9 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 700;
   color: #0a1662;
-  font-size: 36px;
+  font-size: 2.25rem;
   letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .landing-desktop-hi .text-wrapper-40 {
@@ -1193,12 +1209,12 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #333333d9;
-  font-size: 20px;
+  font-size: 1.25rem;
   letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
+  line-height: 1.5rem;
 }
 
+/* Perguntas */
 .landing-desktop-hi .FAQ-list {
   display: flex;
   flex-direction: column;
@@ -1207,18 +1223,28 @@
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-  overflow: hidden;
 }
 
 .landing-desktop-hi .FAQ-item {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 20px 0px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 1.25rem 0;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
+  border-bottom: 1px solid #dde3ec;
+}
+
+.landing-desktop-hi .FAQ-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
 }
 
 .landing-desktop-hi .text-wrapper-41 {
@@ -1228,39 +1254,70 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 600;
   color: #0a1662;
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .landing-desktop-hi .text-wrapper-42 {
+  display: inline-block;
   position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #3c7ef9;
-  font-size: 20px;
+  font-size: 1.25rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   white-space: nowrap;
+  transition: transform 0.3s ease;
 }
 
-.landing-desktop-hi .vector-4 {
-  position: relative;
-  width: 745.5px;
-  height: 1px;
+.landing-desktop-hi .FAQ-item.active .text-wrapper-42 {
+  transform: rotate(20deg);
 }
+
+.landing-desktop-hi .FAQ-answer {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease,
+    visibility 0s linear 0.35s;
+}
+
+.landing-desktop-hi .FAQ-item.active .FAQ-answer {
+  max-height: 37.5rem;
+  padding: 0.75rem 0 0;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.landing-desktop-hi .FAQ-answer p {
+  margin: 0;
+  font-family: "Funnel Sans", Helvetica;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #57595f;
+}
+
+
+/* ==========================================================================
+   08. CONTATO
+   ========================================================================== */
 
 .landing-desktop-hi .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 96px 0px;
   position: relative;
   align-self: stretch;
   width: 100%;
+  padding: 6rem 0;
   flex: 0 0 auto;
   background: linear-gradient(
     180deg,
@@ -1273,26 +1330,29 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
-  padding: 80px;
+  gap: 3rem;
+  padding: 5rem 1.5rem;
   position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
   flex: 0 0 auto;
 }
 
 .landing-desktop-hi .contact-content {
   display: inline-flex;
   align-items: flex-start;
-  gap: 60px;
+  gap: 3.75rem;
   position: relative;
   flex: 0 0 auto;
 }
 
+/* Texto */
 .landing-desktop-hi .contact-info {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 31.25rem;
   align-items: flex-start;
-  gap: 22px;
+  gap: 1.375rem;
   position: relative;
 }
 
@@ -1312,9 +1372,9 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 700;
   color: #0a1662;
-  font-size: 40px;
+  font-size: 2.5rem;
   letter-spacing: 0;
-  line-height: 55px;
+  line-height: 3.4375rem;
 }
 
 .landing-desktop-hi .text-wrapper-44 {
@@ -1323,32 +1383,33 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #242731;
-  font-size: 20px;
+  font-size: 1.25rem;
   letter-spacing: 0;
-  line-height: 30px;
+  line-height: 1.875rem;
 }
 
+/* Formulário */
 .landing-desktop-hi .contact-form {
   display: inline-flex;
-  align-items: flex-start;
-  padding: 32px 42px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
   flex-direction: column;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 2rem 2.625rem;
   position: relative;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
   flex: 0 0 auto;
 }
 
 .landing-desktop-hi .contact-form-content {
   display: flex;
-  width: 560px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   position: relative;
+  width: 35rem;
   flex: 0 0 auto;
 }
 
@@ -1359,97 +1420,105 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 600;
   color: #000000;
-  font-size: 18px;
+  font-size: 1.125rem;
   text-align: center;
   letter-spacing: 0;
-  line-height: 22px;
+  line-height: 1.375rem;
   white-space: nowrap;
 }
 
-.landing-desktop-hi .frame {
-  flex-direction: column;
-  height: 35px;
-  align-items: flex-start;
-  justify-content: center;
-  border-radius: 8px;
-  overflow: hidden;
+/* Campos */
+.landing-desktop-hi .frame,
+.landing-desktop-hi .frame-2,
+.landing-desktop-hi .frame-3 {
   display: flex;
-  gap: 10px;
-  padding: 16px;
+  gap: 0.625rem;
+  padding: 0.5rem 0.75rem;
   position: relative;
   align-self: stretch;
   width: 100%;
-  background-color: #f7f8fa;
-  border: 1px solid;
-  border-color: #dce3ed;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.5rem;
+}
+
+.landing-desktop-hi .frame,
+.landing-desktop-hi .frame-2 {
+  align-items: center;
+  min-height: 2.1875rem;
+  overflow: hidden;
+}
+
+.landing-desktop-hi .frame-3 {
+  flex-direction: column;
+  min-height: 7.5rem;
+}
+
+.landing-desktop-hi .field-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
 }
 
 .landing-desktop-hi .text-wrapper-46 {
   position: relative;
   width: fit-content;
-  margin-top: -11.5px;
-  margin-bottom: -9.5px;
+  margin-top: -0.7188rem;
+  margin-bottom: -0.5938rem;
   font-family: "Funnel Sans", Helvetica;
   font-weight: 400;
   color: #333333;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   white-space: nowrap;
-}
-
-.landing-desktop-hi .frame-2 {
-  height: 35px;
-  align-items: center;
-  display: flex;
-  gap: 10px;
-  padding: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #f7f8fa;
-  border: 1px solid;
-  border-color: #dce3ed;
-}
-
-.landing-desktop-hi .field-message {
-  height: 120px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-}
-
-.landing-desktop-hi .frame-3 {
-  height: 120px;
-  align-items: flex-start;
-  display: flex;
-  gap: 10px;
-  padding: 16px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  background-color: #f7f8fa;
-  border: 1px solid;
-  border-color: #dce3ed;
 }
 
 .landing-desktop-hi .text-wrapper-47 {
   position: relative;
-  width: fit-content;
   font-family: "Funnel Sans", Helvetica;
   font-weight: 400;
   color: #333333;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
+  line-height: 1.5rem;
 }
 
+.landing-desktop-hi .form-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  resize: none;
+  font-family: "Funnel Sans", Helvetica;
+}
+
+.landing-desktop-hi .field-message .form-input {
+  display: block;
+  flex: 1;
+  min-height: 6.25rem;
+  box-sizing: border-box;
+}
+
+.landing-desktop-hi .form-input::placeholder {
+  color: #909090;
+  opacity: 1;
+}
+
+.landing-desktop-hi .frame:focus-within,
+.landing-desktop-hi .frame-2:focus-within,
+.landing-desktop-hi .frame-3:focus-within {
+  outline: 2px solid #3c7ef9;
+  outline-offset: 1px;
+  border-color: #3c7ef9;
+}
+
+/* Botão de envio */
 .landing-desktop-hi .CTA-2 {
   all: unset;
   box-sizing: border-box;
@@ -1457,23 +1526,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
   position: relative;
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
   background-color: #3c7ef9;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   overflow: hidden;
+  cursor: pointer;
 }
+
+
+/* ==========================================================================
+   09. CTA FINAL
+   ========================================================================== */
 
 .landing-desktop-hi .full-final-CTA {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 0.625rem;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -1484,16 +1559,17 @@
 .landing-desktop-hi .final-CTA {
   display: flex;
   flex-direction: column;
-  width: 1441px;
-  height: 400px;
+  width: 100%;
+  min-height: 25rem;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 10px;
+  gap: 0.625rem;
+  padding: 0.625rem;
   position: relative;
   margin-left: -0.5px;
   margin-right: -0.5px;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 2.5rem 2.5rem 0 0;
+  overflow: hidden;
   background: linear-gradient(
     180deg,
     rgba(217, 222, 235, 0.5) 0%,
@@ -1506,12 +1582,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
-  padding: 80px 0px;
+  gap: 2rem;
+  padding: 5rem 0;
   position: relative;
+  margin-top: -1.25rem;
+  margin-bottom: -1.25rem;
   flex: 0 0 auto;
-  margin-top: -20px;
-  margin-bottom: -20px;
 }
 
 .landing-desktop-hi .text-wrapper-48 {
@@ -1521,10 +1597,10 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 600;
   color: #3c7ef9;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   white-space: nowrap;
 }
 
@@ -1534,158 +1610,76 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 700;
   color: #0a1662;
-  font-size: 40px;
+  font-size: 2.5rem;
   text-align: center;
   letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .landing-desktop-hi .text-wrapper-50 {
-  width: 560px;
+  position: relative;
+  width: 100%;
+  max-width: 35rem;
+  font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #242731;
-  font-size: 18px;
+  font-size: 1.125rem;
   text-align: center;
-  line-height: 34px;
-  position: relative;
-  font-family: "Funnel Display", Helvetica;
   letter-spacing: 0;
+  line-height: 2.125rem;
 }
 
 .landing-desktop-hi .CTA-3 {
   all: unset;
   box-sizing: border-box;
-  flex-direction: column;
-  background-color: #3c7ef9;
-  overflow: hidden;
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
   position: relative;
   flex: 0 0 auto;
-  border-radius: 4px;
+  background-color: #3c7ef9;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.landing-desktop-hi .image-removebg-2 {
-  top: 257px;
-  left: 1350px;
-  width: 242px;
-  height: 242px;
+.landing-desktop-hi .cta-streaks-left {
   position: absolute;
-  object-fit: cover;
+  top: 11.25rem;
+  left: -1.875rem;
+  width: 30rem;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
 }
 
-.landing-desktop-hi .image-removebg-3 {
-  top: 376px;
-  left: 1007px;
-  width: 215px;
-  height: 215px;
+.landing-desktop-hi .cta-streaks-right {
   position: absolute;
-  object-fit: cover;
+  top: 11.25rem;
+  right: -1.875rem;
+  width: 30rem;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
 }
 
-.landing-desktop-hi .image-removebg-4 {
-  top: 208px;
-  left: -108px;
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  object-fit: cover;
-}
 
-.landing-desktop-hi .image-removebg-5 {
-  top: 200px;
-  left: -209px;
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .image-removebg-6 {
-  top: 224px;
-  left: 1222px;
-  width: 305px;
-  height: 305px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .image-removebg-7 {
-  top: 224px;
-  left: 1402px;
-  width: 215px;
-  height: 215px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .image-removebg-8 {
-  top: 270px;
-  left: -214px;
-  width: 238px;
-  height: 238px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .image-removebg-9 {
-  top: 246px;
-  left: -4px;
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .image-removebg-10 {
-  top: 250px;
-  left: 1106px;
-  width: 306px;
-  height: 305px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .image-removebg-11 {
-  top: 273px;
-  left: 146px;
-  width: 249px;
-  height: 249px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .image-removebg-12 {
-  top: 263px;
-  left: 1023px;
-  width: 253px;
-  height: 253px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .image-removebg-13 {
-  top: 379px;
-  left: 200px;
-  width: 191px;
-  height: 191px;
-  position: absolute;
-  object-fit: cover;
-}
+/* ==========================================================================
+   10. FOOTER
+   ========================================================================== */
 
 .landing-desktop-hi .footer {
   display: flex;
   flex-direction: column;
-  width: 1440px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 10px;
+  gap: 0.625rem;
+  padding: 0.625rem;
   position: relative;
+  width: 100%;
   flex: 0 0 auto;
   background-color: #2f2e2e;
 }
@@ -1693,11 +1687,13 @@
 .landing-desktop-hi .footer-container {
   display: flex;
   flex-direction: column;
-  width: 1200px;
   align-items: flex-start;
-  gap: 10px;
-  padding: 48px 40px;
+  gap: 0.625rem;
+  padding: 3rem 2.5rem;
   position: relative;
+  width: 100%;
+  max-width: 75rem;
+  box-sizing: border-box;
   flex: 0 0 auto;
 }
 
@@ -1705,7 +1701,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 0px 0px 20px;
+  padding: 0 0 1.25rem;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -1716,42 +1712,27 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 18px;
+  gap: 1.125rem;
   position: relative;
   flex: 1;
   flex-grow: 1;
 }
 
-.landing-desktop-hi .logomarca {
-  display: flex;
-  width: 204px;
-  height: 38px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.landing-desktop-hi .icone {
-  position: relative;
-  width: 38px;
-  height: 38px;
-}
-
 .landing-desktop-hi .logotipo {
   display: flex;
   flex-direction: column;
-  width: 170px;
-  height: 38px;
+  width: 10.625rem;
+  height: 2.375rem;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-left: -4px;
+  margin-left: -0.25rem;
 }
 
 .landing-desktop-hi .vector-5 {
   position: relative;
-  width: 156px;
-  height: 24px;
+  width: 9.75rem;
+  height: 1.5rem;
 }
 
 .landing-desktop-hi .text-wrapper-51 {
@@ -1760,9 +1741,9 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #e7e8ea;
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .landing-desktop-hi .footer-links {
@@ -1781,7 +1762,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 1.25rem 0;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -1795,96 +1776,190 @@
   font-family: "Funnel Display", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   white-space: nowrap;
 }
+/* ==========================================================================
+   11. ACESSIBILIDADE
+   ========================================================================== */
 
-.landing-desktop-hi .header {
-  display: flex;
-  width: 1440px;
-  height: 88px;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: transparent;
+/* Alto contraste */
+.high-contrast,
+.high-contrast .landing-desktop-hi {
+  background: #000 !important;
+  color: #fff !important;
 }
 
-.landing-desktop-hi .header-container {
-  display: flex;
-  width: 1200px;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  align-self: stretch;
+.high-contrast .landing-desktop-hi * {
+  color: #fff !important;
 }
 
-.landing-desktop-hi .vector-wrapper {
-  display: flex;
-  width: 170px;
-  height: 38px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-left: -4px;
+.high-contrast .landing-desktop-hi a,
+.high-contrast .landing-desktop-hi button {
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
 }
 
-.landing-desktop-hi .vector-7 {
-  position: relative;
-  width: 153.59px;
-  height: 24.4px;
+/* Escala de cinza */
+.grayscale {
+  filter: grayscale(100%);
 }
 
-.landing-desktop-hi .navbar {
+/* Inversão de cores */
+.invert-colors {
+  filter: invert(100%);
+}
+
+/* Tamanho do texto */
+.large-text {
+  font-size: 120% !important;
+}
+
+.extra-large-text {
+  font-size: 140% !important;
+}
+
+/* Botão */
+.landing-desktop-hi .accessibility-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-53 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 500;
-  color: #242731;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .apoie-agora-CTA {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 20px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #3c7ef9;
+  width: 42px;
+  height: 42px;
+  margin-left: 12px;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
   border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.landing-desktop-hi .text-wrapper-54 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Funnel Sans", Helvetica;
+.landing-desktop-hi .accessibility-button:hover {
+  background-color: #f0f4ff;
+  border-color: #3c7ef9;
+  color: #3c7ef9;
+}
+
+/* Painel */
+.accessibility-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 220px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #d9e8ff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1001;
+}
+
+.accessibility-menu h2 {
+  margin: 0 0 12px;
+  font-family: "Funnel Display", Helvetica;
+  font-size: 18px;
   font-weight: 600;
-  color: #ffffff;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
+  color: #222222;
 }
 
-.landing-desktop-hi::-webkit-scrollbar {
-  width: 0;
-  display: none;
+.accessibility-menu button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #d9e8ff;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #222222;
+  font-family: "Funnel Sans", Helvetica;
+  font-size: 14px;
+  cursor: pointer;
 }
 
+.accessibility-menu button:hover {
+  background-color: #f0f6ff;
+}
+/* ==========================================================================
+   12. RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 79em) {
+  .landing-desktop-hi .reason-path {
+    display: none;
+  }
+
+  .landing-desktop-hi .contact-container {
+    width: 100%;
+  }
+
+  .landing-desktop-hi .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .landing-desktop-hi .contact-info,
+  .landing-desktop-hi .contact-form-content {
+    width: 100%;
+    max-width: 35rem;
+  }
+
+  .landing-desktop-hi .contact-form {
+    width: 100%;
+    max-width: 40.25rem;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 64em) {
+  .landing-desktop-hi .hero-container,
+  .landing-desktop-hi .FAQ-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .landing-desktop-hi .hero-content,
+  .landing-desktop-hi .FAQ-content,
+  .landing-desktop-hi .impact-intro {
+    width: 100%;
+  }
+
+  .landing-desktop-hi .hero-visual {
+    width: 100%;
+    max-width: 35.4375rem;
+  }
+
+  .landing-desktop-hi .reason-row,
+  .landing-desktop-hi .reason-item-wrapper,
+  .landing-desktop-hi .div-wrapper {
+    justify-content: flex-start;
+  }
+
+  .landing-desktop-hi .reason-item {
+    width: 100%;
+    max-width: 22.5rem;
+  }
+
+  .landing-desktop-hi .impact-metric {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+
+  .landing-desktop-hi .support-options {
+    flex-direction: column;
+  }
+
+ .landing-desktop-hi .support-option {
+    width: 100%;
+    max-width: 26rem;
+  }
+
+  .landing-desktop-hi .cta-streaks-left,
+  .landing-desktop-hi .cta-streaks-right,
+  .landing-desktop-hi .FAQ-visual {
+    display: none;
+  }
+}
