@@ -196,6 +196,9 @@ body {
   white-space: nowrap;
 }
 
+.landing-desktop-hi .mobile-menu-button {
+  display: none;
+}
 
 /* ==========================================================================
    03. HERO
@@ -342,8 +345,9 @@ body {
 /* Ilustração */
 .landing-desktop-hi .hero-visual {
   position: relative;
-  width: 35.4375rem;
+  width: 32rem;
   max-width: 100%;
+  transform: translateY(2.3rem);
 }
 
 .landing-desktop-hi .hero-art {
@@ -2083,28 +2087,6 @@ body {
   font-size: 140% !important;
 }
 
-/* Botão */
-.landing-desktop-hi .accessibility-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.625rem;
-  height: 2.625rem;
-  margin-left: 0.75rem;
-  background-color: #ffffff;
-  border: 1px solid #d0d0d0;
-  border-radius: 0.5rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.landing-desktop-hi .accessibility-button:hover {
-  background-color: #f0f4ff;
-  border-color: #3c7ef9;
-  color: #3c7ef9;
-}
-
 /* Painel */
 .accessibility-menu {
   position: absolute;
@@ -2397,20 +2379,40 @@ body {
 
   .landing-desktop-hi .header {
     display: flex;
-    width: 0;
-    height: 0;
-    overflow: visible;
+    width: 100%;
+    height: 4.5rem;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .landing-desktop-hi .header.scrolled {
+    background-color: #f3f7ff;
+    border-radius: 0 0 1.25rem 1.25rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(10, 22, 98, 0.08);
   }
 
   .landing-desktop-hi .header-container {
-    width: 0;
-    height: 0;
+    width: 100%;
+    height: 100%;
     max-width: none;
     margin: 0;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
   }
 
-  .landing-desktop-hi .header .logomarca,
   .landing-desktop-hi .navbar>a {
+    display: none;
+  }
+
+  .landing-desktop-hi .header .logomarca {
+    display: none;
+  }
+
+  .landing-desktop-hi .header.scrolled .logomarca {
+    display: flex;
+  }
+
+  .landing-desktop-hi .header:not(.scrolled) .mobile-menu-button {
     display: none;
   }
 
@@ -2422,8 +2424,13 @@ body {
     z-index: 1002;
   }
 
-  .landing-desktop-hi .accessibility-button {
-    margin-left: 0;
+  .landing-desktop-hi .mobile-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #242731;
+    padding: 0.5rem;
   }
 
   /* ==================== 02 - HERO ==================== */
@@ -2714,7 +2721,7 @@ body {
     gap: 0.75rem;
 
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: -0.5rem;
 
     position: relative;
     z-index: 10;
@@ -2731,6 +2738,8 @@ body {
     color: #3c7ef9;
     background: transparent;
     font-size: 1.25rem;
+    line-height: 1;
+    padding: 0;
   }
 
   .landing-desktop-hi .carousel-dots {
