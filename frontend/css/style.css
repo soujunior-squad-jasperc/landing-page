@@ -1080,12 +1080,12 @@ body {
   height: 22.5rem;
 }
 
-/* Esconde as chavetas/infernências indesejadas no fundo */
+
 .landing-desktop-hi .text-wrapper-37 {
   display: none;
 }
 
-/* Pousa o mascote com os pés alinhados na linha inferior */
+
 .landing-desktop-hi .jutsu-juno-FAQ {
   position: absolute;
   top: 8.75rem;
@@ -1830,7 +1830,65 @@ body {
   height: 42px;
   margin-left: 12px;
   background-color: #ffffff;
-  border: 1px solid #d0d0d0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.landing-desktop-hi .header-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  max-width: calc(100% - 240px);
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  align-self: stretch;
+}
+
+.landing-desktop-hi .vector-wrapper {
+  display: flex;
+  width: 170px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: -4px;
+}
+
+.landing-desktop-hi .vector-7 {
+  position: relative;
+  width: 153.59px;
+  height: 24.4px;
+}
+
+.landing-desktop-hi .navbar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-53 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 500;
+  color: #242731;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .apoie-agora-CTA {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #3c7ef9;
   border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
@@ -1963,3 +2021,111 @@ body {
     display: none;
   }
 }
+/* ========================================
+   ACESSIBILIDADE
+   ======================================== */
+
+/* Alto contraste */
+.high-contrast,
+.high-contrast .landing-desktop-hi {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast .landing-desktop-hi * {
+  color: #fff !important;
+}
+
+.high-contrast .landing-desktop-hi a,
+.high-contrast .landing-desktop-hi button {
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+/* Escala de cinza */
+.grayscale {
+    filter: grayscale(100%);
+}
+
+/* Inversão de cores */
+.invert-colors {
+    filter: invert(100%);
+}
+/* Tamanho do texto */
+.large-text {
+    font-size: 120% !important;
+}
+
+.extra-large-text {
+    font-size: 140% !important;
+}
+
+/* Botão de acessibilidade */
+
+.header-container {
+    position: relative;
+}
+
+/* Botão de acessibilidade integrado e elegante */
+.accessibility-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px; /* Mude para 50% se preferir totalmente redondo */
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 12px; /* Dá um respiro em relação ao botão anterior */
+}
+
+.accessibility-button:hover {
+  background-color: #f0f4ff;
+  border-color: #3c7ef9;
+  color: #3c7ef9;
+}
+
+/* Painel de acessibilidade */
+.accessibility-menu {
+  position: absolute;
+  top: 60px;
+  right: 0; /* Alinha com o novo botão */
+  width: 220px;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #d9e8ff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1001;
+}
+
+.accessibility-menu h2 {
+    margin: 0 0 12px;
+    font-family: "Funnel Display", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.accessibility-menu button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #d9e8ff;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #222222;
+    font-family: "Funnel Sans", Helvetica;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.accessibility-menu button:hover {
+    background-color: #f0f6ff;
+}
+
+
+
