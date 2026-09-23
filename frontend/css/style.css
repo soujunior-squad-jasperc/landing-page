@@ -309,9 +309,9 @@ body {
   position: relative;
   flex: 0 0 auto;
   border-radius: 0.25rem;
-  border: 1px solid;
-  border-color: #d0d0d0;
+  border: 1px solid rgba(10, 22, 98, 0.18);
 }
+
 
 .landing-desktop-hi .SECONDARY-CTA {
   position: relative;
@@ -330,107 +330,6 @@ body {
   position: relative;
   width: 35.4375rem;
   max-width: 100%;
-}
-
-.landing-desktop-hi .hero-glow {
-  position: absolute;
-  top: -20px;
-  left: 55px;
-  width: 500px;
-  height: 500px;
-  border-radius: 250px;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(61, 127, 245, 0.12) 51%,
-    rgba(61, 127, 245, 0) 100%
-  );
-}
-
-.landing-desktop-hi .image-removebg {
-  top: 8px;
-  left: 71px;
-  width: 392px;
-  height: 392px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .img {
-  top: 87px;
-  left: 157px;
-  width: 392px;
-  height: 392px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .mascot-juno {
-  position: absolute;
-  top: 200px; /* Aumente este valor para descer mais o bonequinho */
-  left: 353px;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.landing-desktop-hi .tag-projetos {
-  top: 333px;
-  left: 182px;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 16px;
-  position: absolute;
-  background-color: #fefefe;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #0a1662;
-}
-
-.landing-desktop-hi .text-wrapper-3 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .tag-mentoria {
-  top: 99px;
-  left: 409px;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 16px;
-  position: absolute;
-  background-color: #fefefe;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #0a1662;
-}
-
-.landing-desktop-hi .text-wrapper-4 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Display", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.landing-desktop-hi .node-projetos {
-  position: absolute;
-  top: 130px;
-  left: 119px;
-  width: 450px;
-  height: 320px;
 }
 
 .landing-desktop-hi .hero-art {
@@ -455,11 +354,9 @@ body {
   min-height: 45rem;
   padding: 6rem 1.5rem;
   box-sizing: border-box;
-  background: linear-gradient(
-    180deg,
-    rgba(243, 247, 255, 1) 0%,
-    rgba(231, 240, 255, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(243, 247, 255, 1) 0%,
+      rgba(231, 240, 255, 1) 100%);
 }
 
 .landing-desktop-hi .support-reason-2 {
@@ -569,7 +466,9 @@ body {
   align-items: flex-start;
   gap: 0.5rem;
   position: relative;
+
 }
+
 
 .landing-desktop-hi .text-wrapper-9 {
   position: relative;
@@ -614,7 +513,24 @@ body {
   font-size: 1.5rem;
   letter-spacing: 0;
   line-height: normal;
+
 }
+
+/* Movimento suave — título e descrição */
+.landing-desktop-hi .reason-item .text-wrapper-10,
+.landing-desktop-hi .reason-item .text-wrapper-11,
+.landing-desktop-hi .reason-item .text-wrapper-12 {
+  transition: transform 0.4s ease;
+}
+
+/* Elevação — números permanecem parados */
+.landing-desktop-hi .reason-item:hover .text-wrapper-10,
+.landing-desktop-hi .reason-item:hover .text-wrapper-11,
+.landing-desktop-hi .reason-item:hover .text-wrapper-12 {
+  transform: translateY(-3px);
+}
+
+
 
 .landing-desktop-hi .reason-path {
   position: absolute;
@@ -622,6 +538,8 @@ body {
   left: 0;
   width: 75rem;
   height: 24.5rem;
+  pointer-events: none;
+
 }
 
 
@@ -639,11 +557,9 @@ body {
   min-height: 39.125rem;
   padding: 6rem 1.5rem;
   box-sizing: border-box;
-  background: linear-gradient(
-    180deg,
-    rgba(232, 240, 255, 1) 0%,
-    rgba(217, 232, 255, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(232, 240, 255, 1) 0%,
+      rgba(217, 232, 255, 1) 100%);
 }
 
 .landing-desktop-hi .impact-container {
@@ -773,11 +689,9 @@ body {
   width: 100%;
   padding: 6rem 1.5rem;
   box-sizing: border-box;
-  background: linear-gradient(
-    180deg,
-    rgba(217, 232, 255, 1) 0%,
-    rgba(241, 245, 251, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(217, 232, 255, 1) 0%,
+      rgba(241, 245, 251, 1) 100%);
 }
 
 .landing-desktop-hi .support-container {
@@ -791,6 +705,7 @@ body {
   flex: 0 0 auto;
 }
 
+/* Introdução */
 .landing-desktop-hi .support-intro-2 {
   display: flex;
   flex-direction: column;
@@ -812,7 +727,8 @@ body {
   color: #3c7ef9;
   font-size: 0.875rem;
   letter-spacing: 0;
-  line-height: normal;
+  line-height: 1.5rem;
+  white-space: nowrap;
 }
 
 .landing-desktop-hi .text-wrapper-18 {
@@ -823,7 +739,7 @@ body {
   color: #242731;
   font-size: 2.5rem;
   letter-spacing: 0;
-  line-height: normal;
+  line-height: 1.2;
 }
 
 .landing-desktop-hi .text-wrapper-19 {
@@ -834,9 +750,15 @@ body {
   color: #333333;
   font-size: 1.125rem;
   letter-spacing: 0;
-  line-height: normal;
+  line-height: 1.5rem;
 }
 
+/* Controles do carrossel — ocultos por padrão */
+.landing-desktop-hi .support-carousel-controls {
+  display: none;
+}
+
+/* Cards */
 .landing-desktop-hi .support-options {
   display: flex;
   align-items: center;
@@ -1043,6 +965,83 @@ body {
   line-height: 1.5rem;
   white-space: nowrap;
 }
+
+.landing-desktop-hi .text-wrapper-29 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .div-3 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .div-5 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+
+.landing-desktop-hi .span {
+  font-weight: 600;
+  color: #3c7ef9;
+}
+
+.landing-desktop-hi .text-wrapper-23 {
+  color: #000000;
+}
+
+.landing-desktop-hi .text-wrapper-30 {
+  font-weight: 600;
+  color: #3d7ff5;
+}
+
+.landing-desktop-hi .text-wrapper-31 {
+  color: #dce8ff;
+}
+
+.landing-desktop-hi .text-wrapper-33 {
+  color: #dde8ff;
+}
+
+.landing-desktop-hi .text-wrapper-35 {
+  color: #242731;
+}
+
+
+.landing-desktop-hi .text-wrapper-25 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
 /* ==========================================================================
    07. FAQ
    ========================================================================== */
@@ -1070,6 +1069,7 @@ body {
   position: relative;
   width: 100%;
   max-width: 75rem;
+  margin: 0 auto;
   flex: 0 0 auto;
 }
 
@@ -1078,29 +1078,43 @@ body {
   position: relative;
   width: 23.0625rem;
   height: 22.5rem;
+  top: -3rem;
+  overflow: visible;
 }
 
 
 .landing-desktop-hi .text-wrapper-37 {
-  display: none;
+  display: block;
+  position: absolute;
+
+  left: 11.5rem;
+  top: 25rem;
+
+  font-family: "Funnel Display", Helvetica;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #c9dcff;
+  line-height: 1;
+  z-index: 5;
 }
 
 
 .landing-desktop-hi .jutsu-juno-FAQ {
   position: absolute;
-  top: 8.75rem;
+  top: 8.15rem;
   left: 3.4375rem;
-  width: 16.25rem;
-  height: 16.25rem;
+  width: 17.5rem;
+  height: 16.9rem;
   object-fit: contain;
 }
 
 .landing-desktop-hi .vector-3 {
   position: absolute;
-  top: 4.75rem;
+  top: 3.99rem;
   left: 6.5625rem;
   width: 16.0625rem;
-  height: 20rem;
+
+  height: 25rem;
 }
 
 .landing-desktop-hi .ellipse {
@@ -1127,31 +1141,31 @@ body {
 }
 
 .landing-desktop-hi .ellipse-2 {
-  top: 4.6875rem;
+  top: 6.35rem;
   left: 1.9375rem;
   background-color: #3c7ef94c;
 }
 
 .landing-desktop-hi .ellipse-3 {
-  top: 4.6875rem;
+  top: 6.35rem;
   left: 3.4375rem;
   background-color: #3c7ef945;
 }
 
 .landing-desktop-hi .ellipse-4 {
-  top: 4.6875rem;
+  top: 6.35rem;
   left: 4.9375rem;
   background-color: #3c7ef926;
 }
 
 .landing-desktop-hi .ellipse-5 {
-  top: 6.1875rem;
+  top: 7.95rem;
   left: 1.9375rem;
   background-color: #3c7ef94c;
 }
 
 .landing-desktop-hi .ellipse-6 {
-  top: 6.1875rem;
+  top: 7.95rem;
   left: 3.4375rem;
   background-color: #3c7ef933;
 }
@@ -1161,7 +1175,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1.25rem;
   position: relative;
   flex: 1;
   flex-grow: 1;
@@ -1172,7 +1186,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.75rem;
-  padding: 0 0 1.5rem;
+  padding: 0 0 0.75rem;
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -1319,11 +1333,9 @@ body {
   width: 100%;
   padding: 6rem 0;
   flex: 0 0 auto;
-  background: linear-gradient(
-    180deg,
-    rgba(241, 245, 251, 1) 0%,
-    rgba(215, 220, 234, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(241, 245, 251, 1) 0%,
+      rgba(215, 220, 234, 1) 100%);
 }
 
 .landing-desktop-hi .contact-container {
@@ -1570,11 +1582,9 @@ body {
   margin-right: -0.5px;
   border-radius: 2.5rem 2.5rem 0 0;
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    rgba(217, 222, 235, 0.5) 0%,
-    rgba(184, 203, 233, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(217, 222, 235, 0.5) 0%,
+      rgba(184, 203, 233, 1) 100%);
 }
 
 .landing-desktop-hi .final-CTA-container {
@@ -1642,8 +1652,45 @@ body {
   flex: 0 0 auto;
   background-color: #3c7ef9;
   border-radius: 0.25rem;
-  overflow: hidden;
   cursor: pointer;
+}
+
+/* =================== ANIMAÇÃO - BOTÕES =================== */
+
+/* Botões principais — transição suave */
+.landing-desktop-hi .primary-button,
+.landing-desktop-hi .secondary-button,
+.landing-desktop-hi .apoie-agora-CTA,
+.landing-desktop-hi .CTA-2,
+.landing-desktop-hi .CTA-3 {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background-color 0.35s ease;
+}
+
+/* Elevação dos botões no hover */
+.landing-desktop-hi .primary-button:hover,
+.landing-desktop-hi .secondary-button:hover,
+.landing-desktop-hi .apoie-agora-CTA:hover,
+.landing-desktop-hi .CTA-2:hover,
+.landing-desktop-hi .CTA-3:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(10, 22, 98, 0.15);
+}
+
+/* Botões azuis — mudança de cor no hover */
+.landing-desktop-hi .primary-button:hover,
+.landing-desktop-hi .apoie-agora-CTA:hover,
+.landing-desktop-hi .CTA-2:hover,
+.landing-desktop-hi .CTA-3:hover {
+  background-color: #2f68d4;
+}
+
+/* Botões dos 3 cards — permanecem sem movimento */
+.landing-desktop-hi .support-option__cta {
+  transform: none;
+  box-shadow: none;
 }
 
 .landing-desktop-hi .cta-streaks-left {
@@ -1746,9 +1793,32 @@ body {
   line-height: 1.5rem;
 }
 
+/* Links do footer */
 .landing-desktop-hi .footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40rem;
+  max-width: 100%;
   position: relative;
-  flex: 0 0 auto;
+}
+
+/* Links individuais */
+.landing-desktop-hi .footer-links a {
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #ffffff;
+  white-space: nowrap;
+
+  /* Interação suave */
+  transition: opacity 0.3s ease;
+}
+
+/* Hover dos links */
+.landing-desktop-hi .footer-links a:hover {
+  opacity: 0.7;
 }
 
 .landing-desktop-hi .vector-6 {
@@ -1781,6 +1851,7 @@ body {
   line-height: 1.5rem;
   white-space: nowrap;
 }
+
 /* ==========================================================================
    11. ACESSIBILIDADE
    ========================================================================== */
@@ -1826,71 +1897,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  margin-left: 12px;
+  width: 2.625rem;
+  height: 2.625rem;
+  margin-left: 0.75rem;
   background-color: #ffffff;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-
-.landing-desktop-hi .header-container {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
-  max-width: calc(100% - 240px);
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  align-self: stretch;
-}
-
-.landing-desktop-hi .vector-wrapper {
-  display: flex;
-  width: 170px;
-  height: 38px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-left: -4px;
-}
-
-.landing-desktop-hi .vector-7 {
-  position: relative;
-  width: 153.59px;
-  height: 24.4px;
-}
-
-.landing-desktop-hi .navbar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.landing-desktop-hi .text-wrapper-53 {
-  position: relative;
-  width: fit-content;
-  font-family: "Funnel Sans", Helvetica;
-  font-weight: 500;
-  color: #242731;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.landing-desktop-hi .apoie-agora-CTA {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 20px;
-  position: relative;
-  flex: 0 0 auto;
-  background-color: #3c7ef9;
-  border-radius: 8px;
-  font-size: 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -1904,41 +1917,43 @@ body {
 /* Painel */
 .accessibility-menu {
   position: absolute;
-  top: 60px;
+  top: 3.75rem;
   right: 0;
-  width: 220px;
-  padding: 16px;
+  width: 13.75rem;
+  padding: 1rem;
   background-color: #ffffff;
   border: 1px solid #d9e8ff;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   z-index: 1001;
 }
 
 .accessibility-menu h2 {
-  margin: 0 0 12px;
+  margin: 0 0 0.75rem;
   font-family: "Funnel Display", Helvetica;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #222222;
 }
 
 .accessibility-menu button {
   width: 100%;
-  padding: 10px;
-  margin-top: 6px;
+  padding: 0.625rem;
+  margin-top: 0.375rem;
   border: 1px solid #d9e8ff;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background-color: #ffffff;
   color: #222222;
   font-family: "Funnel Sans", Helvetica;
-  font-size: 14px;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 
 .accessibility-menu button:hover {
   background-color: #f0f6ff;
 }
+
+
 /* ==========================================================================
    12. RESPONSIVIDADE
    ========================================================================== */
@@ -1972,33 +1987,112 @@ body {
   }
 }
 
-@media (max-width: 64em) {
-  .landing-desktop-hi .hero-container,
+@media (min-width: 769px) and (max-width: 64em) {
+
+  /* ==================== TABLET ==================== */
+
+  .landing-desktop-hi .header-container {
+    max-width: calc(100% - 2.5rem);
+  }
+
+  .landing-desktop-hi .navbar {
+    gap: 1rem;
+  }
+
+  .landing-desktop-hi .hero {
+    min-height: auto;
+    padding: 6.5rem 2.5rem 3rem;
+  }
+
+  .landing-desktop-hi .hero-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .landing-desktop-hi .hero-content {
+    width: min(48%, 30rem);
+    max-width: 30rem;
+  }
+
+  .landing-desktop-hi .hero-visual {
+    width: min(48%, 28rem);
+    max-width: 28rem;
+    margin: 0;
+  }
+
   .landing-desktop-hi .FAQ-container {
     flex-direction: column;
     gap: 2rem;
   }
 
-  .landing-desktop-hi .hero-content,
   .landing-desktop-hi .FAQ-content,
   .landing-desktop-hi .impact-intro {
     width: 100%;
   }
 
-  .landing-desktop-hi .hero-visual {
-    width: 100%;
-    max-width: 35.4375rem;
-  }
-
   .landing-desktop-hi .reason-row,
   .landing-desktop-hi .reason-item-wrapper,
   .landing-desktop-hi .div-wrapper {
+    position: relative;
     justify-content: flex-start;
+    padding: 1rem 0;
+    border-top: 1px solid #bcd3ff;
+    border-right: 1px solid #bcd3ff;
+  }
+
+  .landing-desktop-hi .reason-row::before,
+  .landing-desktop-hi .reason-item-wrapper::before,
+  .landing-desktop-hi .div-wrapper::before,
+  .landing-desktop-hi .reason-row::after,
+  .landing-desktop-hi .reason-item-wrapper::after,
+  .landing-desktop-hi .div-wrapper::after {
+    content: "";
+    position: absolute;
+    top: -0.21875rem;
+    width: 0.4375rem;
+    height: 0.4375rem;
+    background-color: #3c7ef9;
+    border-radius: 50%;
+  }
+
+  .landing-desktop-hi .reason-row::before {
+    left: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-row::after {
+    right: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-item-wrapper::before {
+    left: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-item-wrapper::after {
+    display: none;
+  }
+
+  .landing-desktop-hi .div-wrapper::before {
+    display: none;
+  }
+
+  .landing-desktop-hi .div-wrapper::after {
+    right: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-item-wrapper {
+    border-right: none;
+    border-left: 1px solid #bcd3ff;
   }
 
   .landing-desktop-hi .reason-item {
     width: 100%;
     max-width: 22.5rem;
+  }
+
+  .landing-desktop-hi .dot-grid {
+    opacity: 0.20;
   }
 
   .landing-desktop-hi .impact-metric {
@@ -2007,125 +2101,506 @@ body {
   }
 
   .landing-desktop-hi .support-options {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    scroll-padding-inline: 1.25rem;
   }
 
- .landing-desktop-hi .support-option {
-    width: 100%;
-    max-width: 26rem;
+  .landing-desktop-hi .support-option {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
-  .landing-desktop-hi .cta-streaks-left,
-  .landing-desktop-hi .cta-streaks-right,
+
   .landing-desktop-hi .FAQ-visual {
     display: none;
   }
 }
-/* ========================================
-   ACESSIBILIDADE
-   ======================================== */
 
-/* Alto contraste */
-.high-contrast,
-.high-contrast .landing-desktop-hi {
-  background: #000 !important;
-  color: #fff !important;
-}
+/* ==========================================================================
+   12. RESPONSIVIDADE
 
-.high-contrast .landing-desktop-hi * {
-  color: #fff !important;
-}
+   12.1 AJUSTES GERAIS
+   - Por que apoiar
+   - Contato
 
-.high-contrast .landing-desktop-hi a,
-.high-contrast .landing-desktop-hi button {
-  color: #ffff00 !important;
-  border-color: #ffff00 !important;
-}
+   12.2 TABLET
+   01. Header
+   02. Hero
+   03. FAQ
+   04. Por que apoiar
+   05. Impacto
+   06. Como apoiar
 
-/* Escala de cinza */
-.grayscale {
-    filter: grayscale(100%);
-}
+   12.3 MOBILE
+   01. Header
+   02. Hero
+   03. Por que apoiar
+   04. Impacto
+   05. FAQ
+   06. Como apoiar
+   07. Contato
+   08. CTA Final
+   09. Footer
 
-/* Inversão de cores */
-.invert-colors {
-    filter: invert(100%);
-}
-/* Tamanho do texto */
-.large-text {
-    font-size: 120% !important;
-}
+   ========================================================================== */
 
-.extra-large-text {
-    font-size: 140% !important;
-}
 
-/* Botão de acessibilidade */
 
-.header-container {
-    position: relative;
-}
 
-/* Botão de acessibilidade integrado e elegante */
-.accessibility-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  background-color: #ffffff;
-  border: 1px solid #d0d0d0;
-  border-radius: 8px; /* Mude para 50% se preferir totalmente redondo */
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-left: 12px; /* Dá um respiro em relação ao botão anterior */
-}
+@media (max-width: 768px) {
 
-.accessibility-button:hover {
-  background-color: #f0f4ff;
-  border-color: #3c7ef9;
-  color: #3c7ef9;
-}
+  /* ==================== 01 - HEADER ==================== */
 
-/* Painel de acessibilidade */
-.accessibility-menu {
-  position: absolute;
-  top: 60px;
-  right: 0; /* Alinha com o novo botão */
-  width: 220px;
-  padding: 16px;
-  background-color: #ffffff;
-  border: 1px solid #d9e8ff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  z-index: 1001;
-}
+  .landing-desktop-hi .header {
+    display: flex;
+    width: 0;
+    height: 0;
+    overflow: visible;
+  }
 
-.accessibility-menu h2 {
-    margin: 0 0 12px;
-    font-family: "Funnel Display", Helvetica;
-    font-size: 18px;
-    font-weight: 600;
-    color: #222222;
-}
+  .landing-desktop-hi .header-container {
+    width: 0;
+    height: 0;
+    max-width: none;
+    margin: 0;
+  }
 
-.accessibility-menu button {
+  .landing-desktop-hi .header .logomarca,
+  .landing-desktop-hi .navbar>a {
+    display: none;
+  }
+
+  .landing-desktop-hi .navbar {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1002;
+  }
+
+  .landing-desktop-hi .accessibility-button {
+    margin-left: 0;
+  }
+
+  /* ==================== 02 - HERO ==================== */
+
+  .landing-desktop-hi .hero {
+    min-height: auto;
+    padding: 3rem 1.25rem 2rem;
+    align-items: flex-start;
+  }
+
+  .landing-desktop-hi .hero-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .landing-desktop-hi .hero-content {
     width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #d9e8ff;
-    border-radius: 8px;
-    background-color: #ffffff;
-    color: #222222;
-    font-family: "Funnel Sans", Helvetica;
-    font-size: 14px;
-    cursor: pointer;
+    gap: 1rem;
+  }
+
+  .landing-desktop-hi .hero-copy {
+    gap: 0.75rem;
+  }
+
+  .landing-desktop-hi .div {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .landing-desktop-hi .p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .landing-desktop-hi .hero-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .landing-desktop-hi .primary-button,
+  .landing-desktop-hi .secondary-button {
+    width: 100%;
+  }
+
+  .landing-desktop-hi .hero-visual {
+    width: 100%;
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+
+  /* ==================== 03 - POR QUE APOIAR ==================== */
+
+  .landing-desktop-hi .support-reason {
+    min-height: auto;
+    padding: 3rem 1.25rem;
+  }
+
+  .landing-desktop-hi .support-reasons {
+    gap: 0;
+  }
+
+  .landing-desktop-hi .reason-row,
+  .landing-desktop-hi .reason-item-wrapper,
+  .landing-desktop-hi .div-wrapper {
+    justify-content: flex-start;
+    padding: 1rem 0;
+    border-top: 1px solid #bcd3ff;
+    border-right: 1px solid #bcd3ff;
+  }
+
+  .landing-desktop-hi .reason-item-wrapper {
+    border-right: none;
+    border-left: 1px solid #bcd3ff;
+  }
+
+  .landing-desktop-hi .reason-item {
+    width: 100%;
+  }
+
+  /* A linha decorativa do desktop não aparece no mobile */
+  .landing-desktop-hi .reason-path {
+    display: none;
+  }
+
+  .landing-desktop-hi .reason-row,
+  .landing-desktop-hi .reason-item-wrapper,
+  .landing-desktop-hi .div-wrapper {
+    position: relative;
+  }
+
+  .landing-desktop-hi .reason-row::before,
+  .landing-desktop-hi .reason-item-wrapper::before,
+  .landing-desktop-hi .div-wrapper::before,
+  .landing-desktop-hi .reason-row::after,
+  .landing-desktop-hi .reason-item-wrapper::after,
+  .landing-desktop-hi .div-wrapper::after {
+    content: "";
+    position: absolute;
+    top: -0.21875rem;
+    width: 0.4375rem;
+    height: 0.4375rem;
+    background-color: #3c7ef9;
+    border-radius: 50%;
+  }
+
+  /* 01 — bolinha esquerda e direita */
+  .landing-desktop-hi .reason-row::before {
+    left: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-row::after {
+    right: -0.21875rem;
+  }
+
+  /* 02 — bolinha somente na esquerda */
+  .landing-desktop-hi .reason-item-wrapper::before {
+    left: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-item-wrapper::after {
+    display: none;
+  }
+
+  /* 03 — bolinha somente na direita */
+  .landing-desktop-hi .div-wrapper::before {
+    display: none;
+  }
+
+  .landing-desktop-hi .div-wrapper::after {
+    right: -0.21875rem;
+  }
+
+  /* ==================== 04 - IMPACTO REAL ==================== */
+
+  .landing-desktop-hi .impact {
+    min-height: auto;
+    padding: 3rem 1.25rem;
+  }
+
+  .landing-desktop-hi .impact-container {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .landing-desktop-hi .impact-intro {
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .landing-desktop-hi .dot-grid {
+    display: block;
+    width: 8rem;
+    height: auto;
+    top: 1.5rem;
+    left: 0;
+    opacity: 0.20;
+    pointer-events: none;
+
+    transform: translateY(-1.3rem);
+  }
+
+  .landing-desktop-hi .impact-intro .text-wrapper-13 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .landing-desktop-hi .text-wrapper-14 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .landing-desktop-hi .text-wrapper-15 {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .landing-desktop-hi .impact-metric {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .landing-desktop-hi .metric {
+    gap: 0.4rem;
+  }
+
+  .landing-desktop-hi .text-wrapper-14 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .landing-desktop-hi .text-wrapper-15 {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  /* ==================== 05 - FAQ ==================== */
+
+  .landing-desktop-hi .FAQ-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .landing-desktop-hi .FAQ-visual {
+    display: none;
+  }
+
+  .landing-desktop-hi .FAQ-content {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .landing-desktop-hi .FAQ-item {
+    padding: 1.5rem 0;
+  }
+
+  .landing-desktop-hi .FAQ-question .text-wrapper-41 {
+    max-width: 20rem;
+  }
+
+  /* ==================== 06 - COMO APOIAR ==================== */
+
+  .landing-desktop-hi .support {
+    overflow: hidden;
+    padding: 3rem 0 6rem;
+  }
+
+  .landing-desktop-hi .support-container {
+    width: 100%;
+    max-width: none;
+    position: relative;
+  }
+
+  .landing-desktop-hi .support-intro-2 {
+    padding: 0 1.25rem;
+  }
+
+  /* Os 3 cards ficam lado a lado e podem ser arrastados no mobile */
+  .landing-desktop-hi .support-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    width: 100%;
+    position: relative;
+    transform: none;
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    padding: 1.25rem;
+    box-sizing: border-box;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.25rem;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  /* Esconde a barra de rolagem */
+  .landing-desktop-hi .support-options::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Tamanho dos cards no mobile */
+  .landing-desktop-hi .support-option {
+    flex: 0 0 calc(100vw - 2.5rem);
+    width: calc(100vw - 2.5rem);
+    max-width: 22rem;
+    box-sizing: border-box;
+
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+
+  /* Controles do carrossel */
+  .landing-desktop-hi .support-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+
+    width: 100%;
+    margin-top: 1.5rem;
+
+    position: relative;
+    z-index: 10;
+  }
+
+  .landing-desktop-hi .carousel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #3c7ef9;
+    border-radius: 50%;
+    color: #3c7ef9;
+    background: transparent;
+    font-size: 1.25rem;
+  }
+
+  .landing-desktop-hi .carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  .landing-desktop-hi .carousel-dots span {
+    display: block;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background-color: #bcd3ff;
+  }
+
+  .landing-desktop-hi .carousel-dots span.active {
+    background-color: #3c7ef9;
+  }
+
+  /* ==================== 07 - FOOTER ==================== */
+
+  .landing-desktop-hi .footer {
+    padding: 0;
+  }
+
+  .landing-desktop-hi .footer-container {
+    padding: 2.5rem 1.5rem 1.5rem;
+    gap: 0;
+  }
+
+  /* Logo + descrição em cima / links embaixo */
+  .landing-desktop-hi .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .landing-desktop-hi .footer-brand {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .landing-desktop-hi .text-wrapper-51 {
+    max-width: 20rem;
+  }
+
+  /* Links em grade 2x2 */
+  .landing-desktop-hi .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 3rem;
+    row-gap: 1.75rem;
+
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Linha inferior */
+  .landing-desktop-hi .footer-bottom {
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0 0;
+  }
+
+  .landing-desktop-hi .text-wrapper-52 {
+    white-space: normal;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  /* ==================== 08 - CTA FINAL ==================== */
+
+  .landing-desktop-hi .final-CTA {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .landing-desktop-hi .cta-streaks-left,
+  .landing-desktop-hi .cta-streaks-right {
+    display: block;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .landing-desktop-hi .cta-streaks-left {
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: -1rem;
+    transform: translateY(4.5rem);
+  }
+
+  .landing-desktop-hi .cta-streaks-right {
+    display: none;
+  }
+
+  .landing-desktop-hi .final-CTA-container {
+    position: relative;
+    z-index: 1;
+  }
+
+
 }
-
-.accessibility-menu button:hover {
-    background-color: #f0f6ff;
-}
-
-
-
