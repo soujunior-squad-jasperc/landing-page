@@ -61,6 +61,15 @@ body {
   text-align: left;
 }
 
+/* Corrige o bug de "tela travada"*/
+.landing-desktop-hi a,
+.landing-desktop-hi button {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .landing-desktop-hi a:focus-visible,
 .landing-desktop-hi button:focus-visible {
   outline: 2px solid #3c7ef9;
@@ -1868,17 +1877,6 @@ body {
 
 /* =================== ANIMAÇÃO - BOTÕES =================== */
 
-/* Botões principais — transição suave */
-.landing-desktop-hi .primary-button,
-.landing-desktop-hi .secondary-button,
-.landing-desktop-hi .apoie-agora-CTA,
-.landing-desktop-hi .CTA-2,
-.landing-desktop-hi .CTA-3 {
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    background-color 0.35s ease;
-}
 
 /* Botões dos 3 cards — permanecem sem movimento */
 .landing-desktop-hi .support-option__cta {
