@@ -753,6 +753,11 @@ body {
   line-height: 1.5rem;
 }
 
+/* Controles do carrossel — ocultos por padrão */
+.landing-desktop-hi .support-carousel-controls {
+  display: none;
+}
+
 /* Cards */
 .landing-desktop-hi .support-options {
   display: flex;
@@ -1982,34 +1987,112 @@ body {
   }
 }
 
-@media (max-width: 64em) {
+@media (min-width: 769px) and (max-width: 64em) {
 
-  .landing-desktop-hi .hero-container,
+  /* ==================== TABLET ==================== */
+
+  .landing-desktop-hi .header-container {
+    max-width: calc(100% - 2.5rem);
+  }
+
+  .landing-desktop-hi .navbar {
+    gap: 1rem;
+  }
+
+  .landing-desktop-hi .hero {
+    min-height: auto;
+    padding: 6.5rem 2.5rem 3rem;
+  }
+
+  .landing-desktop-hi .hero-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .landing-desktop-hi .hero-content {
+    width: min(48%, 30rem);
+    max-width: 30rem;
+  }
+
+  .landing-desktop-hi .hero-visual {
+    width: min(48%, 28rem);
+    max-width: 28rem;
+    margin: 0;
+  }
+
   .landing-desktop-hi .FAQ-container {
     flex-direction: column;
     gap: 2rem;
   }
 
-  .landing-desktop-hi .hero-content,
   .landing-desktop-hi .FAQ-content,
   .landing-desktop-hi .impact-intro {
     width: 100%;
   }
 
-  .landing-desktop-hi .hero-visual {
-    width: 100%;
-    max-width: 35.4375rem;
-  }
-
   .landing-desktop-hi .reason-row,
   .landing-desktop-hi .reason-item-wrapper,
   .landing-desktop-hi .div-wrapper {
+    position: relative;
     justify-content: flex-start;
+    padding: 1rem 0;
+    border-top: 1px solid #bcd3ff;
+    border-right: 1px solid #bcd3ff;
+  }
+
+  .landing-desktop-hi .reason-row::before,
+  .landing-desktop-hi .reason-item-wrapper::before,
+  .landing-desktop-hi .div-wrapper::before,
+  .landing-desktop-hi .reason-row::after,
+  .landing-desktop-hi .reason-item-wrapper::after,
+  .landing-desktop-hi .div-wrapper::after {
+    content: "";
+    position: absolute;
+    top: -0.21875rem;
+    width: 0.4375rem;
+    height: 0.4375rem;
+    background-color: #3c7ef9;
+    border-radius: 50%;
+  }
+
+  .landing-desktop-hi .reason-row::before {
+    left: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-row::after {
+    right: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-item-wrapper::before {
+    left: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-item-wrapper::after {
+    display: none;
+  }
+
+  .landing-desktop-hi .div-wrapper::before {
+    display: none;
+  }
+
+  .landing-desktop-hi .div-wrapper::after {
+    right: -0.21875rem;
+  }
+
+  .landing-desktop-hi .reason-item-wrapper {
+    border-right: none;
+    border-left: 1px solid #bcd3ff;
   }
 
   .landing-desktop-hi .reason-item {
     width: 100%;
     max-width: 22.5rem;
+  }
+
+  .landing-desktop-hi .dot-grid {
+    opacity: 0.20;
   }
 
   .landing-desktop-hi .impact-metric {
@@ -2018,39 +2101,56 @@ body {
   }
 
   .landing-desktop-hi .support-options {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    scroll-padding-inline: 1.25rem;
   }
 
   .landing-desktop-hi .support-option {
-    width: 100%;
-    max-width: 26rem;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
 
   .landing-desktop-hi .FAQ-visual {
     display: none;
   }
-
 }
-
-.landing-desktop-hi .support-carousel-controls {
-  display: none;
-}
-
-
 
 /* ==========================================================================
-   12. RESPONSIVIDADE MOBILE
-   ==========================================================================
+   12. RESPONSIVIDADE
+
+   12.1 AJUSTES GERAIS
+   - Por que apoiar
+   - Contato
+
+   12.2 TABLET
+   01. Header
+   02. Hero
+   03. FAQ
+   04. Por que apoiar
+   05. Impacto
+   06. Como apoiar
+
+   12.3 MOBILE
    01. Header
    02. Hero
    03. Por que apoiar
    04. Impacto
-   05. Como apoiar
-   06. FAQ
+   05. FAQ
+   06. Como apoiar
    07. Contato
    08. CTA Final
    09. Footer
+
    ========================================================================== */
 
 
@@ -2061,7 +2161,34 @@ body {
   /* ==================== 01 - HEADER ==================== */
 
   .landing-desktop-hi .header {
+    display: flex;
+    width: 0;
+    height: 0;
+    overflow: visible;
+  }
+
+  .landing-desktop-hi .header-container {
+    width: 0;
+    height: 0;
+    max-width: none;
+    margin: 0;
+  }
+
+  .landing-desktop-hi .header .logomarca,
+  .landing-desktop-hi .navbar>a {
     display: none;
+  }
+
+  .landing-desktop-hi .navbar {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1002;
+  }
+
+  .landing-desktop-hi .accessibility-button {
+    margin-left: 0;
   }
 
   /* ==================== 02 - HERO ==================== */
@@ -2205,10 +2332,11 @@ body {
   }
 
   .landing-desktop-hi .impact-container {
+    align-items: stretch;
     width: 100%;
   }
 
-  .landing-desktop-hi .impact-header {
+  .landing-desktop-hi .impact-intro {
     width: 100%;
     gap: 0.75rem;
   }
@@ -2219,13 +2347,13 @@ body {
     height: auto;
     top: 1.5rem;
     left: 0;
-    opacity: 0.18;
+    opacity: 0.20;
     pointer-events: none;
 
     transform: translateY(-1.3rem);
   }
 
-  .landing-desktop-hi .impact-header .text-wrapper-13 {
+  .landing-desktop-hi .impact-intro .text-wrapper-13 {
     font-size: 2rem;
     line-height: 1.1;
   }
@@ -2241,6 +2369,7 @@ body {
   }
 
   .landing-desktop-hi .impact-metric {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 2rem;
     margin-top: 1.5rem;
   }
@@ -2262,7 +2391,17 @@ body {
 
   /* ==================== 05 - FAQ ==================== */
 
+  .landing-desktop-hi .FAQ-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .landing-desktop-hi .FAQ-visual {
+    display: none;
+  }
+
   .landing-desktop-hi .FAQ-content {
+    width: 100%;
     gap: 2rem;
   }
 
@@ -2291,24 +2430,45 @@ body {
     padding: 0 1.25rem;
   }
 
-  /* Os 3 cards ficam lado a lado */
+  /* Os 3 cards ficam lado a lado e podem ser arrastados no mobile */
   .landing-desktop-hi .support-options {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 1rem;
 
-    width: max-content;
+    width: 100%;
     position: relative;
+    transform: none;
 
-    /* centraliza o CARD AZUL */
-    transform: translateX(calc(50vw - 11rem - 23rem));
+    overflow-x: auto;
+    overflow-y: visible;
+
+    padding: 1.25rem;
+    box-sizing: border-box;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.25rem;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  /* Esconde a barra de rolagem */
+  .landing-desktop-hi .support-options::-webkit-scrollbar {
+    display: none;
   }
 
   /* Tamanho dos cards no mobile */
-  .landing-desktop-hi .support-option{
-    flex: 0 0 22rem;
-    width: 22rem;
+  .landing-desktop-hi .support-option {
+    flex: 0 0 calc(100vw - 2.5rem);
+    width: calc(100vw - 2.5rem);
+    max-width: 22rem;
+    box-sizing: border-box;
+
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
   /* Controles do carrossel */
