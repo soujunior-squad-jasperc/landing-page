@@ -1821,6 +1821,20 @@ body {
   cursor: pointer;
 }
 
+.landing-desktop-hi .frame.has-error,
+.landing-desktop-hi .frame-2.has-error,
+.landing-desktop-hi .frame-3.has-error {
+  border-color: #d93025;
+}
+
+.landing-desktop-hi .field-error {
+  margin: 0;
+  font-family: "Funnel Sans", Helvetica;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #d93025;
+}
+
 
 /* ==========================================================================
    09. CTA FINAL
@@ -3098,4 +3112,57 @@ body {
     background-color: #2f68d4;
   }
 
+}
+/* ==========================================================================
+   HTML SEMÂNTICO — CSS COMPLEMENTAR
+   ========================================================================== */
+
+/* Listas (ol/ul) usadas como layout: sem margem, recuo ou marcador.
+   Especificidade baixa de propósito: as regras por classe continuam vencendo. */
+.landing-desktop-hi ol,
+.landing-desktop-hi ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Link "Pular para o conteúdo" — aparece só quando recebe foco pelo teclado */
+.landing-desktop-hi .skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  padding: 0.75rem 1rem;
+  background-color: #0a1662;
+  color: #ffffff;
+  font-family: "Funnel Sans", Helvetica;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0;
+  transform: translateY(-120%);
+}
+
+.landing-desktop-hi .skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Lista ordenada dos motivos (substitui as divs dentro de .support-reasons) */
+.landing-desktop-hi .reason-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.9375rem;
+  width: 100%;
+}
+
+/* Título <h3> que envolve o botão do FAQ */
+.landing-desktop-hi .FAQ-heading {
+  margin: 0;
+  font: inherit;
+}
+
+@media (max-width: 768px) {
+  .landing-desktop-hi .reason-list {
+    gap: 0;
+  }
 }
