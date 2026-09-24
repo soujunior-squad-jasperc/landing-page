@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="frontend/assets/images/capasoujunior.png" alt="Capa SouJunior" width="100%">
+  <img src="assets/images/capasoujunior.png" alt="Capa SouJunior" width="100%">
   
   # 🚀 Landing Page · Jasper.C
  
