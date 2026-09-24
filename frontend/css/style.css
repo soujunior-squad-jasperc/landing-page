@@ -1575,6 +1575,10 @@ body {
   color: #57595f;
 }
 
+.landing-desktop-hi .FAQ-contact-link {
+  color: #3c7ef9;
+}
+
 
 /* ==========================================================================
    08. CONTATO
@@ -2221,7 +2225,7 @@ body {
 
    ========================================================================== */
 
-   
+
 @media (min-width: 769px) and (max-width: 64em) {
 
   /* ==================== TABLET ==================== */
@@ -2435,14 +2439,23 @@ body {
     align-items: center;
   }
 
-  /* Esconde a logo completa no mobile */
+  /* Logo completa no topo do mobile */
   .landing-desktop-hi .header .logomarca {
+    display: flex;
+  }
+
+  /* Ao rolar, esconde a logo completa */
+  .landing-desktop-hi .header.scrolled .logomarca {
     display: none;
   }
 
   /* Ícone novo escondido antes do scroll */
-  .landing-desktop-hi .header .logo-mobile {
-    display: none;
+  .landing-desktop-hi .header.scrolled .logo-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.375rem;
+    height: 2.375rem;
   }
 
   /* Mostra somente o ícone quando o header aparece */
@@ -2603,7 +2616,7 @@ body {
 
   .landing-desktop-hi .hero {
     min-height: auto;
-    padding: 3rem 1.25rem 2rem;
+    padding: 5rem 1.25rem 2rem;
     align-items: flex-start;
   }
 

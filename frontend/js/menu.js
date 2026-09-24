@@ -33,21 +33,21 @@ const navegacao = document.querySelector(".navbar");
 // --------------------------------------------------------------------------
 
 function definirEstadoDoMenu(aberto) {
-    navegacao.classList.toggle("menu-open", aberto);
-    header.classList.toggle("menu-is-open", aberto);
+  navegacao.classList.toggle("menu-open", aberto);
+  header.classList.toggle("menu-is-open", aberto);
 
-    botaoMenu.textContent = aberto ? "✕" : "☰";
+  botaoMenu.textContent = aberto ? "✕" : "☰";
 
-    botaoMenu.setAttribute("aria-expanded", String(aberto));
-    botaoMenu.setAttribute(
-        "aria-label",
-        aberto ? "Fechar menu" : "Abrir menu"
-    );
+  botaoMenu.setAttribute("aria-expanded", String(aberto));
+  botaoMenu.setAttribute(
+    "aria-label",
+    aberto ? "Fechar menu" : "Abrir menu"
+  );
 }
 
 
 function fecharMenu() {
-    definirEstadoDoMenu(false);
+  definirEstadoDoMenu(false);
 }
 
 
@@ -56,13 +56,13 @@ function fecharMenu() {
 // --------------------------------------------------------------------------
 
 function atualizarHeaderAoRolar() {
-    const paginaFoiRolada = window.scrollY > 50;
+  const paginaFoiRolada = window.scrollY > 50;
 
-    header.classList.toggle("scrolled", paginaFoiRolada);
+  header.classList.toggle("scrolled", paginaFoiRolada);
 
-    if (!paginaFoiRolada) {
-        fecharMenu();
-    }
+  if (!paginaFoiRolada) {
+    fecharMenu();
+  }
 }
 
 
@@ -76,9 +76,9 @@ atualizarHeaderAoRolar();
 // --------------------------------------------------------------------------
 
 botaoMenu.addEventListener("click", () => {
-    const menuEstaAberto = navegacao.classList.contains("menu-open");
+  const menuEstaAberto = navegacao.classList.contains("menu-open");
 
-    definirEstadoDoMenu(!menuEstaAberto);
+  definirEstadoDoMenu(!menuEstaAberto);
 });
 
 
@@ -87,7 +87,7 @@ botaoMenu.addEventListener("click", () => {
 // --------------------------------------------------------------------------
 
 navegacao.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", fecharMenu);
+  link.addEventListener("click", fecharMenu);
 });
 
 // --------------------------------------------------------------------------
@@ -96,7 +96,9 @@ navegacao.querySelectorAll("a").forEach((link) => {
 
 const carrossel = document.querySelector(".support-options");
 const setasCarrossel = document.querySelectorAll(".carousel-arrow");
-const cardsCarrossel = document.querySelectorAll(".support-option");
+const cardsCarrossel = document.querySelectorAll(
+  ".support-option, .support-option-2"
+);
 const dotsCarrossel = document.querySelectorAll(".carousel-dots span");
 
 let cardAtual = 0;
@@ -134,8 +136,21 @@ if (carrossel && setasCarrossel.length === 2 && cardsCarrossel.length) {
     atualizarCarrossel(cardAtual + 1);
   });
 
-  atualizarCarrossel(0);
+  atualizarCarrossel(1);
 }
+
+let larguraAnterior = window.innerWidth;
+
+window.addEventListener("resize", () => {
+  const larguraAtual = window.innerWidth;
+
+  if (larguraAnterior > 768 && larguraAtual <= 768) {
+    atualizarCarrossel(1);
+  }
+
+  larguraAnterior = larguraAtual;
+});
+
 // --------------------------------------------------------------------------
 // 07. FAQ — Abrir e fechar respostas
 // --------------------------------------------------------------------------
