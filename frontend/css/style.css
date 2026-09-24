@@ -20,7 +20,6 @@
    - Bordas, linhas e sombras de 1px permanecem em px.
    ========================================================================== */
 
-
 /* ==========================================================================
    01. BASE
    ========================================================================== */
@@ -31,6 +30,7 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 .landing-desktop-hi {
@@ -61,6 +61,15 @@ body {
   text-align: left;
 }
 
+/* Corrige o bug de "tela travada"*/
+.landing-desktop-hi a,
+.landing-desktop-hi button {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .landing-desktop-hi a:focus-visible,
 .landing-desktop-hi button:focus-visible {
   outline: 2px solid #3c7ef9;
@@ -84,6 +93,11 @@ body {
   height: 2.375rem;
 }
 
+/* Ícone exclusivo do header mobile */
+.landing-desktop-hi .logo-mobile {
+  display: none;
+}
+
 
 /* ==========================================================================
    02. HEADER
@@ -92,7 +106,7 @@ body {
 .landing-desktop-hi .header {
   display: flex;
   width: 100%;
-  height: 5.5rem;
+  height: 4.5rem;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -106,13 +120,24 @@ body {
 }
 
 .landing-desktop-hi .header.scrolled {
-  background-color: #ffffff;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  height: 4.5rem;
+  background-color: #0a1662;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.landing-desktop-hi .header.scrolled .text-wrapper-53 {
+  color: #ffffff;
+}
+
+.landing-desktop-hi .header.scrolled .icone,
+.landing-desktop-hi .header.scrolled .vector-7 {
+  filter: brightness(0) invert(1);
 }
 
 .landing-desktop-hi .header-container {
   display: flex;
-  width: 75rem;
+  width: 71.5625rem;
   max-width: calc(100% - 3rem);
   margin: 0 auto;
   align-items: center;
@@ -132,9 +157,9 @@ body {
 }
 
 .landing-desktop-hi .vector-7 {
-  position: relative;
-  width: 9.5994rem;
-  height: 1.525rem;
+  display: block;
+  width: 12.75rem;
+  height: auto;
 }
 
 .landing-desktop-hi .navbar {
@@ -156,6 +181,11 @@ body {
   letter-spacing: 0;
   line-height: 1.5rem;
   white-space: nowrap;
+
+}
+
+.landing-desktop-hi .navbar>a:not(.apoie-agora-CTA):hover {
+  color: #3c7ef9;
 }
 
 .landing-desktop-hi .apoie-agora-CTA {
@@ -182,6 +212,9 @@ body {
   white-space: nowrap;
 }
 
+.landing-desktop-hi .mobile-menu-button {
+  display: none;
+}
 
 /* ==========================================================================
    03. HERO
@@ -328,8 +361,9 @@ body {
 /* Ilustração */
 .landing-desktop-hi .hero-visual {
   position: relative;
-  width: 35.4375rem;
+  width: 32rem;
   max-width: 100%;
+  transform: translateY(2.3rem);
 }
 
 .landing-desktop-hi .hero-art {
@@ -788,8 +822,8 @@ body {
   justify-content: space-between;
   position: relative;
   width: 20.625rem;
-  min-height: 21.25rem;
-  padding: 1.5rem;
+  min-height: 21.95rem;
+  padding: 1.5rem 1.5rem 1rem;
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 0.75rem;
@@ -873,6 +907,28 @@ body {
   color: var(--card-title);
 }
 
+/* Card — preço */
+.landing-desktop-hi .support-option__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  color: var(--card-title);
+}
+
+.landing-desktop-hi .support-option__price strong {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.landing-desktop-hi .support-option__price span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
 .landing-desktop-hi .support-option__divider {
   width: 12.3438rem;
   height: 1px;
@@ -939,6 +995,10 @@ body {
   color: var(--card-cta-color);
   white-space: nowrap;
   cursor: pointer;
+  margin-top: auto;
+  align-self: center;
+  position: relative;
+
 }
 
 /* Usados também em outras seções (Contato e CTA final) */
@@ -1042,6 +1102,212 @@ body {
   white-space: nowrap;
 }
 
+
+/* ==========================================================================
+   COMPATIBILIDADE — CARDS "COMO APOIAR" DO HTML ATUAL
+   Mantém a estrutura atual do index.html sem alterar o carrossel responsivo.
+   ========================================================================== */
+
+.landing-desktop-hi .support-option-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 21.25rem;
+  min-height: 23.75rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background-color: #0a1662e6;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  overflow: visible;
+  transition:
+    transform 0.3s ease-out,
+    box-shadow 0.3s ease-out;
+}
+
+.landing-desktop-hi .support-option-2:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
+}
+
+.landing-desktop-hi .badge-row {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.3125rem 0.75rem;
+  position: absolute;
+  top: -1.125rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #3c7ef9;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.landing-desktop-hi .option-content,
+.landing-desktop-hi .option-content-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .option-content-2 {
+  min-height: 15rem;
+}
+
+.landing-desktop-hi .div-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .vector-2 {
+  position: relative;
+  width: 12.3438rem;
+  height: 1px;
+  margin-bottom: -1px;
+}
+
+.landing-desktop-hi .text-wrapper-20,
+.landing-desktop-hi .text-wrapper-27 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-20 {
+  color: #0a1662;
+}
+
+.landing-desktop-hi .text-wrapper-27 {
+  color: #98bafb;
+}
+
+.landing-desktop-hi .text-wrapper-21,
+.landing-desktop-hi .text-wrapper-28 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .text-wrapper-21 {
+  color: #0a1662;
+}
+
+.landing-desktop-hi .text-wrapper-28 {
+  color: #ffffff;
+}
+
+.landing-desktop-hi .text-wrapper-26 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #172675;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .benefits-option,
+.landing-desktop-hi .benefits-option-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.landing-desktop-hi .text-wrapper-22 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 600;
+  color: #242731;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.landing-desktop-hi .CTA,
+.landing-desktop-hi .button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.landing-desktop-hi .CTA {
+  background-color: #3c7ef9;
+}
+
+.landing-desktop-hi .button {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.landing-desktop-hi .text-wrapper-34 {
+  position: relative;
+  width: fit-content;
+  font-family: "Funnel Display", Helvetica;
+  font-weight: 700;
+  color: #0a1662;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+/* O card central também participa do carrossel nos tablets. */
+@media (min-width: 769px) and (max-width: 64em) {
+  .landing-desktop-hi .support-option-2 {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+}
+
+/* O card central usa a mesma largura de slide dos outros no mobile. */
+@media (max-width: 768px) {
+  .landing-desktop-hi .support-option-2 {
+    flex: 0 0 calc(100vw - 2.5rem);
+    width: calc(100vw - 2.5rem);
+    max-width: 22rem;
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+}
+
 /* ==========================================================================
    07. FAQ
    ========================================================================== */
@@ -1063,7 +1329,7 @@ body {
 
 .landing-desktop-hi .FAQ-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 5rem;
   position: relative;
@@ -1289,23 +1555,24 @@ body {
 }
 
 .landing-desktop-hi .FAQ-item.active .text-wrapper-42 {
-  transform: rotate(20deg);
+  transform: rotate(45deg);
 }
 
 .landing-desktop-hi .FAQ-answer {
   max-height: 0;
-  padding: 0;
+  padding: 0 1rem;
   overflow: hidden;
   visibility: hidden;
+
   transition:
-    max-height 0.35s ease,
-    padding 0.35s ease,
-    visibility 0s linear 0.35s;
+    max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.45s;
 }
 
 .landing-desktop-hi .FAQ-item.active .FAQ-answer {
   max-height: 37.5rem;
-  padding: 0.75rem 0 0;
+  padding: 1rem;
   visibility: visible;
   transition-delay: 0s;
 }
@@ -1316,6 +1583,10 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #57595f;
+}
+
+.landing-desktop-hi .FAQ-contact-link {
+  color: #3c7ef9;
 }
 
 
@@ -1657,35 +1928,6 @@ body {
 
 /* =================== ANIMAÇÃO - BOTÕES =================== */
 
-/* Botões principais — transição suave */
-.landing-desktop-hi .primary-button,
-.landing-desktop-hi .secondary-button,
-.landing-desktop-hi .apoie-agora-CTA,
-.landing-desktop-hi .CTA-2,
-.landing-desktop-hi .CTA-3 {
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    background-color 0.35s ease;
-}
-
-/* Elevação dos botões no hover */
-.landing-desktop-hi .primary-button:hover,
-.landing-desktop-hi .secondary-button:hover,
-.landing-desktop-hi .apoie-agora-CTA:hover,
-.landing-desktop-hi .CTA-2:hover,
-.landing-desktop-hi .CTA-3:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(10, 22, 98, 0.15);
-}
-
-/* Botões azuis — mudança de cor no hover */
-.landing-desktop-hi .primary-button:hover,
-.landing-desktop-hi .apoie-agora-CTA:hover,
-.landing-desktop-hi .CTA-2:hover,
-.landing-desktop-hi .CTA-3:hover {
-  background-color: #2f68d4;
-}
 
 /* Botões dos 3 cards — permanecem sem movimento */
 .landing-desktop-hi .support-option__cta {
@@ -1892,28 +2134,6 @@ body {
   font-size: 140% !important;
 }
 
-/* Botão */
-.landing-desktop-hi .accessibility-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.625rem;
-  height: 2.625rem;
-  margin-left: 0.75rem;
-  background-color: #ffffff;
-  border: 1px solid #d0d0d0;
-  border-radius: 0.5rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.landing-desktop-hi .accessibility-button:hover {
-  background-color: #f0f4ff;
-  border-color: #3c7ef9;
-  color: #3c7ef9;
-}
-
 /* Painel */
 .accessibility-menu {
   position: absolute;
@@ -1987,9 +2207,82 @@ body {
   }
 }
 
+/* ==========================================================================
+   12. RESPONSIVIDADE
+
+   12.1 AJUSTES GERAIS
+   - Por que apoiar
+   - Contato
+
+   12.2 TABLET
+   01. Header
+   02. Hero
+   03. FAQ
+   04. Por que apoiar
+   05. Impacto
+   06. Como apoiar
+
+   12.3 MOBILE
+   01. Header
+   02. Hero
+   03. Por que apoiar
+   04. Impacto
+   05. FAQ
+   06. Como apoiar
+   07. Contato
+   08. CTA Final
+   09. Footer
+
+   ========================================================================== */
+
+
 @media (min-width: 769px) and (max-width: 64em) {
 
   /* ==================== TABLET ==================== */
+
+  /* Setas do carrossel — iPad Air e iPad Pro */
+  .landing-desktop-hi .support-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .landing-desktop-hi .carousel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #3c7ef9;
+    border-radius: 50%;
+    color: #3c7ef9;
+    background: transparent;
+    font-size: 1.25rem;
+  }
+
+  .landing-desktop-hi .carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  .landing-desktop-hi .carousel-dots span {
+    display: block;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background-color: #bcd3ff;
+  }
+
+  .landing-desktop-hi .carousel-dots span.active {
+    background-color: #3c7ef9;
+  }
 
   .landing-desktop-hi .header-container {
     max-width: calc(100% - 2.5rem);
@@ -2125,34 +2418,6 @@ body {
   }
 }
 
-/* ==========================================================================
-   12. RESPONSIVIDADE
-
-   12.1 AJUSTES GERAIS
-   - Por que apoiar
-   - Contato
-
-   12.2 TABLET
-   01. Header
-   02. Hero
-   03. FAQ
-   04. Por que apoiar
-   05. Impacto
-   06. Como apoiar
-
-   12.3 MOBILE
-   01. Header
-   02. Hero
-   03. Por que apoiar
-   04. Impacto
-   05. FAQ
-   06. Como apoiar
-   07. Contato
-   08. CTA Final
-   09. Footer
-
-   ========================================================================== */
-
 
 
 
@@ -2162,40 +2427,209 @@ body {
 
   .landing-desktop-hi .header {
     display: flex;
-    width: 0;
-    height: 0;
-    overflow: visible;
+    width: 100%;
+    height: 4.5rem;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .landing-desktop-hi .header.scrolled {
+    height: 4.5rem;
+    background-color: #f3f7ff;
+    border-radius: 0;
+    box-shadow: 0 0.25rem 0.75rem rgba(10, 22, 98, 0.08);
+    filter: none;
+  }
+
+  .landing-desktop-hi .header.scrolled .text-wrapper-53 {
+    color: #242731;
   }
 
   .landing-desktop-hi .header-container {
-    width: 0;
-    height: 0;
+    width: 100%;
+    height: 100%;
     max-width: none;
     margin: 0;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+    align-items: center;
   }
 
-  .landing-desktop-hi .header .logomarca,
-  .landing-desktop-hi .navbar>a {
+  /* Logo completa no topo do mobile */
+  .landing-desktop-hi .header .logomarca {
+    display: flex;
+    width: 9.5rem;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .landing-desktop-hi .header .logomarca .vector-7 {
+    width: 9.95rem;
+    height: auto;
+  }
+
+  /* Ao rolar, esconde a logo completa */
+  .landing-desktop-hi .header.scrolled .logomarca {
     display: none;
   }
 
+  .landing-desktop-hi .header.scrolled .logo-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.875rem;
+    height: 1.875rem;
+    flex: 0 0 1.875rem;
+  }
+
+  .landing-desktop-hi .header.scrolled .logo-mobile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+
+  .landing-desktop-hi .header:not(.scrolled) .mobile-menu-button {
+    display: none;
+  }
+
+  /* ==================== MENU MOBILE ==================== */
+
+  /* Painel de navegação */
   .landing-desktop-hi .navbar {
     display: flex;
     position: fixed;
-    top: 1rem;
+    top: 4.5rem;
     right: 1rem;
-    z-index: 1002;
+    z-index: 999;
+
+    width: 13rem;
+    height: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+
+    padding: 0 1rem;
+    box-sizing: border-box;
+
+    background-color: #f3f7ff;
+    border-radius: 0 0 1.25rem 1.25rem;
+    box-shadow: none;
+    overflow: hidden;
+
+    transition:
+      height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.3s ease;
   }
 
-  .landing-desktop-hi .accessibility-button {
-    margin-left: 0;
+
+  /* Botão ☰ / X */
+  .landing-desktop-hi .mobile-menu-button {
+    position: fixed;
+    top: 0.75rem;
+    right: 1.5rem;
+    z-index: 1003;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+
+    font-size: 1.5rem;
+    color: #242731;
   }
+
+
+  /* Esconde o botão antes do scroll */
+  .landing-desktop-hi .header:not(.scrolled) .mobile-menu-button {
+    display: none;
+  }
+
+
+  /* Links */
+  .landing-desktop-hi .navbar>a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.75rem;
+
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+    text-align: left;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.75rem);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0s linear 0.45s;
+  }
+
+
+  /* Menu aberto */
+  .landing-desktop-hi .navbar.menu-open {
+    height: 17.25rem;
+    padding-bottom: 1rem;
+
+    box-shadow: 0 0.25rem 0.75rem rgba(10, 22, 98, 0.08);
+  }
+
+
+  /* Links — menu aberto */
+  .landing-desktop-hi .navbar.menu-open>a {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+    transition:
+      opacity 0.25s ease 0.08s,
+      transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0s;
+  }
+
+
+  /* Botão Apoie Agora */
+  .landing-desktop-hi .navbar>.apoie-agora-CTA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 3rem;
+    margin-top: 0.25rem;
+
+    background-color: #3c7ef9;
+    color: #ffffff;
+    border-radius: 0.5rem;
+
+    text-align: center;
+  }
+
+
+  /* X — menu aberto */
+  .landing-desktop-hi .header.menu-is-open .mobile-menu-button {
+    color: #3c7ef9;
+  }
+
+
 
   /* ==================== 02 - HERO ==================== */
 
   .landing-desktop-hi .hero {
     min-height: auto;
-    padding: 3rem 1.25rem 2rem;
+    padding: 5rem 1.25rem 2rem;
     align-items: flex-start;
   }
 
@@ -2291,8 +2725,8 @@ body {
     content: "";
     position: absolute;
     top: -0.21875rem;
-    width: 0.4375rem;
-    height: 0.4375rem;
+    width: 0.625rem;
+    height: 0.625rem;
     background-color: #3c7ef9;
     border-radius: 50%;
   }
@@ -2445,7 +2879,7 @@ body {
     overflow-x: auto;
     overflow-y: visible;
 
-    padding: 1.25rem;
+    padding: 2.5rem 1.25rem 1.25rem;
     box-sizing: border-box;
 
     scroll-snap-type: x mandatory;
@@ -2469,6 +2903,17 @@ body {
 
     scroll-snap-align: center;
     scroll-snap-stop: always;
+
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  /* Card ativo do carrossel */
+  .landing-desktop-hi .support-option.card-ativo {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
+    z-index: 2;
   }
 
   /* Controles do carrossel */
@@ -2479,7 +2924,7 @@ body {
     gap: 0.75rem;
 
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: -0.5rem;
 
     position: relative;
     z-index: 10;
@@ -2496,6 +2941,14 @@ body {
     color: #3c7ef9;
     background: transparent;
     font-size: 1.25rem;
+    line-height: 1;
+    padding: 0;
+    text-indent: 0;
+  }
+
+  .landing-desktop-hi .carousel-arrow .arrow-symbol {
+    display: inline-block;
+    transform: translateY(-2px);
   }
 
   .landing-desktop-hi .carousel-dots {
@@ -2602,5 +3055,47 @@ body {
     z-index: 1;
   }
 
+
+}
+
+/* Animação dos botões no mobile */
+
+.landing-desktop-hi .primary-button,
+.landing-desktop-hi .secondary-button,
+.landing-desktop-hi .apoie-agora-CTA,
+.landing-desktop-hi .CTA-2,
+.landing-desktop-hi .CTA-3 {
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.12s ease;
+}
+
+.landing-desktop-hi .primary-button:active,
+.landing-desktop-hi .secondary-button:active,
+.landing-desktop-hi .apoie-agora-CTA:active,
+.landing-desktop-hi .CTA-2:active,
+.landing-desktop-hi .CTA-3:active {
+  transform: scale(0.96);
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* Elevação dos botões no hover */
+  .landing-desktop-hi .primary-button:hover,
+  .landing-desktop-hi .secondary-button:hover,
+  .landing-desktop-hi .apoie-agora-CTA:hover,
+  .landing-desktop-hi .CTA-2:hover,
+  .landing-desktop-hi .CTA-3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(10, 22, 98, 0.15);
+  }
+
+  /* Botões azuis — mudança de cor no hover */
+  .landing-desktop-hi .primary-button:hover,
+  .landing-desktop-hi .apoie-agora-CTA:hover,
+  .landing-desktop-hi .CTA-2:hover,
+  .landing-desktop-hi .CTA-3:hover {
+    background-color: #2f68d4;
+  }
 
 }
