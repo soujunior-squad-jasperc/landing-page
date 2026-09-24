@@ -9,17 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const rules = {
     nome: (v) => {
       if (!v) return "Informe seu nome.";
-      if (v.length < 2) return "O nome deve ter pelo menos 2 caracteres.";
+      if (v.length < 2) return "O nome deve ter pelo menos 2 caracteres";
       return "";
     },
     email: (v) => {
       if (!v) return "Informe seu e-mail.";
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return "Informe um e-mail válido.";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return "Informe um e-mail válido";
       return "";
     },
     mensagem: (v) => {
       if (!v) return "Escreva sua mensagem.";
-      if (v.length < 10) return "A mensagem deve ter pelo menos 10 caracteres.";
+      if (v.length < 10) return "A mensagem deve ter pelo menos 10 caracteres";
       return "";
     },
   };
@@ -108,9 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function mostrarMensagemDeSucesso() {
-  alert("Mensagem enviada! Em breve entraremos em contato.");
+  alert("Mensagem enviada! Em breve entraremos em contato");
 }
 
 function mostrarMensagemDeErro() {
-  alert("Não foi possível enviar agora. Tente novamente em instantes.");
+  alert("Não foi possível enviar agora. Tente novamente em instantes");
 }
