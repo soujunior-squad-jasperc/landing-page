@@ -2458,7 +2458,7 @@ body {
   /* Logo completa no topo do mobile */
   .landing-desktop-hi .header .logomarca {
     display: flex;
-    width: 11rem;
+    width: 9rem;
     height: auto;
     justify-content: flex-start;
   }

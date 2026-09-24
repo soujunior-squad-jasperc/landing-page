@@ -136,7 +136,7 @@ if (carrossel && setasCarrossel.length === 2 && cardsCarrossel.length) {
     atualizarCarrossel(cardAtual + 1);
   });
 
-  atualizarCarrossel(1);
+  requestAnimationFrame(() => atualizarCarrossel(1));
 }
 
 let larguraAnterior = window.innerWidth;
