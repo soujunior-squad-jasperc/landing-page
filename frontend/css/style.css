@@ -93,6 +93,11 @@ body {
   height: 2.375rem;
 }
 
+/* Ícone exclusivo do header mobile */
+.landing-desktop-hi .logo-mobile {
+  display: none;
+}
+
 
 /* ==========================================================================
    02. HEADER
@@ -116,7 +121,8 @@ body {
 
 .landing-desktop-hi .header.scrolled {
   background-color: #ffffff;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 1.25rem 1.25rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(10, 22, 98, 0.08);
 }
 
 .landing-desktop-hi .header-container {
@@ -806,8 +812,8 @@ body {
   justify-content: space-between;
   position: relative;
   width: 20.625rem;
-  min-height: 21.25rem;
-  padding: 1.5rem;
+  min-height: 21.95rem;
+  padding: 1.5rem 1.5rem 1rem;
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 0.75rem;
@@ -891,6 +897,28 @@ body {
   color: var(--card-title);
 }
 
+/* Card — preço */
+.landing-desktop-hi .support-option__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin: 0;
+  font-family: "Funnel Display", Helvetica;
+  color: var(--card-title);
+}
+
+.landing-desktop-hi .support-option__price strong {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.landing-desktop-hi .support-option__price span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
 .landing-desktop-hi .support-option__divider {
   width: 12.3438rem;
   height: 1px;
@@ -957,6 +985,10 @@ body {
   color: var(--card-cta-color);
   white-space: nowrap;
   cursor: pointer;
+  margin-top: auto;
+  align-self: center;
+  position: relative;
+
 }
 
 /* Usados também em outras seções (Contato e CTA final) */
@@ -1287,7 +1319,7 @@ body {
 
 .landing-desktop-hi .FAQ-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 5rem;
   position: relative;
@@ -1513,23 +1545,24 @@ body {
 }
 
 .landing-desktop-hi .FAQ-item.active .text-wrapper-42 {
-  transform: rotate(20deg);
+  transform: rotate(45deg);
 }
 
 .landing-desktop-hi .FAQ-answer {
   max-height: 0;
-  padding: 0;
+  padding: 0 1rem;
   overflow: hidden;
   visibility: hidden;
+
   transition:
-    max-height 0.35s ease,
-    padding 0.35s ease,
-    visibility 0s linear 0.35s;
+    max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.45s;
 }
 
 .landing-desktop-hi .FAQ-item.active .FAQ-answer {
   max-height: 37.5rem;
-  padding: 0.75rem 0 0;
+  padding: 1rem;
   visibility: visible;
   transition-delay: 0s;
 }
@@ -2160,6 +2193,35 @@ body {
   }
 }
 
+/* ==========================================================================
+   12. RESPONSIVIDADE
+
+   12.1 AJUSTES GERAIS
+   - Por que apoiar
+   - Contato
+
+   12.2 TABLET
+   01. Header
+   02. Hero
+   03. FAQ
+   04. Por que apoiar
+   05. Impacto
+   06. Como apoiar
+
+   12.3 MOBILE
+   01. Header
+   02. Hero
+   03. Por que apoiar
+   04. Impacto
+   05. FAQ
+   06. Como apoiar
+   07. Contato
+   08. CTA Final
+   09. Footer
+
+   ========================================================================== */
+
+   
 @media (min-width: 769px) and (max-width: 64em) {
 
   /* ==================== TABLET ==================== */
@@ -2342,34 +2404,6 @@ body {
   }
 }
 
-/* ==========================================================================
-   12. RESPONSIVIDADE
-
-   12.1 AJUSTES GERAIS
-   - Por que apoiar
-   - Contato
-
-   12.2 TABLET
-   01. Header
-   02. Hero
-   03. FAQ
-   04. Por que apoiar
-   05. Impacto
-   06. Como apoiar
-
-   12.3 MOBILE
-   01. Header
-   02. Hero
-   03. Por que apoiar
-   04. Impacto
-   05. FAQ
-   06. Como apoiar
-   07. Contato
-   08. CTA Final
-   09. Footer
-
-   ========================================================================== */
-
 
 
 
@@ -2398,40 +2432,172 @@ body {
     margin: 0;
     padding: 0 1.25rem;
     box-sizing: border-box;
+    align-items: center;
   }
 
-  .landing-desktop-hi .navbar>a {
-    display: none;
-  }
-
+  /* Esconde a logo completa no mobile */
   .landing-desktop-hi .header .logomarca {
     display: none;
   }
 
-  .landing-desktop-hi .header.scrolled .logomarca {
-    display: flex;
+  /* Ícone novo escondido antes do scroll */
+  .landing-desktop-hi .header .logo-mobile {
+    display: none;
   }
+
+  /* Mostra somente o ícone quando o header aparece */
+  .landing-desktop-hi .header.scrolled .logo-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.375rem;
+    height: 2.375rem;
+  }
+
+  /* Tamanho da imagem */
+  .landing-desktop-hi .header.scrolled .logo-mobile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+
 
   .landing-desktop-hi .header:not(.scrolled) .mobile-menu-button {
     display: none;
   }
 
+  /* ==================== MENU MOBILE ==================== */
+
+  /* Painel de navegação */
   .landing-desktop-hi .navbar {
     display: flex;
     position: fixed;
-    top: 1rem;
+    top: 4.5rem;
     right: 1rem;
-    z-index: 1002;
+    z-index: 999;
+
+    width: 13rem;
+    height: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+
+    padding: 0 1rem;
+    box-sizing: border-box;
+
+    background-color: #f3f7ff;
+    border-radius: 0 0 1.25rem 1.25rem;
+    box-shadow: none;
+    overflow: hidden;
+
+    transition:
+      height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.3s ease;
   }
 
+
+  /* Botão ☰ / X */
   .landing-desktop-hi .mobile-menu-button {
+    position: fixed;
+    top: 0.75rem;
+    right: 1.5rem;
+    z-index: 1003;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+
     font-size: 1.5rem;
     color: #242731;
-    padding: 0.5rem;
   }
+
+
+  /* Esconde o botão antes do scroll */
+  .landing-desktop-hi .header:not(.scrolled) .mobile-menu-button {
+    display: none;
+  }
+
+
+  /* Links */
+  .landing-desktop-hi .navbar>a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.75rem;
+
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+    text-align: left;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.75rem);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0s linear 0.45s;
+  }
+
+
+  /* Menu aberto */
+  .landing-desktop-hi .navbar.menu-open {
+    height: 17.25rem;
+    padding-bottom: 1rem;
+
+    box-shadow: 0 0.25rem 0.75rem rgba(10, 22, 98, 0.08);
+  }
+
+
+  /* Links — menu aberto */
+  .landing-desktop-hi .navbar.menu-open>a {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+    transition:
+      opacity 0.25s ease 0.08s,
+      transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0s;
+  }
+
+
+  /* Botão Apoie Agora */
+  .landing-desktop-hi .navbar>.apoie-agora-CTA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 3rem;
+    margin-top: 0.25rem;
+
+    background-color: #3c7ef9;
+    color: #ffffff;
+    border-radius: 0.5rem;
+
+    text-align: center;
+  }
+
+
+  /* X — menu aberto */
+  .landing-desktop-hi .header.menu-is-open .mobile-menu-button {
+    color: #3c7ef9;
+  }
+
+
 
   /* ==================== 02 - HERO ==================== */
 
@@ -2533,8 +2699,8 @@ body {
     content: "";
     position: absolute;
     top: -0.21875rem;
-    width: 0.4375rem;
-    height: 0.4375rem;
+    width: 0.625rem;
+    height: 0.625rem;
     background-color: #3c7ef9;
     border-radius: 50%;
   }
@@ -2687,7 +2853,7 @@ body {
     overflow-x: auto;
     overflow-y: visible;
 
-    padding: 1.25rem;
+    padding: 2.5rem 1.25rem 1.25rem;
     box-sizing: border-box;
 
     scroll-snap-type: x mandatory;
@@ -2711,6 +2877,17 @@ body {
 
     scroll-snap-align: center;
     scroll-snap-stop: always;
+
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  /* Card ativo do carrossel */
+  .landing-desktop-hi .support-option.card-ativo {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(10, 22, 98, 0.15);
+    z-index: 2;
   }
 
   /* Controles do carrossel */
