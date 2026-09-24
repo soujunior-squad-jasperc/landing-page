@@ -120,9 +120,19 @@ body {
 }
 
 .landing-desktop-hi .header.scrolled {
-  background-color: #ffffff;
-  border-radius: 0 0 1.25rem 1.25rem;
-  box-shadow: 0 0.25rem 0.75rem rgba(10, 22, 98, 0.08);
+  height: 4.5rem;
+  background-color: #0a1662;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.landing-desktop-hi .header.scrolled .text-wrapper-53 {
+  color: #ffffff;
+}
+
+.landing-desktop-hi .header.scrolled .icone,
+.landing-desktop-hi .header.scrolled .vector-7 {
+  filter: brightness(0) invert(1);
 }
 
 .landing-desktop-hi .header-container {
@@ -2425,8 +2435,13 @@ body {
 
   .landing-desktop-hi .header.scrolled {
     background-color: #f3f7ff;
-    border-radius: 0 0 1.25rem 1.25rem;
+    border-radius: 0;
     box-shadow: 0 0.25rem 0.75rem rgba(10, 22, 98, 0.08);
+    filter: none;
+  }
+
+  .landing-desktop-hi .header.scrolled .text-wrapper-53 {
+    color: #242731;
   }
 
   .landing-desktop-hi .header-container {
@@ -2442,6 +2457,9 @@ body {
   /* Logo completa no topo do mobile */
   .landing-desktop-hi .header .logomarca {
     display: flex;
+    width: 11rem;
+    height: auto;
+    justify-content: flex-start;
   }
 
   /* Ao rolar, esconde a logo completa */
@@ -2930,6 +2948,12 @@ body {
     font-size: 1.25rem;
     line-height: 1;
     padding: 0;
+    text-indent: 0;
+  }
+
+  .landing-desktop-hi .carousel-arrow .arrow-symbol {
+    display: inline-block;
+    transform: translateY(-2px);
   }
 
   .landing-desktop-hi .carousel-dots {
