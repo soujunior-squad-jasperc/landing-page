@@ -106,7 +106,7 @@ body {
 .landing-desktop-hi .header {
   display: flex;
   width: 100%;
-  height: 5.5rem;
+  height: 4.5rem;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -2434,6 +2434,7 @@ body {
   }
 
   .landing-desktop-hi .header.scrolled {
+    height: 4.5rem;
     background-color: #f3f7ff;
     border-radius: 0;
     box-shadow: 0 0.25rem 0.75rem rgba(10, 22, 98, 0.08);
