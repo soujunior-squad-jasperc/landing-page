@@ -5,6 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SouJunior — Apoie essa causa</title>
+  <meta name="description"
+    content="Apoie a SouJunior, comunidade gratuita que conecta, desenvolve e impulsiona quem está começando na tecnologia." />
   <link rel="icon" type="image/svg+xml" href="assets/images/header/Logomarca.svg" />
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -12,6 +14,8 @@
 
 <body>
   <div class="landing-desktop-hi">
+    <a class="skip-link" href="#conteudo-principal" >Pular para o conteúdo</a>
+
     <!-- ==================== HEADER / NAVEGAÇÃO ==================== -->
     <header class="header">
       <div class="header-container">
@@ -21,30 +25,31 @@
         <a href="#" class="logo-mobile" aria-label="SouJunior — voltar ao topo">
           <img src="assets/images/header/Logomarca.png" alt="SouJunior" />
         </a>
-        <nav class="navbar" aria-label="Navegação principal">
+        <nav class="navbar" id="menu-principal" aria-label="Navegação principal">
           <a href="#impacto" class="text-wrapper-53">Impacto</a>
           <a href="#como-apoiar" class="text-wrapper-53">Como Apoiar</a>
           <a href="#faq" class="text-wrapper-53">FAQ</a>
           <a href="#contato" class="text-wrapper-53">Contato</a>
           <a href="#como-apoiar" class="apoie-agora-CTA">
-            <div class="text-wrapper-54">Apoie Agora</div>
+            <span class="text-wrapper-54">Apoie Agora</span>
           </a>
         </nav>
 
-        <button class="mobile-menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <button class="mobile-menu-button" type="button" aria-label="Abrir menu" aria-expanded="false"
+          aria-controls="menu-principal">
           ☰
         </button>
       </div>
     </header>
 
-    <main>
+    <main id="conteudo-principal">
       <!-- ==================== HERO ==================== -->
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-titulo">
         <div class="hero-container">
           <div class="hero-content">
             <div class="hero-copy">
               <p class="text-wrapper">SOUJUNIOR • APOIE ESSA CAUSA</p>
-              <h1 class="div">Por que apoiar a SouJunior?</h1>
+              <h1 class="div" id="hero-titulo">Por que apoiar a SouJunior?</h1>
               <p class="p">
                 Seu apoio mantém uma comunidade gratuita que conecta,
                 desenvolve e impulsiona quem está começando na tecnologia.
@@ -52,10 +57,10 @@
             </div>
             <div class="hero-actions">
               <a href="#como-apoiar" class="primary-button">
-                <div class="text-wrapper-2">Apoie Agora</div>
+                <span class="text-wrapper-2">Apoie Agora</span>
               </a>
               <a href="#impacto" class="secondary-button">
-                <div class="SECONDARY-CTA">Conheça nosso impacto →</div>
+                <span class="SECONDARY-CTA">Conheça nosso impacto <span aria-hidden="true">→</span></span>
               </a>
             </div>
           </div>
@@ -66,11 +71,11 @@
       </section>
 
       <!-- ==================== POR QUE APOIAR ==================== -->
-      <section class="support-reason">
+      <section class="support-reason" aria-labelledby="motivos-titulo">
         <div class="support-reason-2">
           <div class="support-intro">
             <p class="text-wrapper-6">POR QUE SEU APOIO IMPORTA</p>
-            <h2 class="text-wrapper-7">O que seu apoio torna possível</h2>
+            <h2 class="text-wrapper-7" id="motivos-titulo">O que seu apoio torna possível</h2>
             <p class="text-wrapper-8">
               A SouJunior é construída pela comunidade. Seu apoio ajuda a
               manter a infraestrutura e os recursos que permitem que projetos,
@@ -78,85 +83,87 @@
             </p>
           </div>
           <div class="support-reasons">
-            <div class="reason-row">
-              <div class="reason-item">
-                <div class="text-wrapper-9" aria-hidden="true">01</div>
-                <h3 class="text-wrapper-10">Infraestrutura</h3>
-                <p class="text-wrapper-11">
-                  Tecnologia que mantém a comunidade no ar
-                </p>
-              </div>
-            </div>
-            <div class="reason-item-wrapper">
-              <div class="reason-item">
-                <div class="text-wrapper-9" aria-hidden="true">02</div>
-                <h3 class="text-wrapper-10">Comunidade</h3>
-                <p class="text-wrapper-11">
-                  Conexões que fazem conhecimento circular
-                </p>
-              </div>
-            </div>
-            <div class="div-wrapper">
-              <div class="reason-item">
-                <div class="text-wrapper-9" aria-hidden="true">03</div>
-                <h3 class="text-wrapper-12">Experiência prática</h3>
-                <p class="text-wrapper-11">
-                  Projetos que transformam aprendizado em prática
-                </p>
-              </div>
-            </div>
+            <ol class="reason-list">
+              <li class="reason-row">
+                <div class="reason-item">
+                  <span class="text-wrapper-9" aria-hidden="true">01</span>
+                  <h3 class="text-wrapper-10">Infraestrutura</h3>
+                  <p class="text-wrapper-11">
+                    Tecnologia que mantém a comunidade no ar
+                  </p>
+                </div>
+              </li>
+              <li class="reason-item-wrapper">
+                <div class="reason-item">
+                  <span class="text-wrapper-9" aria-hidden="true">02</span>
+                  <h3 class="text-wrapper-10">Comunidade</h3>
+                  <p class="text-wrapper-11">
+                    Conexões que fazem conhecimento circular
+                  </p>
+                </div>
+              </li>
+              <li class="div-wrapper">
+                <div class="reason-item">
+                  <span class="text-wrapper-9" aria-hidden="true">03</span>
+                  <h3 class="text-wrapper-12">Experiência prática</h3>
+                  <p class="text-wrapper-11">
+                    Projetos que transformam aprendizado em prática
+                  </p>
+                </div>
+              </li>
+            </ol>
             <img class="reason-path" alt="" src="https://c.animaapp.com/MMr1Q--NL_HoixoJA_D-SA/img/reason-path.svg" />
           </div>
         </div>
       </section>
 
       <!-- ==================== IMPACTO ==================== -->
-      <section class="impact" id="impacto">
+      <section class="impact" id="impacto" aria-labelledby="impacto-titulo">
         <div class="impact-container">
           <img class="dot-grid" alt="" src="https://c.animaapp.com/MMr1Q--NL_HoixoJA_D-SA/img/dot-grid.svg" />
           <div class="impact-intro">
-            <div class="text-wrapper">IMPACTO REAL</div>
-            <h2 class="text-wrapper-13">Uma comunidade que gera impacto</h2>
+            <p class="text-wrapper">IMPACTO REAL</p>
+            <h2 class="text-wrapper-13" id="impacto-titulo">Uma comunidade que gera impacto</h2>
             <p class="text-wrapper-11">
               Pessoas aprendendo, compartilhando conhecimento e conquistando
               espaço na tecnologia. Conheça alguns números da comunidade
               SouJunior.
             </p>
           </div>
-          <div class="impact-metric">
-            <div class="metric">
-              <div class="text-wrapper-14">120</div>
-              <div class="text-wrapper-15">Membros</div>
-            </div>
-            <div class="metric-2">
-              <div class="text-wrapper-14">108</div>
-              <div class="text-wrapper-15">Apoiadores</div>
-            </div>
-            <div class="metric-3">
-              <div class="text-wrapper-14">+50</div>
-              <p class="text-wrapper-15">
+          <ul class="impact-metric">
+            <li class="metric">
+              <span class="text-wrapper-14">120</span>
+              <span class="text-wrapper-15">Membros</span>
+            </li>
+            <li class="metric-2">
+              <span class="text-wrapper-14">108</span>
+              <span class="text-wrapper-15">Apoiadores</span>
+            </li>
+            <li class="metric-3">
+              <span class="text-wrapper-14">+50</span>
+              <span class="text-wrapper-15">
                 pessoas empregadas através da SouJunior
-              </p>
-            </div>
-            <div class="metric-4">
-              <div class="text-wrapper-14">35</div>
-              <div class="text-wrapper-15">mentores ativos</div>
-            </div>
-          </div>
+              </span>
+            </li>
+            <li class="metric-4">
+              <span class="text-wrapper-14">35</span>
+              <span class="text-wrapper-15">mentores ativos</span>
+            </li>
+          </ul>
         </div>
       </section>
 
       <!-- ==================== COMO APOIAR ==================== -->
-      <section class="support" id="como-apoiar">
+      <section class="support" id="como-apoiar" aria-labelledby="como-apoiar-titulo">
         <div class="support-container">
           <div class="support-intro-2">
-            <div class="text-wrapper-17">COMO APOIAR</div>
-            <h2 class="text-wrapper-18">Escolha seu apoio</h2>
+            <p class="text-wrapper-17">COMO APOIAR</p>
+            <h2 class="text-wrapper-18" id="como-apoiar-titulo">Escolha seu apoio</h2>
             <p class="text-wrapper-19">Escolha uma forma de contribuir</p>
           </div>
-          <div class="support-options">
+          <ul class="support-options">
 
-            <article class="support-option">
+            <li class="support-option">
               <div class="support-option__content">
                 <h3 class="support-option__eyebrow">Apoio inicial</h3>
                 <div class="support-option__header">
@@ -177,10 +184,10 @@
                 </div>
               </div>
               <a href="https://novo.apoia.se/support/soujunior/new" target="_blank" rel="noopener noreferrer"
-                class="support-option__cta">Quero apoiar →</a>
-            </article>
+                class="support-option__cta"><span>Quero apoiar <span aria-hidden="true">→</span></span></a>
+            </li>
 
-            <article class="support-option support-option--featured">
+            <li class="support-option support-option--featured">
               <span class="support-option__badge">Mais popular</span>
               <div class="support-option__content">
                 <h3 class="support-option__eyebrow">Apoio recorrente</h3>
@@ -202,10 +209,10 @@
                 </div>
               </div>
               <a href="https://novo.apoia.se/support/soujunior/new" target="_blank" rel="noopener noreferrer"
-                class="support-option__cta">Quero apoiar →</a>
-            </article>
+                class="support-option__cta"><span>Quero apoiar <span aria-hidden="true">→</span></span></a>
+            </li>
 
-            <article class="support-option">
+            <li class="support-option">
               <div class="support-option__content">
                 <h3 class="support-option__eyebrow">Apoio ampliado</h3>
                 <div class="support-option__header">
@@ -226,10 +233,10 @@
                 </div>
               </div>
               <a href="https://novo.apoia.se/support/soujunior/new" target="_blank" rel="noopener noreferrer"
-                class="support-option__cta">Quero apoiar →</a>
-            </article>
+                class="support-option__cta"><span>Quero apoiar <span aria-hidden="true">→</span></span></a>
+            </li>
 
-          </div>
+          </ul>
           <div class="support-carousel-controls" aria-hidden="true">
             <span class="carousel-arrow"><span class="arrow-symbol">←</span></span>
 
@@ -246,7 +253,7 @@
       </section>
 
       <!-- ==================== FAQ ==================== -->
-      <section class="FAQ" id="faq">
+      <section class="FAQ" id="faq" aria-labelledby="faq-titulo">
         <div class="FAQ-container">
           <div class="FAQ-visual" aria-hidden="true">
             <div class="text-wrapper-37">{}</div>
@@ -262,19 +269,22 @@
           </div>
           <div class="FAQ-content">
             <div class="FAQ-intro">
-              <div class="text-wrapper-38">TIRE SUAS DÚVIDAS</div>
-              <h2 class="text-wrapper-39">Perguntas frequentes</h2>
+              <p class="text-wrapper-38">TIRE SUAS DÚVIDAS</p>
+              <h2 class="text-wrapper-39" id="faq-titulo">Perguntas frequentes</h2>
               <p class="text-wrapper-40">
                 Tudo o que você precisa saber antes de apoiar a SouJunior.
               </p>
             </div>
             <div class="FAQ-list">
               <div class="FAQ-item">
-                <button class="FAQ-question" type="button" aria-expanded="false" aria-controls="faq-resposta-1">
-                  <span class="text-wrapper-41">Como posso apoiar a SouJunior?</span>
-                  <span class="text-wrapper-42" aria-hidden="true">+</span>
-                </button>
-                <div class="FAQ-answer" id="faq-resposta-1">
+                <h3 class="FAQ-heading">
+                  <button class="FAQ-question" type="button" id="faq-pergunta-1" aria-expanded="false"
+                    aria-controls="faq-resposta-1">
+                    <span class="text-wrapper-41">Como posso apoiar a SouJunior?</span>
+                    <span class="text-wrapper-42" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+                <div class="FAQ-answer" id="faq-resposta-1" role="region" aria-labelledby="faq-pergunta-1">
                   <p>
                     Você pode apoiar a SouJunior de diferentes formas, como contribuindo
                     financeiramente, através dos nossos planos disponíveis, oferecendo
@@ -285,11 +295,14 @@
               </div>
 
               <div class="FAQ-item">
-                <button class="FAQ-question" type="button" aria-expanded="false" aria-controls="faq-resposta-2">
-                  <span class="text-wrapper-41">Para onde vai a minha contribuição?</span>
-                  <span class="text-wrapper-42" aria-hidden="true">+</span>
-                </button>
-                <div class="FAQ-answer" id="faq-resposta-2">
+                <h3 class="FAQ-heading">
+                  <button class="FAQ-question" type="button" id="faq-pergunta-2" aria-expanded="false"
+                    aria-controls="faq-resposta-2">
+                    <span class="text-wrapper-41">Para onde vai a minha contribuição?</span>
+                    <span class="text-wrapper-42" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+                <div class="FAQ-answer" id="faq-resposta-2" role="region" aria-labelledby="faq-pergunta-2">
                   <p>
                     As contribuições ajudam a fortalecer e manter as iniciativas da
                     SouJunior, apoiando projetos, atividades e oportunidades voltadas
@@ -300,11 +313,14 @@
               </div>
 
               <div class="FAQ-item">
-                <button class="FAQ-question" type="button" aria-expanded="false" aria-controls="faq-resposta-3">
-                  <span class="text-wrapper-41">Posso escolher ou alterar o valor do apoio?</span>
-                  <span class="text-wrapper-42" aria-hidden="true">+</span>
-                </button>
-                <div class="FAQ-answer" id="faq-resposta-3">
+                <h3 class="FAQ-heading">
+                  <button class="FAQ-question" type="button" id="faq-pergunta-3" aria-expanded="false"
+                    aria-controls="faq-resposta-3">
+                    <span class="text-wrapper-41">Posso escolher ou alterar o valor do apoio?</span>
+                    <span class="text-wrapper-42" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+                <div class="FAQ-answer" id="faq-resposta-3" role="region" aria-labelledby="faq-pergunta-3">
                   <p>
                     Sim. Você pode escolher a forma de apoio que melhor se encaixa na
                     sua realidade. Caso queira contribuir de uma maneira diferente das
@@ -314,11 +330,14 @@
               </div>
 
               <div class="FAQ-item">
-                <button class="FAQ-question" type="button" aria-expanded="false" aria-controls="faq-resposta-4">
-                  <span class="text-wrapper-41">Como empresas podem apoiar a SouJunior?</span>
-                  <span class="text-wrapper-42" aria-hidden="true">+</span>
-                </button>
-                <div class="FAQ-answer" id="faq-resposta-4">
+                <h3 class="FAQ-heading">
+                  <button class="FAQ-question" type="button" id="faq-pergunta-4" aria-expanded="false"
+                    aria-controls="faq-resposta-4">
+                    <span class="text-wrapper-41">Como empresas podem apoiar a SouJunior?</span>
+                    <span class="text-wrapper-42" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+                <div class="FAQ-answer" id="faq-resposta-4" role="region" aria-labelledby="faq-pergunta-4">
                   <p>
                     Empresas podem apoiar por meio de parcerias, patrocínios,
                     oportunidades, mentorias e outras formas de colaboração. Para
@@ -333,20 +352,27 @@
       </section>
 
       <!-- ==================== CONTATO ==================== -->
-      <section class="contact" id="contato">
+      <section class="contact" id="contato" aria-labelledby="contato-titulo">
         <div class="contact-container">
           <div class="contact-content">
             <div class="contact-info">
               <div class="contact-header">
-                <div class="text-wrapper-38">ENTRE EM CONTATO</div>
+                <p class="text-wrapper-38">ENTRE EM CONTATO</p>
               </div>
-              <h2 class="text-wrapper-43">Quer apoiar de outra forma?</h2>
+              <h2 class="text-wrapper-43" id="contato-titulo">Quer apoiar de outra forma?</h2>
               <p class="text-wrapper-44">
                 Converse com a gente sobre parcerias, apoio institucional ou
                 outras formas de contribuir com a SouJunior.
               </p>
             </div>
-            <form class="contact-form" id="contact-form" novalidate>
+            <form class="contact-form" id="contact-form" name="contato" method="POST" data-netlify="true"
+              netlify-honeypot="bot-field" aria-labelledby="contato-titulo" novalidate>
+              <p hidden>
+                <label>Não preencha isto: <input name="bot-field" /></label>
+              </p>
+
+              <input type="hidden" name="form-name" value="contato" />
+
               <div class="contact-form-content">
                 <div class="div-4">
                   <label for="contato-nome" class="text-wrapper-45">Nome</label>
@@ -370,33 +396,33 @@
                   </div>
                 </div>
                 <button type="submit" class="CTA-2">
-                  <div class="text-wrapper-25">Enviar mensagem →</div>
+                  <span class="text-wrapper-25">Enviar mensagem <span aria-hidden="true">→</span></span>
                 </button>
               </div>
             </form>
           </div>
         </div>
       </section>
-    </main>
 
-    <!-- ==================== CTA FINAL ==================== -->
-    <div class="full-final-CTA">
-      <div class="final-CTA">
-        <div class="final-CTA-container">
-          <div class="text-wrapper-48">APOIE A SOUJUNIOR</div>
-          <h2 class="text-wrapper-49">Faça parte dessa transformação</h2>
-          <p class="text-wrapper-50">
-            Seu apoio ajuda a manter a SouJunior gratuita e acessível para
-            quem está começando na tecnologia.
-          </p>
-          <a href="https://apoia.se/soujunior" target="_blank" rel="noopener noreferrer" class="CTA-3">
-            <div class="text-wrapper-25">Apoie a SouJunior</div>
-          </a>
+      <!-- ==================== CTA FINAL ==================== -->
+      <section class="full-final-CTA" aria-labelledby="cta-final-titulo">
+        <div class="final-CTA">
+          <div class="final-CTA-container">
+            <p class="text-wrapper-48">APOIE A SOUJUNIOR</p>
+            <h2 class="text-wrapper-49" id="cta-final-titulo">Faça parte dessa transformação</h2>
+            <p class="text-wrapper-50">
+              Seu apoio ajuda a manter a SouJunior gratuita e acessível para
+              quem está começando na tecnologia.
+            </p>
+            <a href="https://apoia.se/soujunior" target="_blank" rel="noopener noreferrer" class="CTA-3">
+              <span class="text-wrapper-25">Apoie a SouJunior</span>
+            </a>
+          </div>
+          <img class="cta-streaks-left" alt="" src="assets/images/desenho-final-cta/final-cta-left-streaks.png" />
+          <img class="cta-streaks-right" alt="" src="assets/images/desenho-final-cta/final-cta-right-streaks.png" />
         </div>
-        <img class="cta-streaks-left" alt="" src="assets/images/desenho-final-cta/final-cta-left-streaks.png" />
-        <img class="cta-streaks-right" alt="" src="assets/images/desenho-final-cta/final-cta-right-streaks.png" />
-      </div>
-    </div>
+      </section>
+    </main>
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
@@ -425,7 +451,7 @@
         </div>
         <img class="vector-6" alt="" src="https://c.animaapp.com/MMr1Q--NL_HoixoJA_D-SA/img/vector-8.svg" />
         <div class="footer-bottom">
-          <div class="text-wrapper-52">© 2026 SouJunior</div>
+          <p class="text-wrapper-52">© 2026 SouJunior</p>
           <p class="text-wrapper-52">
             Feito pela comunidade, para a comunidade.
           </p>
