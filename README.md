@@ -18,10 +18,10 @@
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
-    <img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white" alt="Netlify">
+    <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudfare">
   </p>
   <p>
-    <a href="https://soujunior-landingpage-jasperc.netlify.app/"><b>🌐 Ver o site</b></a>
+    <a href="https://jasperc-soujunior.jasperc.workers.dev/"><b>🌐 Ver o site</b></a>
     &nbsp;·&nbsp;
     <a href="https://novo.apoia.se/support/soujunior/new?step=new-support"><b>💙 Apoiar a SouJunior</b></a>
   </p>
@@ -102,7 +102,7 @@ A página combina **storytelling, números reais da comunidade e CTAs estratégi
 | **Tipografia** | Funnel Display · Funnel Sans · Inter | Identidade visual da página |
 | **Formulário** | Netlify Forms | Recebe as mensagens de contato sem servidor próprio |
 | **Versionamento** | Git & GitHub | Controle de versão e colaboração em equipe |
-| **Infraestrutura** | Netlify | Hospedagem e deploy contínuo (CI/CD) a cada push |
+| **Infraestrutura** | Cloudfare Pages | Hospedagem e deploy contínuo (CI/CD) a cada push |
  
 ---
  
@@ -154,9 +154,9 @@ O envio das mensagens é feito pelo **Netlify Forms**, que só funciona no site 
  
 ## 🌐 Deploy
  
-O site é publicado na **Netlify**
+O site é publicado na **CloudFare**
  
-🔗 **[soujunior-landingpage-jasperc.netlify.app](https://soujunior-landingpage-jasperc.netlify.app/)**
+🔗 **[https://jasperc-soujunior.jasperc.workers.dev/](https://jasperc-soujunior.jasperc.workers.dev/)**
  
 ## Equipe Jasper.C
  
