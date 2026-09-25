@@ -85,17 +85,18 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.style.pointerEvents = "none"; // evita envio duplicado
     submitButton.style.opacity = "0.7";
 
-    fetch("/", {
+fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data).toString(),
+      headers: { Accept: "application/json" },
+      body: data,
     })
-      .then((response) => {
-        // fetch só rejeita em falha de rede; erros 4xx/5xx precisam ser checados aqui
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      .then((response) => response.json())
+      .then((result) => {
+        if (!result.success) throw new Error(result.message || "Falha no envio");
         form.reset();
         mostrarMensagemDeSucesso();
       })
+      
       .catch((error) => {
         console.error("Erro ao enviar o formulário:", error);
         mostrarMensagemDeErro();
