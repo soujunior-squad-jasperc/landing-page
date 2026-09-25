@@ -100,9 +100,9 @@ A página combina **storytelling, números reais da comunidade e CTAs estratégi
 | :--- | :--- | :--- |
 | **Front-end** | HTML5 · CSS3 · JavaScript (Vanilla) | Estrutura semântica, estilização modular e interatividade |
 | **Tipografia** | Funnel Display · Funnel Sans · Inter | Identidade visual da página |
-| **Formulário** | Netlify Forms | Recebe as mensagens de contato sem servidor próprio |
+| **Formulário** | Web3Forms | Recebe as mensagens de contato sem servidor próprio |
 | **Versionamento** | Git & GitHub | Controle de versão e colaboração em equipe |
-| **Infraestrutura** | Cloudfare Pages | Hospedagem e deploy contínuo (CI/CD) a cada push |
+| **Infraestrutura** | Cloudflare Pages | Hospedagem e deploy contínuo (CI/CD) a cada push |
  
 ---
  
@@ -117,9 +117,7 @@ landing-page/
 │   ├── global.css        # Configurações globais, reset e tipografia
 │   ├── style.css         # Estilos específicos da página principal
 ├── js/
-│   ├── donation.js       # Lógica e interatividade para a seção de doações
 │   ├── form.js           # Validação e comportamento de formulários
-│   ├── main.js           # Ponto de entrada principal dos scripts
 │   └── menu.js           # Controle do menu de navegação (ex: menu responsivo/mobile)
 ├── .gitignore            # Arquivos ignorados pelo controle de versão
 ├── index.html            # Arquivo HTML principal da página
@@ -148,13 +146,13 @@ cd landing-page
  
 ### ⚠️ Sobre o formulário de contato
  
-O envio das mensagens é feito pelo **Netlify Forms**, que só funciona no site publicado. Em ambiente local, a validação dos campos funciona normalmente, mas o envio não é processado e a página mostra a mensagem de erro.
+O envio das mensagens é feito pelo **Web3Forms**, que só funciona no site publicado. Em ambiente local, a validação dos campos funciona normalmente, mas o envio não é processado e a página mostra a mensagem de erro.
  
 ---
  
 ## 🌐 Deploy
  
-O site é publicado na **CloudFare**
+O site é publicado na **CloudFlare**
  
 🔗 **[https://jasperc-soujunior.jasperc.workers.dev/](https://jasperc-soujunior.jasperc.workers.dev/)**
  
