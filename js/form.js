@@ -8,17 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Regras: retornam a mensagem de erro, ou "" se estiver válido
   const rules = {
     nome: (v) => {
-      if (!v) return "Informe seu nome.";
+      if (!v) return "Informe seu nome";
       if (v.length < 2) return "O nome deve ter pelo menos 2 caracteres";
       return "";
     },
     email: (v) => {
-      if (!v) return "Informe seu e-mail.";
+      if (!v) return "Informe seu e-mail";
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return "Informe um e-mail válido";
       return "";
     },
     mensagem: (v) => {
-      if (!v) return "Escreva sua mensagem.";
+      if (!v) return "Escreva sua mensagem";
       if (v.length < 10) return "A mensagem deve ter pelo menos 10 caracteres";
       return "";
     },
